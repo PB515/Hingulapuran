@@ -18,6 +18,11 @@ export function SiteFooter() {
         <p className="mt-8 font-[family-name:var(--font-body)] text-xs text-muted/70">
           {site.legalName} · {site.tagline}
         </p>
+        <p className="mt-3">
+          <Link href="/admin" className="font-[family-name:var(--font-body)] text-[11px] uppercase tracking-[0.2em] text-loha/70 transition-colors hover:text-swarna">
+            Admin
+          </Link>
+        </p>
       </div>
     </footer>
   );
