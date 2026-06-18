@@ -4,8 +4,8 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useReducedMotion, useMotionValueEvent } from "motion/react";
 import { site } from "@/lib/site";
 
-/* Flip to false to hide the scroll-% tuning readout. */
-const TUNING = true;
+/* Flip to true to show the scroll-% tuning readout. */
+const TUNING = false;
 
 /* Flagship hero: a Mata-ni-Pachedi temple door that opens as you scroll, revealing
    the cave-shrine backdrop and the goddess. Pure CSS-transform parallax on the
