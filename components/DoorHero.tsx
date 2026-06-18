@@ -21,11 +21,8 @@ export function DoorHero() {
   const rightX = useTransform(scrollYProgress, [0, 0.4], ["0%", "106%"]);
   const bgScale = useTransform(scrollYProgress, [0, 1], [1.12, 1]);
   const toranY = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
-  // title EMERGES from the gate opening (the niche centre): rises up + scales up as
-  // the doors part, then rests in the upper third and holds.
-  const titleOp = useTransform(scrollYProgress, [0.25, 0.4], [0, 1]);
-  const titleScale = useTransform(scrollYProgress, [0.25, 0.5], [0.6, 1]);
-  const titleY = useTransform(scrollYProgress, [0.25, 0.5], ["200px", "0px"]);
+  // The title + scrim are STATIC behind the doors; the doors sliding away reveal
+  // them. (No scroll-driven opacity — that was getting stuck at 0.)
 
   const open = !!reduce; // reduced-motion → start open, no scroll dependency
 
@@ -57,29 +54,23 @@ export function DoorHero() {
         />
         <div className="absolute inset-0 bg-raat/30" aria-hidden />
 
-        {/* dark scrim behind the title — fades in with it so the cream/gold text
-            reads against the bright cloth, while the art stays visible around it */}
-        <motion.div
+        {/* dark scrim — sits behind the doors; revealed as they open so the
+            cream/gold title reads against the bright cloth */}
+        <div
           aria-hidden
-          style={{
-            opacity: reduce ? 1 : titleOp,
-            background: "radial-gradient(46% 40% at 50% 40%, rgba(18,16,31,0.92), rgba(18,16,31,0) 72%)",
-          }}
           className="pointer-events-none absolute inset-0 z-10"
+          style={{ background: "radial-gradient(48% 42% at 50% 44%, rgba(18,16,31,0.94), rgba(18,16,31,0) 72%)" }}
         />
 
-        {/* title revealed as the doors open */}
-        <motion.div
-          style={reduce ? undefined : { opacity: titleOp, y: titleY, scale: titleScale }}
-          className="relative z-20 -mt-24 px-6 text-center"
-        >
-          <h1 className="font-[family-name:var(--font-display)] text-5xl leading-[1.05] text-patra md:text-7xl" style={{ textShadow: "0 2px 24px rgba(18,16,31,.85)" }}>
+        {/* title — static behind the doors, revealed as they slide away */}
+        <div className="pointer-events-none absolute inset-0 z-20 flex flex-col items-center justify-center px-6 text-center">
+          <h1 className="font-[family-name:var(--font-display)] text-5xl leading-[1.05] text-patra md:text-7xl" style={{ textShadow: "0 2px 24px rgba(18,16,31,.9)" }}>
             हिंगलाज माता
           </h1>
-          <p className="mx-auto mt-7 max-w-2xl font-[family-name:var(--font-display)] text-xl leading-relaxed text-swarna md:text-3xl" style={{ textShadow: "0 2px 18px rgba(18,16,31,.9)" }}>
+          <p className="mx-auto mt-7 max-w-2xl font-[family-name:var(--font-display)] text-xl leading-relaxed text-swarna md:text-3xl" style={{ textShadow: "0 2px 18px rgba(18,16,31,.95)" }}>
             {site.mantra}
           </p>
-        </motion.div>
+        </div>
 
         {/* door leaves (right = mirrored). DESKTOP: wide leaf, object-cover fills cleanly. */}
         <motion.img

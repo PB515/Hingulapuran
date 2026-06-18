@@ -53,19 +53,27 @@ export function LegendScroll() {
   }
 
   return (
-    <section ref={ref} className="relative h-[520vh] bg-raat">
+    <section
+      ref={ref}
+      className="relative h-[900vh] bg-rakta"
+      style={{ backgroundImage: "url(/art/motifs/cloth-texture.webp)", backgroundSize: "640px" }}
+    >
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
         <div className="pointer-events-none absolute left-0 right-0 top-24 z-10 text-center">
           <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.35em] text-swarna">The legend</p>
           <h2 className="mt-2 font-[family-name:var(--font-display)] text-4xl text-patra md:text-5xl">हिंगुल की कथा</h2>
         </div>
 
-        <motion.div ref={trackRef} style={{ x }} className="flex w-max items-center will-change-transform">
+        <motion.div ref={trackRef} style={{ x }} className="flex w-max items-center gap-[4vw] px-[6vw] will-change-transform">
           {PANELS.map((p, i) => (
-            <figure key={p.src} className="relative h-[62vh] shrink-0" style={{ aspectRatio: "8 / 3" }}>
+            <figure
+              key={p.src}
+              className="relative h-[60vh] shrink-0 overflow-hidden rounded-md border-2 border-swarna/30 shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
+              style={{ aspectRatio: "8 / 3" }}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={p.src} alt={p.cap} loading="eager" className="h-full w-full object-cover" />
-              <figcaption className="absolute bottom-4 left-6 font-[family-name:var(--font-display-latin)] text-sm tracking-[0.15em] text-patra" style={{ textShadow: "0 1px 10px rgba(18,16,31,.9)" }}>
+              <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-6 py-4 text-left font-[family-name:var(--font-display-latin)] text-sm tracking-[0.15em] text-patra">
                 <span className="text-swarna">{String(i + 1).padStart(2, "0")}</span> · {p.cap}
               </figcaption>
             </figure>

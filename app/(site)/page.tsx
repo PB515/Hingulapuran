@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { DoorHero } from "@/components/DoorHero";
 import { LegendScroll } from "@/components/LegendScroll";
 import { ParshuramClimax } from "@/components/ParshuramClimax";
+import { SceneBand } from "@/components/SceneBand";
 
 export default function Home() {
   return (
@@ -37,6 +38,9 @@ export default function Home() {
 
       {/* Climax: Parshuram lays his sword at her feet. */}
       <ParshuramClimax />
+
+      {/* Scene band — the Hingol river / mool sthan */}
+      <SceneBand src="/art/scene/hingol-river.webp" line="हिंगोल नदी के तट पर" sub="The cave on the Hingol — the mool sthan" />
     </main>
   );
 }

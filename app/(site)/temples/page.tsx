@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { temples } from "@/lib/temples";
+import { SceneBand } from "@/components/SceneBand";
 
 const TempleMap = dynamic(() => import("@/components/TempleMap").then((m) => m.TempleMap));
 
@@ -7,9 +8,10 @@ export const metadata = { title: "Temples — Hingulapuran" };
 
 export default function Temples() {
   return (
-    <main className="mx-auto max-w-5xl px-6 pb-24 pt-32 md:px-10">
-      <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.3em] text-swarna">मंदिर · The temples</p>
-      <h1 className="mt-3 font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">Temples of Hinglaj</h1>
+    <>
+    <SceneBand src="/art/scene/cave-shrine.webp" line="मंदिर" sub="The shrines of Hinglaj Mata across the world" />
+    <main className="mx-auto max-w-5xl px-6 pb-24 pt-16 md:px-10">
+      <h1 className="font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">Temples of Hinglaj</h1>
       <p className="mt-5 max-w-xl font-[family-name:var(--font-body)] text-muted">
         From the cave on the Hingol river to the shrines across Rajasthan, Gujarat and Maharashtra. Tap a marker to read more.
       </p>
@@ -29,5 +31,6 @@ export default function Temples() {
         ))}
       </ul>
     </main>
+    </>
   );
 }
