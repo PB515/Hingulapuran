@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   HINGULAPURAN — design tokens (Veer + Bhakti · deep warrior-devotional)
+   Palette anchored to Mata-ni-Pachedi: deep oxblood maroon, kalam black, cream,
+   antique gold, with cold steel as the distinct accent. Dark by default.
+   ============================================================================ */
+
+:root {
+  /* — raw brand palette — */
+  --rakta:  #3E0A1A;   /* deep oxblood maroon — primary brand ground */
+  --raat:   #12101F;   /* cosmic night — page background */
+  --sindoor:#B5302A;   /* vermilion — hot accent */
+  --kesari: #D97A1A;   /* saffron — flame / bhakti glow */
+  --swarna: #C9A227;   /* antique gold — sacred, borders, CTA */
+  --loha:   #6E757C;   /* steel — swords/shields, the cool differentiator */
+  --patra:  #E7D7B8;   /* parchment/cream — text + reading surface */
+  --kajal:  #1A1110;   /* near-black ink */
+
+  /* — semantic tokens the IDP/Tailwind read — */
+  --background: var(--raat);
+  --foreground: var(--patra);
+  --muted: #b9a98c;            /* muted cream — secondary text */
+  --border: #3a2730;           /* maroon-tinted hairline */
+  --accent: var(--swarna);     /* gold CTA */
+  --accent-foreground: var(--kajal);  /* dark text on gold — passes AA */
+
+  /* — typography (wired in layout.tsx via next/font) — */
+  --font-display:       var(--font-deva), serif;          /* Devanagari hero (Rozha One) */
+  --font-display-guj:   var(--font-baloo), sans-serif;    /* Gujarati display (Baloo Bhai 2) */
+  --font-display-latin: var(--font-eczar), serif;         /* Latin display/subhead (Eczar) */
+  --font-guj:           var(--font-noto-guj), serif;      /* Gujarati body */
+  --font-body:          var(--font-mukta), system-ui, sans-serif;
+
+  --space-tight: 0.5rem;
+  --space-section: 4rem;
+  --space-major: 8rem;
+  --radius: 0.5rem;
+}
+
+@theme inline {
+  --color-rakta: var(--rakta);
+  --color-raat: var(--raat);
+  --color-sindoor: var(--sindoor);
+  --color-kesari: var(--kesari);
+  --color-swarna: var(--swarna);
+  --color-loha: var(--loha);
+  --color-patra: var(--patra);
+  --color-kajal: var(--kajal);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --font-display: var(--font-display);
+  --font-display-guj: var(--font-display-guj);
+  --font-display-latin: var(--font-display-latin);
+  --font-guj: var(--font-guj);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+/* Temple map — re-tone the OSM tiles to parchment/sepia so the map matches the
+   brand instead of looking like a default blue Google map. */
+.hl-tiles {
+  filter: sepia(0.7) saturate(0.8) hue-rotate(-12deg) brightness(0.82) contrast(1.05);
+}
+.leaflet-container {
+  background: var(--rakta);
+  font-family: var(--font-body);
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--patra);
+  color: var(--kajal);
+}
