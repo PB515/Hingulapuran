@@ -19,6 +19,7 @@ const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
 /* PACING — the only knobs. Raise to slow things down / lengthen the scroll. */
 const SCENE_WEIGHT = 1.4; // scroll length per reel scene
 const BEAT_WEIGHT = 1.7;  // scroll length per map beat (longer, to read the card)
+const OUTRO_WEIGHT = 0.9; // a short fade-to-dark AFTER the last beat (the exit transition)
 const VH_PER_UNIT = 170;  // overall scroll density — raise for more scroll everywhere
 
 type Stop = { deva: string; en: string; body: string; all?: boolean; x?: number; y?: number; hinglaj?: boolean };
@@ -153,17 +154,21 @@ export function ShaktipeethSaga() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
 
   const S = shaktipeethReel.length; // reel scenes
-  // one weighted timeline across the whole sequence: scenes first, then map beats
-  const weights = [...shaktipeethReel.map(() => SCENE_WEIGHT), ...STOPS.map(() => BEAT_WEIGHT)];
+  const B = STOPS.length;           // map beats
+  // weighted timeline: scenes, then map beats, then a short outro that fades to dark
+  const weights = [...shaktipeethReel.map(() => SCENE_WEIGHT), ...STOPS.map(() => BEAT_WEIGHT), OUTRO_WEIGHT];
   const { heightVh, windows } = buildTimeline(weights, VH_PER_UNIT);
   const sceneWindows = windows.slice(0, S);
-  const beatWindows = windows.slice(S);
+  const beatWindows = windows.slice(S, S + B);
+  const [outroStart, outroEnd] = windows[S + B];
   const mapStart = beatWindows[0][0]; // the map is fully revealed by here
 
   // two master layers that hard-switch at the boundary — the map CANNOT be obscured
   const reelOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [1, 0]);
   const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
-  const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.03, 1.12]);
+  const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.02, 1.06]);
+  // fade to dark AFTER the last beat (outro) — the clean handoff to the next section
+  const outroDark = useTransform(scrollYProgress, [outroStart, outroEnd], [0, 1]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   // physically unmount the reel once past the boundary — if it's not in the DOM it cannot ghost
@@ -222,8 +227,8 @@ export function ShaktipeethSaga() {
           <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <motion.img src={MAP} alt="" aria-hidden style={{ scale: mapScale }} className="absolute inset-0 h-full w-full object-cover" />
-            <div className="pointer-events-none absolute inset-0 bg-raat/25" />
-            <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(125% 105% at 50% 42%, transparent 50%, rgba(18,16,31,.62) 100%)" }} />
+            <div className="pointer-events-none absolute inset-0 bg-raat/12" />
+            <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(130% 110% at 50% 45%, transparent 58%, rgba(18,16,31,.42) 100%)" }} />
 
             {PEETHAS.map((s, k) => {
               const [a, b] = beatWindows[OVERVIEW];
@@ -239,6 +244,9 @@ export function ShaktipeethSaga() {
               return <MapCard key={`mc${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
             })}
           </motion.div>
+
+          {/* outro — fade to dark AFTER hinglaj, the clean handoff to the next section */}
+          <motion.div style={{ opacity: outroDark }} className="pointer-events-none absolute inset-0 z-30 bg-raat" />
 
           {/* frame rule + scroll hint */}
           <div className="pointer-events-none absolute inset-0 z-40 rounded-[inherit] ring-1 ring-inset ring-swarna/15" />
