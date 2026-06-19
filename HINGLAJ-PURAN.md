@@ -21,8 +21,8 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–~40 + 44–46 done** (forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas — Satyavrata 27–28, Devi-yajna 29, shraddha 30; **Sudarshana-charita** consolidated ch 32–~40; Navratri-phala/Kumari 44; Durga-avatāras 45; **Mahishāsura-utpatti 46**). ☐ **ch ~41–43 + 47–64 remain** — the Sudarshana tail + Chandi/Raktabīja ritual (~41–43), and the **rest of the Mahishāsura-vadha** (47–64: the gods' combined tejas forming the Devi → the war → the slaying). Offset ~+4 (drifts); locate headings directly.
-  - ⚠️ Read in passing/consolidated & flagged: philosophy ch 23/24/26; ākhyāna ch 30; Sudarshana saga (32–~40, splits TBD); ~41–43 still to map. ch 14 title read tentatively as Hayagrīva.
+- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–~40 + 44–53 done** (forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas 27–30; **Sudarshana-charita** consolidated 32–~40; Navratri-phala/Kumari 44; Durga-avatāras 45; the **Mahishāsura arc** 46–53: utpatti, conquest, Brihaspati's counsel, the deva-daitya war, Rudra's counsel, **the Devi born from the gods' combined tejas (ch 52)**, and her vow + Mahisha's envoy). ☐ **ch ~41–43 + 54–64 remain** — Sudarshana tail + Chandi/Raktabīja ritual (~41–43), and the **climactic battle & slaying of Mahishāsura** (54–63; ch 64 aftermath already summarized as the Stream-1→2 bridge). Offset drifts ~+4/+5; locate headings directly.
+  - ⚠️ Read in passing/consolidated & flagged: philosophy ch 23/24/26; ākhyāna ch 30; Sudarshana saga (32–~40); ch 54–64 to split; ~41–43 to map. ch 14 title read tentatively as Hayagrīva.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -189,6 +189,33 @@ A recap of the **Devi's role across the avatāras** — Brahma as Soma, Hari as 
 ### Ch 46 — The Origin of Mahishāsura (મહિષાસુર ઉત્પત્તિ) — ✅ verified from PDF (printed pp.142+)
 **Janamejaya** asks Vyasa for the Devi's charita. A great dānava-king **Mahisha** performs fierce tapas on **Hemagiri** for **10,000 years**; **Brahma**, pleased, appears and Mahisha asks for immortality. Brahma refuses absolute deathlessness (the born must die) but grants that **no deva, daitya, or any male** can slay him — leaving only a *woman* able to kill him. Mahisha returns triumphant to his realm. (The chapter then turns to whose son he was and how he gained the **buffalo (mahiṣa) form**.)
 **Scenes:** Mahisha's 10,000-year tapas on Hemagiri · Brahma granting the "no male may slay me" boon · the buffalo-demon exulting in his invincibility.
+
+### Ch 47 — Mahishāsura's Conquest (મહિષાસુર વિજય) — ✅ verified from PDF (printed pp.144–~147)
+Emboldened by the boon, the dānava **Mahisha conquers the whole world**, defeats the gods, and establishes **sole sovereignty (ekachhatra)** with his mighty generals (Mahāvīrya, Mahodbhaṭa…). The chapter opens with the buffalo-birth coda — Mahishāsura born of a she-buffalo, unkillable by deva/daitya/man.
+**Scenes:** Mahishāsura's armies overrunning the three worlds · the buffalo-demon enthroned over the dethroned gods.
+
+### Ch 48 — Brihaspati's Counsel to Indra (ગુરુ બૃહસ્પતિનો ઇન્દ્રને બોધ) — ✅ verified from PDF (printed pp.148+)
+Mahisha's envoy demands the gods abandon heaven, flee, or serve him. Indra convenes the gods; guru **Brihaspati** counsels war — never underestimate even a weak-seeming foe, use both **intellect (buddhi) and force (bala)**, marshal the army, and make **no treaty** with such an enemy.
+**Scenes:** the envoy's ultimatum in Indra's court · Brihaspati counselling the assembled gods to war.
+
+### Ch 49–50 — The Deva-Daitya War (દેવ તથા દૈત્યોનું યુદ્ધ) — ✅ verified from PDF (printed pp.~149–153)
+The gods and demons clash. The battle rages; the demon general **Tāmrāksha** is felled, raising an uproar (hāhākāra) in the demon ranks — but then **Mahisha himself, enraged, takes up his great mace and charges the gods**, routing them.
+**Scenes:** the pitched deva-daitya battle · Tāmrāksha falling · Mahisha charging with his mace, the gods routed.
+
+### Ch 51 — Rudra's Counsel (દેવોની ચિંતા) — ✅ verified from PDF (printed pp.~153–158)
+Defeated, the gods despair. **Rudra** counsels that **none of them alone** — Brahma, Vishnu, Shiva, Indra — can slay Mahisha; they must go together to **Vishnu**, praise him, and seek a combined remedy. The gods set out on their vāhanas amid auspicious omens.
+**Scenes:** the routed gods in council · Rudra urging unity · the gods riding their vāhanas to Vishnu under auspicious skies.
+
+### Ch 52 — The Tejas the Gods Cast into One Place (દેવોએ એક ઠેકાણે મૂકેલું તેજ) — ✅ verified from PDF (printed pp.158+)
+**The birth of the Devi.** Assembled before Vishnu/Shiva, the gods' **combined tejas (radiant wrath)** streams out and unites into one blazing mass, taking form as the supreme **Goddess (Mahishāsura-mardinī)** — each god contributing his light and his weapon. *(The iconic Devi-Mahatmya origin of the Goddess.)*
+**Scenes:** the streams of tejas pouring from every god → fusing into the radiant Devi · the gods arming her with their weapons (trishula, chakra, vajra, bow…) — **the flagship Mahishāsura-mardinī "birth from tejas" reel**.
+
+### Ch 53 — Mahisha's Envoy to the Devi (મહિષ દેવી પાસે મોકલેલા દૂત) — ✅ verified from PDF (printed pp.~163–166)
+The Devi, **sinha-vāhinī** (lion-mounted), divine and fully armed, is praised by the gods; she vows *"abandon fear — I shall slay this asura,"* and lets out a **world-shaking roar** that terrifies the demons. **Mahisha sends an envoy/minister** to discover who she is.
+**Scenes:** the gods praising the lion-mounted Devi · her terrifying roar shaking the worlds · Mahisha's envoy approaching her.
+
+### Ch 54–64 — The Battle & Slaying of Mahishāsura — ◑ to detail (printed pp.~166–204)
+The climactic war: the Devi battles and destroys **Mahisha's generals** (Chikṣura, Chāmara, Asilomā, Biḍāla and the rest) and his armies, then the **final duel with Mahishāsura** — who shifts between buffalo, lion, man and elephant forms — ending in the **slaying of the buffalo-demon** (**Mahishāsura-mardinī**), the Devi's stuti, and **ch 64 = "the state of the earth after Mahisha's slaying"** (already summarized — it is the bridge into Dwitiya Pravah / the Hingula story). **To split into per-chapter entries on the next pass** (offset drifts ~+4/+5; locate headings directly). High-value finale reel.
 
 ---
 

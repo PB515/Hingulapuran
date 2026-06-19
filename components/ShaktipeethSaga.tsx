@@ -98,10 +98,10 @@ function Scene({ scene, a, b, p, first, last }: { scene: ReelScene; a: number; b
         </div>
       )}
       <div className="pointer-events-none absolute inset-0 z-20" style={{ background: "radial-gradient(125% 105% at 50% 42%, transparent 50%, rgba(18,16,31,.62) 100%)" }} />
-      {/* left scrim so the title reads over the art (the figure stays centred, uncovered) */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-2/3" style={{ background: "linear-gradient(to right, rgba(18,16,31,.94), rgba(18,16,31,.45) 42%, transparent)" }} />
-      <div className="absolute bottom-[12%] left-[6%] z-30 max-w-xs text-left md:max-w-sm">
-        <p className="font-[family-name:var(--font-display)] text-4xl leading-tight text-patra md:text-6xl" style={{ textShadow: "0 2px 22px rgba(18,16,31,.95)" }}>{scene.deva}</p>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-2/5" style={{ background: "linear-gradient(to top, rgba(18,16,31,.95), rgba(18,16,31,.55) 42%, transparent)" }} />
+      <div className="absolute inset-x-0 bottom-[7%] z-30 px-6 text-center">
+        <p className="font-[family-name:var(--font-display)] text-3xl text-patra md:text-5xl" style={{ textShadow: "0 2px 22px rgba(18,16,31,.95)" }}>{scene.deva}</p>
+        <p className="mt-3 font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.28em] text-swarna md:text-sm" style={{ textShadow: "0 2px 14px rgba(18,16,31,1)" }}>{scene.en}</p>
       </div>
     </motion.div>
   );
@@ -160,6 +160,9 @@ export function ShaktipeethSaga() {
   const beatWindows = windows.slice(S);
   const mapStart = beatWindows[0][0]; // the map is fully revealed by here
 
+  // two master layers that hard-switch at the boundary — the map CANNOT be obscured
+  const reelOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [1, 0]);
+  const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
   const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.03, 1.12]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
@@ -199,10 +202,18 @@ export function ShaktipeethSaga() {
 
   return (
     <section ref={ref} className="relative bg-raat" style={{ height: `${heightVh}vh` }}>
-      <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden px-3 py-10 md:px-6">
-        <div className="relative aspect-video w-full max-w-7xl overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-          {/* MAP — the solid back layer; the reel scenes sit on top and fade away to reveal it */}
-          <div className="absolute inset-0 z-0 isolate">
+      <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden px-4 py-16 md:px-10">
+        <div className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
+          {/* REEL LAYER — scenes; whole layer fades out at the boundary */}
+          <motion.div style={{ opacity: reelOpacity }} className="absolute inset-0 z-10">
+            {shaktipeethReel.map((s, i) => {
+              const [a, b] = sceneWindows[i];
+              return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} last={i === S - 1} />;
+            })}
+          </motion.div>
+
+          {/* MAP LAYER — on top, fades fully opaque at the boundary (cannot be obscured) */}
+          <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <motion.img src={MAP} alt="" aria-hidden style={{ scale: mapScale }} className="absolute inset-0 h-full w-full object-cover" />
             <div className="pointer-events-none absolute inset-0 bg-raat/25" />
@@ -221,13 +232,7 @@ export function ShaktipeethSaga() {
               const [a, b] = beatWindows[k];
               return <MapCard key={`mc${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
             })}
-          </div>
-
-          {/* REEL — scenes on top; fade out in turn, the last revealing the map */}
-          {shaktipeethReel.map((s, i) => {
-            const [a, b] = sceneWindows[i];
-            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} last={i === S - 1} />;
-          })}
+          </motion.div>
 
           {/* frame rule + scroll hint */}
           <div className="pointer-events-none absolute inset-0 z-40 rounded-[inherit] ring-1 ring-inset ring-swarna/15" />
