@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion, type MotionValue } from "motion/react";
 import { shaktipeethReel, type ReelScene, type ReelLayer } from "@/lib/reels";
+import { buildTimeline } from "@/lib/timeline";
 
 /* The whole fall-of-Sati chapter as ONE pinned stage: the 2.5D scene-reel plays, then
    scene 4 hands straight off (no gap) into the guided map tour — the parting → the
@@ -14,6 +15,11 @@ import { shaktipeethReel, type ReelScene, type ReelLayer } from "@/lib/reels";
    • STOPS[].x/.y = focus sites (a stop with `all:true` lights PEETHAS; one with neither is intro) */
 
 const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
+
+/* PACING — the only knobs. Raise to slow things down / lengthen the scroll. */
+const SCENE_WEIGHT = 1.4; // scroll length per reel scene
+const BEAT_WEIGHT = 1.7;  // scroll length per map beat (longer, to read the card)
+const VH_PER_UNIT = 110;  // overall scroll density — raise for more scroll everywhere
 
 type Stop = { deva: string; en: string; body: string; all?: boolean; x?: number; y?: number; hinglaj?: boolean };
 
@@ -52,13 +58,16 @@ function Img({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue
 
 /** one reel scene, animated within its absolute [a,b] window of the shared scroll.
    `first` = already on screen when the section pins (no emerge-from-back, no scroll needed). */
-function Scene({ scene, a, b, p, first }: { scene: ReelScene; a: number; b: number; p: MotionValue<number>; first?: boolean }) {
+function Scene({ scene, a, b, p, first, last }: { scene: ReelScene; a: number; b: number; p: MotionValue<number>; first?: boolean; last?: boolean }) {
   const reduce = useReducedMotion();
   const span = b - a;
   const f = span * 0.45; // generous overlap so a scene is always covering (no flashes / map peek)
+  // the last scene keeps its fade-out INSIDE its window, so the map is fully clean once it ends
+  const outA = last ? b - f : b;
+  const outB = last ? b : b + f;
   const opacity = useTransform(
     p,
-    first ? [a, b, b + f] : [a - f, a, b, b + f],
+    first ? [a, outA, outB] : [a - f, a, outA, outB],
     first ? [1, 1, 0] : [0, 1, 1, 0],
   );
   const scale = useTransform(p, [a, (a + b) / 2, b], first ? [1, 1, 1.06] : [0.84, 1, 1.08]);
@@ -144,21 +153,15 @@ export function ShaktipeethSaga() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
 
   const S = shaktipeethReel.length; // reel scenes
-  const B = STOPS.length;           // map beats
-  const RF = S / (S + B);           // fraction of scroll given to the reel
+  // one weighted timeline across the whole sequence: scenes first, then map beats
+  const weights = [...shaktipeethReel.map(() => SCENE_WEIGHT), ...STOPS.map(() => BEAT_WEIGHT)];
+  const { heightVh, windows } = buildTimeline(weights, VH_PER_UNIT);
+  const sceneWindows = windows.slice(0, S);
+  const beatWindows = windows.slice(S);
+  const mapStart = beatWindows[0][0]; // the map is fully revealed by here
 
-  const sceneWin = (k: number): [number, number] => [(RF * k) / S, (RF * (k + 1)) / S];
-  // the last scene fades out over this much scroll, revealing the solid map beneath;
-  // the map cards wait until that reveal is complete so they never sit over the reel art
-  const tail = 0.45 * (RF / S);
-  const mapStart = RF + tail + 0.02;
-  const beatWin = (j: number): [number, number] => {
-    const span = (1 - mapStart) / B;
-    return [mapStart + span * j, mapStart + span * (j + 1)];
-  };
-
-  const mapScale = useTransform(scrollYProgress, [RF, 1], [1.03, 1.12]);
-  const scrollHint = useTransform(scrollYProgress, [0, 0.06], [1, 0]);
+  const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.03, 1.12]);
+  const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   if (reduce) {
     return (
@@ -195,7 +198,7 @@ export function ShaktipeethSaga() {
   }
 
   return (
-    <section ref={ref} className="relative bg-raat" style={{ height: `${(S + B) * 115}vh` }}>
+    <section ref={ref} className="relative bg-raat" style={{ height: `${heightVh}vh` }}>
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden px-4 py-16 md:px-10">
         <div className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
           {/* MAP — the solid back layer; the reel scenes sit on top and fade away to reveal it */}
@@ -206,24 +209,24 @@ export function ShaktipeethSaga() {
             <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(125% 105% at 50% 42%, transparent 50%, rgba(18,16,31,.62) 100%)" }} />
 
             {PEETHAS.map((s, k) => {
-              const [a, b] = beatWin(OVERVIEW);
+              const [a, b] = beatWindows[OVERVIEW];
               return <PeethaDot key={`pd${k}`} site={s} a={a} b={b} p={scrollYProgress} />;
             })}
             {STOPS.map((s, k) => {
               if (s.x == null) return null;
-              const [a, b] = beatWin(k);
+              const [a, b] = beatWindows[k];
               return <FocusPin key={`fp${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
             })}
             {STOPS.map((s, k) => {
-              const [a, b] = beatWin(k);
+              const [a, b] = beatWindows[k];
               return <MapCard key={`mc${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
             })}
           </div>
 
           {/* REEL — scenes on top; fade out in turn, the last revealing the map */}
           {shaktipeethReel.map((s, i) => {
-            const [a, b] = sceneWin(i);
-            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} />;
+            const [a, b] = sceneWindows[i];
+            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} last={i === S - 1} />;
           })}
 
           {/* frame rule + scroll hint */}
