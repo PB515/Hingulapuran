@@ -55,9 +55,10 @@ function Img({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue
 function Scene({ scene, a, b, p, first }: { scene: ReelScene; a: number; b: number; p: MotionValue<number>; first?: boolean }) {
   const reduce = useReducedMotion();
   const span = b - a;
+  const f = span * 0.45; // generous overlap so a scene is always covering (no flashes / map peek)
   const opacity = useTransform(
     p,
-    first ? [a, b - span * 0.16, b] : [a, a + span * 0.14, b - span * 0.14, b],
+    first ? [a, b, b + f] : [a - f, a, b, b + f],
     first ? [1, 1, 0] : [0, 1, 1, 0],
   );
   const scale = useTransform(p, [a, (a + b) / 2, b], first ? [1, 1, 1.06] : [0.84, 1, 1.08]);
@@ -72,7 +73,7 @@ function Scene({ scene, a, b, p, first }: { scene: ReelScene; a: number; b: numb
   const ov = scene.overlay;
 
   return (
-    <motion.div style={{ opacity, scale }} className="absolute inset-0 will-change-transform">
+    <motion.div style={{ opacity, scale }} className="absolute inset-0 isolate z-10 will-change-transform">
       <Img src={scene.far} y={farY} fit="object-cover" z="z-0" />
       <div className="pointer-events-none absolute inset-0 z-[5] bg-raat/35" />
       <Img src={scene.subject} y={subjY} fit="object-contain" z="z-10" scale={subjScale} origin="center bottom" />
@@ -147,9 +148,15 @@ export function ShaktipeethSaga() {
   const RF = S / (S + B);           // fraction of scroll given to the reel
 
   const sceneWin = (k: number): [number, number] => [(RF * k) / S, (RF * (k + 1)) / S];
-  const beatWin = (j: number): [number, number] => [RF + ((1 - RF) * j) / B, RF + ((1 - RF) * (j + 1)) / B];
+  // the last scene fades out over this much scroll, revealing the solid map beneath;
+  // the map cards wait until that reveal is complete so they never sit over the reel art
+  const tail = 0.45 * (RF / S);
+  const mapStart = RF + tail + 0.02;
+  const beatWin = (j: number): [number, number] => {
+    const span = (1 - mapStart) / B;
+    return [mapStart + span * j, mapStart + span * (j + 1)];
+  };
 
-  const mapOpacity = useTransform(scrollYProgress, [RF - 0.05, RF + 0.02], [0, 1]);
   const mapScale = useTransform(scrollYProgress, [RF, 1], [1.03, 1.12]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.06], [1, 0]);
 
@@ -191,14 +198,8 @@ export function ShaktipeethSaga() {
     <section ref={ref} className="relative bg-raat" style={{ height: `${(S + B) * 115}vh` }}>
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden px-4 py-16 md:px-10">
         <div className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-          {/* REEL — scenes 1..4 */}
-          {shaktipeethReel.map((s, i) => {
-            const [a, b] = sceneWin(i);
-            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} />;
-          })}
-
-          {/* MAP — fades in as the reel ends, stays pinned for the tour */}
-          <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0">
+          {/* MAP — the solid back layer; the reel scenes sit on top and fade away to reveal it */}
+          <div className="absolute inset-0 z-0 isolate">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <motion.img src={MAP} alt="" aria-hidden style={{ scale: mapScale }} className="absolute inset-0 h-full w-full object-cover" />
             <div className="pointer-events-none absolute inset-0 bg-raat/25" />
@@ -217,7 +218,13 @@ export function ShaktipeethSaga() {
               const [a, b] = beatWin(k);
               return <MapCard key={`mc${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
             })}
-          </motion.div>
+          </div>
+
+          {/* REEL — scenes on top; fade out in turn, the last revealing the map */}
+          {shaktipeethReel.map((s, i) => {
+            const [a, b] = sceneWin(i);
+            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} />;
+          })}
 
           {/* frame rule + scroll hint */}
           <div className="pointer-events-none absolute inset-0 z-40 rounded-[inherit] ring-1 ring-inset ring-swarna/15" />
