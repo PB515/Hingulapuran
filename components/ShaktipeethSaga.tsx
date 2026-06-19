@@ -50,12 +50,17 @@ function Img({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue
   );
 }
 
-/** one reel scene, animated within its absolute [a,b] window of the shared scroll. */
-function Scene({ scene, a, b, p }: { scene: ReelScene; a: number; b: number; p: MotionValue<number> }) {
+/** one reel scene, animated within its absolute [a,b] window of the shared scroll.
+   `first` = already on screen when the section pins (no emerge-from-back, no scroll needed). */
+function Scene({ scene, a, b, p, first }: { scene: ReelScene; a: number; b: number; p: MotionValue<number>; first?: boolean }) {
   const reduce = useReducedMotion();
   const span = b - a;
-  const opacity = useTransform(p, [a, a + span * 0.14, b - span * 0.14, b], [0, 1, 1, 0]);
-  const scale = useTransform(p, [a, (a + b) / 2, b], [0.84, 1, 1.08]);
+  const opacity = useTransform(
+    p,
+    first ? [a, b - span * 0.16, b] : [a, a + span * 0.14, b - span * 0.14, b],
+    first ? [1, 1, 0] : [0, 1, 1, 0],
+  );
+  const scale = useTransform(p, [a, (a + b) / 2, b], first ? [1, 1, 1.06] : [0.84, 1, 1.08]);
   const farY = useTransform(p, [a, b], ["-2%", "2%"]);
   const subjY = useTransform(p, [a, b], ["-6%", "6%"]);
   const nearY = useTransform(p, [a, b], ["-12%", "12%"]);
@@ -189,7 +194,7 @@ export function ShaktipeethSaga() {
           {/* REEL — scenes 1..4 */}
           {shaktipeethReel.map((s, i) => {
             const [a, b] = sceneWin(i);
-            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} />;
+            return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} />;
           })}
 
           {/* MAP — fades in as the reel ends, stays pinned for the tour */}
