@@ -21,7 +21,7 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ☐ not yet translated — the bulk of the PDF (Devi puja vidhis, Navratri/Chandi, Devi Mahatmya, Mahishasur-vadha).
+- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–5 done** (Devi-worship rite & phala, cosmogony from Mahalakshmi, the Goddess's forms, origin of Durga, names of Shakti). ☐ **ch 6–64 remain** — Navratri/Chandi vidhis & vrat (6–14), Nahuṣa/Kaitabha & the Krishna-Mahamaya stavans (15–27), and the **Devi Mahatmya / Mahishāsura-vadha** arc (≈28–64). Offset +5 in this region (printed N = PDF N+5).
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -31,7 +31,36 @@
 
 ---
 
-## Seed summaries (user-provided, chapters 65–87 — verify + expand from PDF)
+## Pratham Pravah — chapters 1–64 (✅ translating from PDF, 2026-06-19)
+*The Devi-upāsanā portion: rituals of Goddess-worship (puja, mantra/nyāsa, Navratri vrat, Chandi-pāṭh, homa), then the Devi Mahatmya (Durga's origin → Mahishāsura-vadha). Heavily ritual/liturgical — summaries note the ritual content; scene candidates favour the narrative/iconographic beats. Pandit/native review especially important here (ritual prescriptions).*
+
+### Mangalacharan (મંગલાચરણ) — ✅ verified from PDF (printed p.1)
+Invocation: *"May Shri Jagadambika Hingula be ever victorious."* A prayer to **Gayatri-Savitri** (two Sanskrit shlokas — *"namo hiṅgule devi mātar…namaste namaste namaste yoginām yogagamye"*), then a Gujarati prose salutation to Hingula — *"you of unbroken divine radiance, the world's origin, embodiment of Mahalakshmi; at your lotus-feet I bow; O Mother of the World, you dwell in the hearts of those who remember you, destroy their delusion, and are in every way the bestower of welfare."*
+**Scenes:** the akhand-jyot invocation plate (Hingula + Gayatri-Savitri) — a title/opening vignette.
+
+### Ch 1 — The Rite of Devi-Worship (દેવીના પૂજનનો વિધિ) — ✅ verified from PDF (printed pp.3–6)
+Frame for the whole grantha: **Skanda** asks **Mahadeva** who Ambika is — her origin, qualities, colours and forms. Mahadeva opens with the **phala (fruits) of Chandika-worship**: those who worship the Goddess with devotion gain longevity, sons, wealth and prosperity, and even kings submit to them — happiness in this world and the next; one who neglects her worship becomes poor, sick and scorned, with no happiness here or hereafter. (Ritual/phalashruti chapter; the puja prescriptions follow.)
+**Scenes:** Skanda questioning Mahadeva on Kailasa (far: the mountain; subject: the two seated; near: lotus) · the blessed devotee vs. the neglectful — the fruits-of-worship vignette.
+
+### Ch 2 — Creation of the World from Mahalakshmi (મહાલક્ષ્મીથી ચરાચરની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.7–9)
+One must worship the three-formed (**trimūrti**) Devi in Navratri — she is supreme even over the gods. Asked *why even Vishnu worships and meditates on her*, Mahadeva reveals the **cosmogony**: from the three gunas the creation arose; the three Devi-forms apportion the powers — **Gauri to Rudra, Lakshmi to Vishnu (Janardana), Saraswati to Brahma** — so that Vishnu sustains, Rudra destroys, and Brahma creates. *"Thus from Mahalakshmi the whole moving-and-unmoving world arose; from her we — you, I, Brahma and all the gods — were born."*
+**Scenes:** the three Devi-forms apportioning Gauri/Lakshmi/Saraswati to the trimūrti · the cosmic egg (aṇḍa) and the world issuing from Mahalakshmi.
+
+### Ch 3 — The Various Forms of the Great Goddess (મહાદેવીનાં ભિન્ન ભિન્ન સ્વરૂપો) — ✅ verified from PDF (printed pp.10–12)
+**Vishnu** asks about the Devi's power, forms and deeds; Mahadeva relates how she **protected the gods for 5000 years** and took her differing forms as need arose — **Mahakali** manifesting to slay **Madhu-Kaitabha**, and her other four-/many-armed protective forms (the Devi-Mahatmya three-form scheme: Mahakali, Mahalakshmi, Mahasaraswati).
+**Scenes:** the array of the Goddess's many forms · Mahakali rising to slay Madhu-Kaitabha.
+
+### Ch 4 — The Origin of Goddess Durga (દુર્ગાદેવીની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.13–15)
+A mighty asura named **Durga** (son of a Rudra-form), through great tapas, wins from **Brahma** the boon that **no male can defeat him**. He conquers all — usurping the offices of Indra, Surya, Vayu, Agni, Chandra, Kubera — terrorizes the cosmos and suppresses all dharma. The Goddess (whom no *male* could slay) arises, battles and **slays him**, taking his name as **Durga**.
+**Scenes:** the asura Durga's boon-empowered conquest, the gods dethroned · the Goddess battling & slaying Durga (chakra hurled) → she takes his name.
+
+### Ch 5 — The Many Names of Shakti (શક્તિનાં અનેક નામો) — ✅ verified from PDF (printed pp.16–19)
+**Vishnu** asks Shiva to recite the names of the Goddess's **shaktis**; Shiva enumerates them — a **nāma-stotra** litany of the many names/forms of Shakti born of Durga.
+**Scenes:** a nāma-mālā / iconographic array of the named Shakti-forms (suits a "wall of names/forms" gallery vignette).
+
+---
+
+## Dwitiya Pravah — chapters 65–87 (✅ all verified from PDF, 2026-06-19)
 
 ### Ch 65 — Origin of Hingula (હિંગુળા ઉત્પત્તિ) — ✅ verified from PDF (printed pp.205–208)
 Opens Dwitiya Pravah. *Suta uvāca:* "I bow to Goddess Hingula, self-manifest, abode of all gods." The sages ask Suta to narrate her Mahatmya — who first worshipped her, and how she arose; Suta agrees. In the **Rambhaka** region the rakshasa **Viprachitti** had two sons, **Hingul** and **Sindur (Sindurāsura)**, who conquered all the gods. The distressed gods fled to **Parvati**, who created a son from her own body-dust, armed him, and sent him against Sindurāsura; he slew the demon in a thrilling battle (the other daityas fleeing) and was granted the title **Ganapati**. Hearing his brother was slain by the Goddess's son, **Hingul** — roaming Patala — is consumed with fury, goes to **Mount Meru**, and performs a **1000-year penance** (standing on his toe, arms raised) whose austerity terrifies the gods. They flee to **Brahma**, who comes to Sumeru and offers a boon; Hingul asks to be **unkillable by any created being, weapon, god or demon, on earth or in Patala** — Brahma grants it via the bīja-mantra. Hingul then rallies the daityas, **conquers and expels the gods from Swarga**; they again beg Parvati, who manifests an **enchanting (manohar) form**.

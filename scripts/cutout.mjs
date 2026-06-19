@@ -62,7 +62,8 @@ async function walk(dir) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name);
     if (statSync(p).isDirectory()) { await walk(p); continue; }
-    if (/-(subject|near)\.png$/i.test(name)) {
+    // every layer EXCEPT the opaque -far backdrop is a white-bg cut-out
+    if (/\.png$/i.test(name) && !/-far\.png$/i.test(name)) {
       const pct = await cutout(p);
       console.log(`cut ${pct}% bg  ${p}`);
     }

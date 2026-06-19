@@ -9,19 +9,21 @@ import type { ReelScene, ReelLayer } from "@/lib/reels";
    and EMERGE from the back (scale + fade) as you scroll. Responsive desktop/mobile
    art. Reduced-motion → a static, readable stack. (Sacred history — see STYLE Rule 0.) */
 
-function ResponsiveImg({ src, y, fit, z }: { src: ReelLayer; y: MotionValue<string>; fit: string; z: string }) {
+function ResponsiveImg({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue<string>; fit: string; z: string; scale?: number; origin?: string }) {
   const cls = `pointer-events-none absolute inset-0 h-full w-full ${fit} ${z}`;
+  const style = { y, scale, transformOrigin: origin };
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <motion.img src={src.d} alt="" aria-hidden loading="lazy" style={{ y }} className={`hidden md:block ${cls}`} />
+      <motion.img src={src.d} alt="" aria-hidden loading="lazy" style={style} className={`hidden md:block ${cls}`} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <motion.img src={src.m} alt="" aria-hidden loading="lazy" style={{ y }} className={`md:hidden ${cls}`} />
+      <motion.img src={src.m} alt="" aria-hidden loading="lazy" style={style} className={`md:hidden ${cls}`} />
     </>
   );
 }
 
 function Scene({ scene, i, n, p }: { scene: ReelScene; i: number; n: number; p: MotionValue<number> }) {
+  const reduce = useReducedMotion();
   const start = i / n;
   const mid = (i + 0.5) / n;
   const end = (i + 1) / n;
@@ -33,13 +35,35 @@ function Scene({ scene, i, n, p }: { scene: ReelScene; i: number; n: number; p: 
   const subjY = useTransform(p, [start, end], ["-6%", "6%"]);
   const nearY = useTransform(p, [start, end], ["-12%", "12%"]);
 
+  // per-scene composition tuning (e.g. bigger subject, fire shrunk to the floor)
+  const subjScale = scene.subjectScale ?? 1;
+  const nearScale = scene.nearScale ?? 1;
+  const nearFit = scene.nearAlign === "bottom" ? "object-contain object-bottom" : "object-contain";
+  const nearOrigin = scene.nearAlign === "bottom" ? "center bottom" : undefined;
+  const ov = scene.overlay;
+
   return (
     <motion.div style={{ opacity, scale }} className="absolute inset-0 will-change-transform">
       <ResponsiveImg src={scene.far} y={farY} fit="object-cover" z="z-0" />
       {/* dim the busy backdrop so the cut-out subject reads */}
       <div className="pointer-events-none absolute inset-0 z-[5] bg-raat/35" />
-      <ResponsiveImg src={scene.subject} y={subjY} fit="object-contain" z="z-10" />
-      <ResponsiveImg src={scene.near} y={nearY} fit="object-contain" z="z-20" />
+      <ResponsiveImg src={scene.subject} y={subjY} fit="object-contain" z="z-10" scale={subjScale} origin="center bottom" />
+      <ResponsiveImg src={scene.near} y={nearY} fit={nearFit} z="z-20" scale={nearScale} origin={nearOrigin} />
+      {/* optional overlay layer — e.g. a small Sudarshan chakra, centred and slowly spinning */}
+      {ov && (
+        <div className="pointer-events-none absolute inset-0 z-[24] flex items-center justify-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <motion.img src={ov.src.d} alt="" aria-hidden style={{ width: `${(ov.scale ?? 0.34) * 100}%` }}
+            className="hidden md:block"
+            animate={reduce || !ov.spin ? undefined : { rotate: 360 }}
+            transition={ov.spin ? { duration: ov.spin, repeat: Infinity, ease: "linear" } : undefined} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <motion.img src={ov.src.m} alt="" aria-hidden style={{ width: `${(ov.scale ?? 0.34) * 100}%` }}
+            className="md:hidden"
+            animate={reduce || !ov.spin ? undefined : { rotate: 360 }}
+            transition={ov.spin ? { duration: ov.spin, repeat: Infinity, ease: "linear" } : undefined} />
+        </div>
+      )}
       {/* edge vignette focuses the centre */}
       <div className="pointer-events-none absolute inset-0 z-20" style={{ background: "radial-gradient(125% 105% at 50% 42%, transparent 50%, rgba(18,16,31,.62) 100%)" }} />
       {/* bottom scrim so the caption is legible over the art */}

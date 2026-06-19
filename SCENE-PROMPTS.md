@@ -41,19 +41,27 @@ Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat frontal h
 Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat, no realism/3D/gradients; palette only — black #1A1110, gold #C9A227, maroon #3E0A1A, steel #6E757C; aged cotton. FOREGROUND ONLY: swirling ash and storm-debris, a few broken branches and dust spirals across the lower frame, drawn in flat kalam strokes. Isolated on a plain solid white background, no shadow.
 ```
 
-## Scene 3 — Vishnu's Sudarshan
-**s3-far**
+## Scene 3 — Vishnu's Sudarshan  *(REVISED — staged as 4 separate layers)*
+> This is the hinge of the origin: Vishnu's chakra parts Sati's body, which the grieving Shiva still bears. Generate **four** layers — Vishnu fills the **left third**, Shiva+Sati fill the **right third**, the chakra is its **own small** centred image. Each subject/near layer must sit on its own side of the empty frame (the rest plain white) so they stack into one composition. The chakra layer is rendered small and slowly spinning in code, so draw it as a tight wheel only.
+
+**s3-far** *(cosmos only — no mandala, no figures; the chakra is now its own layer)*
 ```
-Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat frontal hieratic, no realism/3D/shadows/gradients; palette only — maroon #3E0A1A ground, black #1A1110, cream #E7D7B8, gold #C9A227, steel #6E757C; aged cotton; devotional; sacred history. SETTING (far, opaque, fills frame): a vast cosmic sky with faint kalam constellations and a large soft gold mandala low-centre, distant cloud banks, four-sided block-print border. Deep, reverent, no foreground figures, no white margin.
+Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat frontal hieratic, no realism/3D/shadows/gradients; palette only — maroon #3E0A1A ground, black #1A1110, cream #E7D7B8, gold #C9A227, steel #6E757C; aged cotton; devotional; sacred history. SETTING (far, opaque, fills the entire frame): a vast deep cosmic night sky over faint distant cloud banks, scattered fine kalam-drawn constellations and small gold stars, a dense four-sided floral block-print border. Empty, reverent, centre kept calm and uncluttered. No figures, no chakra, no large central disc, no white margin.
 ```
-**s3-subject**
+**s3-subject** *(Vishnu — LEFT third, NO chakra)*
 ```
-Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat frontal hieratic, no realism/3D/shadows/gradients; palette only — maroon #3E0A1A, black #1A1110, cream #E7D7B8, gold #C9A227, steel #6E757C; aged cotton; devotional. FIGURES ONLY: Lord Vishnu, crowned with gold halo, conch and mace, releasing the spinning Sudarshan chakra from his finger; at the side the grieving Shiva still bearing Sati's body. Frontal, hieratic, dignified. Isolated on a plain solid white background, no scenery, no shadow.
+Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat frontal hieratic, no realism/3D/shadows/gradients; palette only — maroon #3E0A1A, black #1A1110, cream #E7D7B8, gold #C9A227, steel #6E757C; aged cotton; devotional. FIGURE ONLY: Lord Vishnu standing in majestic frontal pose, blue-grey skin, tall gold crown and gold halo, four arms holding conch, mace and lotus, the lower right hand raised with index finger extended as if having just released a weapon (but NO chakra drawn). Dignified, hieratic. Placed at the LEFT side of the frame, the rest of the frame empty. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
-**s3-near**
+**s3-near** *(grieving Shiva bearing Sati — RIGHT third)*
 ```
-Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat, no realism/3D/gradients; palette only — black #1A1110, gold #C9A227, cream #E7D7B8; aged cotton. FOREGROUND ONLY: the bright spinning gold Sudarshan chakra and radiating straight gold light-streaks crossing the lower-mid frame. Flat, decorative. Isolated on a plain solid white background, no shadow.
+Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat frontal hieratic, no realism/3D/shadows/gradients; palette only — maroon #3E0A1A, black #1A1110, cream #E7D7B8, gold #C9A227, steel #6E757C; aged cotton; fierce, sorrowful, devotional. FIGURE ONLY: Lord Shiva, ash-grey skin, matted jata, crescent moon and serpent, third eye, grief on his face, tenderly bearing the limp body of Devi Sati across his arms. Dignified, powerful, mournful. Placed at the RIGHT side of the frame, the rest of the frame empty. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
+**s3-chakra** *(the Sudarshan chakra ALONE — small, centred, spun in code)*
+```
+Sacred Mata-ni-Pachedi × Rajput-miniature, kalam black linework, flat, no realism/3D/shadows/gradients; palette only — antique gold #C9A227, kalam-black #1A1110, cream #E7D7B8, deep maroon #3E0A1A; aged cotton. OBJECT ONLY: the Sudarshan chakra — a single perfectly circular gold discus with a ring of fine flame-like spokes around the rim and an intricate lotus-mandala centre, radiating thin straight gold light-rays evenly in all directions. Flat, symmetrical, decorative, centred, filling the frame. Isolated on a plain solid white background, no figures, no shadow.
+```
+
+> **Scene 1 note:** the "Sati hidden by fire" issue is now fixed in code (the subject is scaled up and the fire is shrunk + anchored to the floor), so you do **not** need to regenerate Scene 1 — but if you want her even more prominent, regenerate `s1-subject` drawn taller/full-height on white.
 
 ## Scene 4 — The 51 parts fall across Jambudvip
 **s4-far**

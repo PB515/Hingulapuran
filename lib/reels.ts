@@ -4,7 +4,14 @@
  * Art paths follow SCENE-PROMPTS.md naming. Adding chapter #N later = a new entry.
  */
 export type ReelLayer = { d: string; m: string }; // desktop / mobile webp
-export type ReelScene = { far: ReelLayer; subject: ReelLayer; near: ReelLayer; deva: string; en: string };
+export type Overlay = { src: ReelLayer; scale?: number; spin?: number }; // centred extra layer (e.g. chakra)
+export type ReelScene = {
+  far: ReelLayer; subject: ReelLayer; near: ReelLayer; deva: string; en: string;
+  subjectScale?: number;            // grow the subject (default 1)
+  nearScale?: number;               // shrink the near/foreground layer (default 1)
+  nearAlign?: "bottom" | "center";  // anchor the near layer (e.g. fire to the floor)
+  overlay?: Overlay;                // optional centred overlay above the figures
+};
 
 const layers = (chapter: string, file: string): ReelLayer => ({
   d: `/art/stories/${chapter}/desktop/${file}`,
@@ -21,9 +28,19 @@ const scene = (chapter: string, s: number, deva: string, en: string): ReelScene 
 
 /** Chapter A — The Fall of Sati (51 Shaktipeeth); scene 5 is the live map, not a reel scene. */
 export const shaktipeethReel: ReelScene[] = [
-  scene("shaktipeeth", 1, "सती का अग्नि-प्रवेश", "Sati enters the sacred fire"),
+  // Sati larger + the fire shrunk and anchored to the floor so she stays visible
+  { ...scene("shaktipeeth", 1, "सती का अग्नि-प्रवेश", "Sati enters the sacred fire"), subjectScale: 1.22, nearScale: 0.6, nearAlign: "bottom" },
   scene("shaktipeeth", 2, "शिव का तांडव", "Shiva bears her, and dances his grief"),
-  scene("shaktipeeth", 3, "सुदर्शन चक्र", "Vishnu's Sudarshan"),
+  // The hinge of the origin, staged as separate layers: Vishnu (left, no chakra),
+  // grieving Shiva bearing Sati (right), and a small spinning Sudarshan chakra between.
+  {
+    far: layers("shaktipeeth", "s3-far.webp"),
+    subject: layers("shaktipeeth", "s3-subject.webp"), // Vishnu, positioned left in-frame
+    near: layers("shaktipeeth", "s3-near.webp"),       // Shiva bearing Sati, positioned right in-frame
+    overlay: { src: layers("shaktipeeth", "s3-chakra.webp"), scale: 0.3, spin: 30 },
+    deva: "सुदर्शन चक्र",
+    en: "Vishnu's Sudarshan",
+  },
   scene("shaktipeeth", 4, "इकयावन अंग", "The fifty-one parts fall across the land"),
 ];
 
