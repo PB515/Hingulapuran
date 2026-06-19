@@ -21,7 +21,7 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–14 done** (cosmogony & Devi's forms 1–5; the Devi-worship liturgy 6–10; the Chandi-pāṭh vidhis 11–14: nava/shata-Chandi + Navadurga names, sahasra-Chandi, purashcharaṇa, and **Havyashrī-utpatti** which frames the narrative). ☐ **ch 15–64 remain** — the **Madhu-Kaitabha** episode (15–18; note: "Madhu", not "Nahu" — earlier TOC misread), Brahma/Krishna-Mahamaya stavans & nirguṇa-saguṇa/virāṭ discourses (19–27), then the big **Devi Mahatmya / Mahishāsura-vadha** arc (≈28–64). Offset ~+4/+5 (drifts); TOC page numbers run optimistic — locate headings directly.
+- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–18 done** (cosmogony & Devi's forms 1–5; the Devi-worship liturgy 6–10; the Chandi-pāṭh vidhis 11–13; ch 14 = the **Hayagrīva** episode; the **Madhu-Kaitabha** first charita 15–18, incl. Brahma's Yoganidrā-hymn and a Shākta discourse on saguṇa/nirguṇa Shakti). ☐ **ch 19–64 remain** — Brahma/Krishna-Mahamaya stavans & nirguṇa-saguṇa/virāṭ discourses (19–27), then the big **Mahishāsura-vadha** arc (≈28–64). Offset ~+4 in this region (drifts); TOC page numbers run optimistic — locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -91,9 +91,25 @@ The **purashcharaṇa** discipline — the formal preparatory observance of mant
 **Scenes:** the solitary japa-observance before the Devi (a contemplative rite vignette).
 > **Flag:** read only in passing on a dense page; verify the specific purashcharaṇa prescriptions on re-read.
 
-### Ch 14 — The Origin of Havyashrī (હવ્યશ્રીની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.43–44)
-The sages, amazed, ask **Suta** about the **origin of Havyashrī** (the spirit/goddess of the oblation-offerings) from the body of **Madhava (Vishnu)**. This is the **frame that opens the narrative arc** — Suta begins the charitra of the *nirguṇa* Bhagavan, leading directly into the **Madhu-Kaitabha** episode (Vishnu in yoga-nidrā; Brahma seeking to wake him).
-**Scenes:** the sages questioning Suta (the bard begins the great account) · Havyashrī issuing from Vishnu's body · Vishnu reclining in yoga-nidrā (opening of the Madhu-Kaitabha tale).
+### Ch 14 — The Origin of Hayagrīva (હયગ્રીવની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.43–49)
+*(Title read tentatively as "Havyashrī/Hayashrī" — but the chapter's content is wholly the Hayagrīva myth.)* The sages, amazed, ask **Suta** how the great frame-event came about. An asura named **Hayagrīva** wins from the Devi a boon that he can be slain **only by a horse-headed being**, then torments the three worlds. Meanwhile **Brahma**, touching Vishnu's bow, makes the **bowstring snap and sever Vishnu's head** — the cosmos trembles, the gods despair, and **Brihaspati** counsels intellect (buddhi) over lament. On the gods' resolve, a **horse's head is affixed to Vishnu's body** — he becomes **Hayagrīva (horse-faced)** by Mahāmāyā's grace and slays the asura Hayagrīva. (This is the Hayagrīva-avatāra origin; it sets up the Madhu-Kaitabha arc.)
+**Scenes:** the asura Hayagrīva's boon-empowered terror · the snapped bowstring severing Vishnu's head, cosmos trembling · the gods affixing the horse-head → Vishnu-Hayagrīva · the slaying of the asura.
+
+### Ch 15 — The Origin of Madhu & Kaitabha (મધુ તથા કૈટભની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.49–~52)
+The sages ask how the two unconquerable demons gained immortality and how Bhagavan slew them. The demons **Madhu and Kaitabha** arise from the **ear-wax (mala) of Vishnu** as he lies in **yoga-nidrā** on the cosmic waters, and rise to threaten **Brahma** seated on the lotus from Vishnu's navel.
+**Scenes:** Madhu & Kaitabha emerging from the sleeping Vishnu · the two demons menacing Brahma on the navel-lotus over the cosmic ocean.
+
+### Ch 16 — Brahma's Hymn to Yoganidrā (બ્રહ્માએ શ્રીદેવી ભગવતીની સ્તુતિ) — ✅ verified from PDF (printed pp.~52–54)
+Brahma praises **Yoganidrā / Mahāmāyā** with the great Devi-Mahatmya hymn (*"O Devi, O nirguṇā, Mother of all — you are Dhṛti, Smṛti, Kānti, Kṣamā, Shraddhā, Medhā, Jayā, Vijayā, Lakṣmī…the all-form of the three worlds"*), begging her to release Vishnu so he can slay the demons. **Yoganidrā withdraws from Vishnu's body and he awakens.**
+**Scenes:** Brahma on the lotus singing the Devtattva-stuti to the radiant Yoganidrā · the goddess issuing from Vishnu's body → Vishnu waking.
+
+### Ch 17 — The Devi as Universal Shakti (સંક્ષિપ્ત — દેવીથી થતાં કાર્યો) — ✅ verified from PDF (printed pp.~54–58)
+A **Shākta doctrinal discourse**: all the gods act **only through Shakti** — Brahma's creative, Vishnu/Hari's protective, Shiva/Hara's destructive power; *"Shiva without Shakti is inert."* Shakti pervades all the gods (Indra, Agni, Surya, Varuna…) who can do nothing bereft of her; she is twofold — **saguṇa and nirguṇa**. (Includes the pramāṇas and that Para-brahman is beyond logic.)
+**Scenes:** a contemplative tableau of the gods each animated by the one Shakti (the Devi at the centre, the trimūrti's powers radiating) — a doctrinal/iconographic vignette.
+
+### Ch 18 — The Slaying of Madhu & Kaitabha (મધુ કૈટભનો વધ) — ✅ verified from PDF (printed pp.58–~62)
+Vishnu wakes and asks Brahma his trouble; Brahma explains the two demons (born of Vishnu's ear-wax) seek to slay him. **Vishnu battles Madhu and Kaitabha** in a long duel and **slays them** (deluded by Mahāmāyā, they grant their own death). The gods are freed; the first charita closes.
+**Scenes:** Vishnu rising to face the two demons · the great duel on the cosmic waters · the slaying of Madhu & Kaitabha → the gods' relief.
 
 ---
 
