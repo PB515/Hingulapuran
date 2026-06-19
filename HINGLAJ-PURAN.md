@@ -23,9 +23,9 @@
 ## Chapter index & status
 - **Ch 1–64 (Pratham Pravah):** ☐ not yet translated — the bulk of the PDF (Devi puja vidhis, Navratri/Chandi, Devi Mahatmya, Mahishasur-vadha).
 - **Ch 65–87 (Dwitiya Pravah):** translating now, chapter-by-chapter from the PDF.
-  - ✅ **Ch 65–76 verified from PDF (2026-06-19)** — see below (corrected the 65/66 boon-split; filled the 67–71 gap; located the Mandakini-rivers detail in ch 68 and a compressed Parashurama/Kamadhenu telling in ch 73).
-  - ☐ **Ch 77–83 — the big remaining gap** (the Parshuram-kshetra campaign: Ram–Bhargava yuddha, Dadhichi's decision, a "vadh", Shri-Devi abhaya, mantra-diksha). Next to translate.
-  - ◑ Ch 84–87 — seed summaries below; verify + expand from PDF.
+  - ✅ **Ch 65–83 verified from PDF (2026-06-19)** — see below. Highlights: corrected the 65/66 boon-split; filled the 67–71 gap; located the Mandakini-rivers detail in ch 68; the full **Parshuram campaign (77–83)** now translated — Ram–Arjuna 7-day duel (78), **Ratnasen Akhyan** (79, not "Ramcharit"), Dadhichi's jyotisha discourse (80), **Ratnasen vadh** + the five princes' refuge & queens' sati (81), Jayasena's abhaya/brahma-vidyā (82), and the **mantra-dīkṣā → Brahmakshatriya** (83).
+  - ◑ **Ch 84–87 — last block** (partly seeded): Hingula shelters the warriors (84), King Jayasena's divine law (85), community origins / Brahmakshatriya·Khatri·Bhatia·Pushkarna (86), grand summary & blessing (87). Next to translate.
+  - ⚠️ Deep-campaign pages (ch 80–83) are heavy-noise scans — several proper names read tentatively; flags inline. Pandit/native review recommended before publishing.
 
 ---
 
@@ -82,7 +82,35 @@ Frame: the sages ask Suta how the **Saraswata** rishis, born of **Saraswati**, c
 **Kartavirya Arjuna (Sahasrarjuna)**, king of **Mahishmati**, comes to sage **Jamadagni's** ashram. **Renuka** tells Jamadagni that grihastha-dharma demands they host him; Jamadagni orders the feast prepared, and the wish-cow **Kamadhenu** manifests a miraculous banquet for the king and his army. Coveting the cow, the king **seizes Kamadhenu** — the spark of Parashurama's wrath. *(Parshuram-reel scene 1–2; the niḥkṣatriya campaign it ignites is told compressed in ch 73 and at length in ch 77+.)*
 **Scenes:** Sahasrarjuna and his army arriving at the ashram · Kamadhenu manifesting the miraculous feast · the king seizing the cow → Jamadagni & Renuka's grief.
 
-### Ch 77–83 — ☐ gap (translate from PDF — likely the Parshuram campaign + more)
+### Ch 77 — Parashurama-kshetra (પરશુરામ ક્ષેત્ર) — ✅ verified from PDF (printed pp.244–248)
+**Renuka** recounts how the **Mahishmati king** came hunting, was hosted via **Kamadhenu**, then tried to seize the cow — shooting **Jamadagni** and striking her. **Parashurama vows** to slay that king, his sons, grandsons and all kin, exterminate the **Kshatriyas**, and honor his slain father with their blood (tarpana). Renuka charges him: rid the earth of Kshatriya-seed and **give it into brahmins' hands**, restore the **Vedas** to brahmins, keep devotion to **Shiva**, and perform their funeral rites. Rama asks her to explain, in detail, how this is to be done.
+**Scenes:** Renuka recounting the cow-theft & Jamadagni's wounding · Parashurama's vow over his father's body · Renuka's charge — earth to the brahmins, Vedas restored.
+
+### Ch 78 — Battle of Rama and Arjuna (રામ તથા અર્જુનનું યુદ્ધ) — ✅ verified from PDF (printed pp.~252–256)
+A fierce **seven-day duel** between Parashurama and the thousand-armed **Kartavirya / Sahasrarjuna**. Parashurama severs the king's bow, mace and chariot and cuts down his arms one by one; onlookers marvel that this Rama must be **Vishnu** himself. The king is overwhelmed and slain — the first great blow of the niḥkṣatriya campaign.
+**Scenes:** the seven-day duel (far: armies & darkened sky of arrows; subject: Parashurama vs. the thousand-armed king; near: shattered bow/mace) · Parashurama severing the king's arms · the crowd's awe — "this is Vishnu."
+
+### Ch 79 — The Tale of King Ratnasena (રત્નસેન આખ્યાન) — ✅ verified from PDF (printed pp.~258–262)
+Fleeing Parashurama's slaughter, **King Ratnasena** of the Vindhya/Sindh-Saurashtra region brings his womenfolk — the **Vishvamitra-born apsara-daughters** (Chandrāsya, Pakhinī, Pammā, Sukumārī, Kushāvatī) — to the **ashram of a divine couple on the Saraswati**. The rishi asks why a king has forsaken his throne for the forest (*"did someone defeat you, take your wealth? tell me your sorrow"*) — opening the refuge story behind the Brahmakshatriya.
+**Scenes:** Ratnasena & the princesses fleeing into the forest · arrival at the Saraswati-bank ashram · the rishi's compassionate questioning.
+
+### Ch 80 — Dadhichi's Deliberation (દધિચિએ કરેલ વિચાર) — ✅ verified from PDF (printed pp.~262–266)
+A **jyotisha discourse** framed as Dadhichi's deliberation on **time and the omens of death** — planetary configurations (Saturn, eclipses of sun and moon) that foretell a person's death in fifteen days or six months, and the units of time from *kāla* up through *muhūrta, tithi, pakṣa, māsa, ṛtu, varṣa, yuga* to *mahākalpa*. (Fittingly didactic — the publisher Hirji Prabhashankar bore the title *Jyotirvidyābhūshaṇ*.)
+**Scenes:** the sage's discourse on time & fate (a contemplative reading-vignette rather than an action beat) · the wheel of time-units · the death-omen constellations.
+> **Flag:** this chapter's exact framing (whose death, and how it bears on the refuge narrative) sat on a heavy-noise scan; verify the connective tissue on re-read.
+
+### Ch 81 — The Slaying of Ratnasena (રત્નસેન વધ) — ✅ verified from PDF (printed pp.~266–270)
+**Parashurama kills King Ratnasena.** His queens, dreading for their sons, **entrust the five princes** — read as **Jayasen, Bindhumān, Vishāl, Chandrashāl** (+ a fifth) — to the rishi and commit **sati**, dying with their husband on the Saraswati bank. The rishi, seeing the princes now fatherless and throneless, grants them **refuge** ("tathāstu"); they live hidden in the ashram. Then Parashurama, mid-slaughter, comes to **Dadhichi's ashram**, where Dadhichi honors him and asks his purpose. *(Jayasen here is the King Jayasena of ch 85.)*
+**Scenes:** Parashurama slaying Ratnasena · the queens entrusting the five princes → their sati on the Saraswati · the rishi granting refuge · Parashurama arriving at Dadhichi's ashram.
+
+### Ch 82 — Jayasena granted abhaya & brahma-vidyā by Rama (રામથી જયસેને... શ્રીદેવી અભય) — ✅ verified from PDF (printed pp.~270–274)
+Parashurama imparts to **Jayasena and the princes** the **dhanurveda**, the **mantras**, and all the **vidyās of the three worlds**, gives invincible **astras**, and grants **abhaya (protection / fearlessness)**. Parashurama — recognized as **Narayana/Vishnu** — is set at ease and even sets down his bow; his wrath is checked (per the chapter title, under **Shri-Devi's** grant of abhaya). The princes pass from threatened Kshatriyas toward a protected, brahmin-knowledge-bearing line.
+**Scenes:** Parashurama teaching the dhanurveda & mantras to the kneeling princes · the granting of abhaya / the Devi's protection · Parashurama recognized as Narayana, lowering his bow.
+> **Flag:** the precise role of **Shri-Devi** in granting the abhaya (named in the TOC title) was implied but not cleanly legible on the noisy scan; verify on re-read.
+
+### Ch 83 — Mantra-initiation (મંત્રદીક્ષા) — ✅ verified from PDF (printed pp.~274–280)
+The rishi **Gautama** (and the **Saraswata rishi**) give **Jayasena and the princes** **mantra-upadeśa / dīkṣā**. Gautama directs Jayasena to the **Saraswata rishi**, by whose mantra-vidyā the lineage will fulfill its aims and attain **brahman-hood** — completing the transformation of the surviving Kshatriya princes into the protected **Brahmakshatriya** line (leading into ch 84–86).
+**Scenes:** Gautama directing Jayasena to the Saraswata rishi · the mantra-dīkṣā of the princes · the princes rising as Brahmakshatriya.
 
 ### Ch 84 — Hingula saves the warriors
 Fleeing Parshuram's extermination, **Sage Dadhichi + surviving Rajput princes** take refuge at **Mount Hingula**; a **12-year penance** (offering their own flesh). Hingula manifests and grants sanctuary, weaving the **"Brahmakshatriya"** disguise. *(Parshuram-reel scenes 6–8.)*
