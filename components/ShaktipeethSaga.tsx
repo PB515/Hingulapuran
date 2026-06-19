@@ -164,8 +164,6 @@ export function ShaktipeethSaga() {
   const mapStart = beatWindows[0][0];
 
   const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
-  // photo fades in WITHIN the finale window only (never bleeds back over the Hinglaj map beat)
-  const photoOpacity = useTransform(scrollYProgress, finaleWindow ? [finaleWindow[0], finaleWindow[0] + 0.03] : [0.98, 1], [0, hasPhoto ? 1 : 0]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   // discrete active index from scroll — only ONE scene/text is mounted at a time
@@ -246,8 +244,6 @@ export function ShaktipeethSaga() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={MAP} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
-              <div className="pointer-events-none absolute inset-0 bg-raat/12" />
-              <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(130% 110% at 50% 45%, transparent 58%, rgba(18,16,31,.42) 100%)" }} />
               {PEETHAS.map((s, k) => {
                 const [a, b] = beatWindows[OVERVIEW];
                 return <PeethaDot key={`pd${k}`} site={s} a={a} b={b} p={scrollYProgress} />;
@@ -260,11 +256,11 @@ export function ShaktipeethSaga() {
             </motion.div>
 
             {/* FINALE — close on the real temple photo (only if provided) */}
-            {hasPhoto && (
-              <motion.div style={{ opacity: photoOpacity }} className="absolute inset-0 z-30">
+            {hasPhoto && active >= S + B && (
+              <div className="absolute inset-0 z-30">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={FINALE_PHOTO!} alt="The Hinglaj Mata shrine on the Hingol, Balochistan" className="absolute inset-0 h-full w-full object-cover" />
-              </motion.div>
+              </div>
             )}
 
             <div className="pointer-events-none absolute inset-0 z-40 rounded-[inherit] ring-1 ring-inset ring-swarna/15" />
