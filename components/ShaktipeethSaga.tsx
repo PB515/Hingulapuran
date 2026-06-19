@@ -37,7 +37,8 @@ const FINALE_TEXT = {
 };
 
 /* PACING */
-const SCENE_WEIGHT = 1.4;
+const SCENE_WEIGHTS = [2.6, 2.6, 2.6, 1.4]; // per scene 1-4 — scenes 1-3 scroll longer
+const SCENE_WEIGHT = 1.4;                    // fallback if a chapter has extra scenes
 const BEAT_WEIGHT = 1.8;
 const FINALE_WEIGHT = 1.4;
 const VH_PER_UNIT = 150;
@@ -156,7 +157,7 @@ export function ShaktipeethSaga() {
   const B = STOPS.length;
   const hasPhoto = !!FINALE_PHOTO;
   const weights = [
-    ...shaktipeethReel.map(() => SCENE_WEIGHT),
+    ...shaktipeethReel.map((_, i) => SCENE_WEIGHTS[i] ?? SCENE_WEIGHT),
     ...STOPS.map(() => BEAT_WEIGHT),
     ...(hasPhoto ? [FINALE_WEIGHT] : []),
   ];

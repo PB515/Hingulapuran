@@ -203,10 +203,17 @@ The wedding complete, the humiliated rival kings — led by **Sudhajit and Shatr
 **Scenes:** the rival kings' assault · **the lion-mounted Chandikā slaying Sudhajit & Shatrujit** — the saga's flagship battle beat · the surviving kings hymning the Devi → Sudarshana enthroned.
 > **2nd-pass note:** the rivals are **Sudhajit & Shatrujit** (confirmed). The exact ch-40/41 boundary (where the enthronement ends and the Navratri ritual of ~41 begins) still to pin.
 
-### Ch ~41–43 — Navratri Vrat & Kalasha-Maṇḍapa Installation (નવરાત્રી વ્રત / મંડપ-કલશ સ્થાપન) — ✅ verified from PDF (printed pp.~129–134)
-After the Sudarshana saga the text returns to **Navratri/Chandi ritual**: the vrat is to be done in **both Sharad and Vasanta** seasons (when disease and death rise); the detailed **maṇḍapa & vedi** construction (toraṇas, canopies), inviting **nine/five/three brahmins**, svastivācana, and installing the **four-armed Ambikā** (bearing conch, chakra, gadā, padma) on a **lion-throne**, with the **kalasha** set on the vedi — the full kalasha-sthāpanā rite. (A Raktabīja/Chandi-pāṭh element sits in this cluster per the TOC.)
-**Scenes:** the decorated Navratri maṇḍapa with toraṇas · the four-armed Ambikā enthroned on the lion · the kalasha installation & brahmin rites.
-> **Flag:** read in passing; split into exact per-chapter entries and confirm the Raktabīja/Chandi placement on re-read.
+### Ch 41 — The Saga's Conclusion: Sudarshana Enthroned (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified, 2nd pass (printed pp.126–~128)
+The saga closes: after the Devi slays the rivals, Sudarshana and the survivors hymn her; the **Devi grants the boon to dwell in his city and guard the realm**; Sudarshana is **enthroned** and worships Ambikā with deep devotion.
+**Scenes:** the victors' hymn to the Devi · the Devi granting her protective presence to the city · Sudarshana's coronation & worship of Ambikā.
+
+### Ch 42 — Return to Ayodhyā & Reconciliation (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified, 2nd pass (printed pp.129–~131)
+Sudarshana **returns to Ayodhyā** and magnanimously reconciles with the rival queen — *"I did not slay your son or your father Sudhajit; the Devi did — bear no grief; you are as my own mother Manoramā to me."* Manoramā recounts their exile hardships (robbed in the forest, then sheltered by **Bharadvāja**). The saga's coda on equanimity and the Devi's grace.
+**Scenes:** Sudarshana bowing to the rival queen in reconciliation · Manoramā recounting the forest exile.
+
+### Ch 43 — Navratri Vrat & Kalasha-Maṇḍapa Installation (નવરાત્રી વ્રત / મંડપ-કલશ સ્થાપન) — ✅ verified, 2nd pass (printed pp.~132–134)
+The text returns to **Navratri ritual**: the vrat in **both Sharad and Vasanta** seasons (when disease and death rise); the detailed **maṇḍapa & vedi** (toraṇas, canopies), inviting nine/five/three brahmins, svastivācana, and installing the **four-armed Ambikā** (conch, chakra, gadā, padma) on a **lion-throne** with the **kalasha** on the vedi.
+**Scenes:** the decorated Navratri maṇḍapa · the four-armed Ambikā enthroned on the lion · the kalasha-sthāpanā & brahmin rites.
 
 ### Ch 44 — Fruits of the Navratri Vrat / Kumari-puja eligibility (નવરાત્રી વ્રત કરવાથી થતાં ફળ) — ✅ verified from PDF (printed pp.~135–138)
 Returns to **Kumari-puja** detail: which girls to **avoid** (diseased, blind, deaf, deformed, low-born) and to choose (by varna — Brahmin girl best for all aims, Kshatriya for victory, Vaishya for gain, Shudra for the rest); the **nine-day** worship, or ashtami/three-day (saptami–ashtami–navami) fasting if unable; homa and brahmin-feeding. Reiterates the vrat's fruits.
@@ -280,9 +287,9 @@ An **embedded ākhyāna**: the Devi asks Mahisha who **Mandodarī** was. He tell
 The climax. The Devi **drinks wine from a golden cup** and charges the buffalo-demon; as **Mahisha shifts between forms** and, half-felled, rises to mock her, she strikes him down with her **mace and beheads him** — blood gushes from the demon's neck. **Mahishāsura is slain** (Mahishāsura-mardinī). The gods rain flowers, the dundubhis sound, rishis/siddhas/gandharvas rejoice; the surviving demons flee to Patala; the gods praise the victorious Devi.
 **Scenes:** the Devi with the golden cup charging · the shape-shifting last duel · the **beheading of the buffalo-demon — the flagship Mahishāsura-mardinī slaying reel** · flower-rain & the gods' jubilation.
 
-### Ch 63 — The Devi's Stuti / closing worship (દેવી સ્તુતિ — Sāvitrī pujā-vidhi) — ◑ to detail (printed pp.~195–200)
-The victorious Devi is hymned by the gods; closing worship (the TOC links a Sāvitrī puja-vidhi here). Leads directly into ch 64. **To detail on re-read.**
-**Scenes:** the gods' victory-hymn to the Devi · the closing worship.
+### Ch 63 — The Devi's Victory-Stuti & the Sāvitrī-vrat Rite (દેવીસ્તુતિ તથા સાવિત્રીવ્રત પૂજાવિધિ) — ✅ verified, 2nd pass (printed pp.196–~200)
+With Mahisha slain, the gods led by **Indra** joyfully **hymn the Devi** — *"by your Shakti Brahma creates, Vishnu preserves, Mahadeva destroys; you are Dhṛti, Mati, Smṛti, Dayā, Kṣamā…; without you who could protect us?"* The chapter then gives the **Sāvitrī-vrat puja-vidhi** (the rite). Leads directly into ch 64.
+**Scenes:** the gods' victory-hymn to the lion-mounted Devi over the fallen Mahisha · the Sāvitrī-vrat worship.
 
 ### Ch 64 — The State of the Earth after Mahisha's Slaying (મહિષ વધ પછી પૃથ્વીની સ્થિતિ) — ✅ verified from PDF (printed pp.~200–204)
 Closes Pratham Pravah: the world restored after Mahisha's death, and the bridging verse introducing **Hingulāmbikā** (*"red-eyed, born of a red lotus, she arose; to protect the gods she manifested, self-arisen"*) — the hinge into **Dwitiya Pravah** and the Hingula story (see ch 65).
