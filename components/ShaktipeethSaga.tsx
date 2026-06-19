@@ -26,7 +26,7 @@ import { buildTimeline } from "@/lib/timeline";
    (Sacred history — STYLE Rule 0; never myth/legend/story.)
    ========================================================================== */
 
-const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp?v=2";
+const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
 
 // The real Balochistan shrine photo — save the provided image to public/art/temple/hinglaj.jpg
 const FINALE_PHOTO: string | null = "/art/temple/hinglaj.jpg";
@@ -161,9 +161,6 @@ export function ShaktipeethSaga() {
   const sceneWindows = windows.slice(0, S);
   const beatWindows = windows.slice(S, S + B);
   const finaleWindow = hasPhoto ? windows[S + B] : null;
-  const mapStart = beatWindows[0][0];
-
-  const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   // discrete active index from scroll — only ONE scene/text is mounted at a time
@@ -232,27 +229,31 @@ export function ShaktipeethSaga() {
 
           {/* RIGHT — artwork only */}
           <div className="relative aspect-video w-full overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-            {/* REEL — only the active scene is mounted (hard swap, no overlap) */}
+            {/* MAP — always present, a plain bright image at the back (no opacity/filter/scale) */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={MAP} alt="" aria-hidden className="absolute inset-0 z-0 h-full w-full object-cover" />
+
+            {/* MAP MARKERS — only during the map beats */}
+            {active >= S && active < S + B && (
+              <div className="absolute inset-0 z-[15]">
+                {PEETHAS.map((s, k) => {
+                  const [a, b] = beatWindows[OVERVIEW];
+                  return <PeethaDot key={`pd${k}`} site={s} a={a} b={b} p={scrollYProgress} />;
+                })}
+                {STOPS.map((s, k) => {
+                  if (s.x == null) return null;
+                  const [a, b] = beatWindows[k];
+                  return <FocusPin key={`fp${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
+                })}
+              </div>
+            )}
+
+            {/* REEL — the active scene covers the map */}
             {active < S && (
               <div className="absolute inset-0 z-10">
                 <Scene key={`sc${active}`} scene={shaktipeethReel[active]} a={sceneWindows[active][0]} b={sceneWindows[active][1]} p={scrollYProgress} />
               </div>
             )}
-
-            {/* MAP — on top, fully opaque past the boundary; stays lit to the end */}
-            <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={MAP} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
-              {PEETHAS.map((s, k) => {
-                const [a, b] = beatWindows[OVERVIEW];
-                return <PeethaDot key={`pd${k}`} site={s} a={a} b={b} p={scrollYProgress} />;
-              })}
-              {STOPS.map((s, k) => {
-                if (s.x == null) return null;
-                const [a, b] = beatWindows[k];
-                return <FocusPin key={`fp${k}`} stop={s} a={a} b={b} p={scrollYProgress} hold={!hasPhoto && k === lastBeat} />;
-              })}
-            </motion.div>
 
             {/* FINALE — close on the real temple photo (only if provided) */}
             {hasPhoto && active >= S + B && (
