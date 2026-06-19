@@ -43,28 +43,54 @@ export function BrahmarandhraOrb() {
         <h2 className="mt-4 font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">ब्रह्मरंध्र</h2>
         <p className="mt-3 font-[family-name:var(--font-display-latin)] text-sm tracking-[0.12em] text-swarna">Brahmarandhra</p>
 
-        {/* the orb */}
-        <div className="relative mx-auto mt-16 flex h-[clamp(260px,42vw,460px)] w-full max-w-2xl items-center justify-center">
-          <motion.div style={reduce ? undefined : { rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }} className="relative">
-            <motion.div
-              aria-hidden
-              animate={reduce ? undefined : { scale: [1, 1.05, 1] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="h-[clamp(220px,34vw,380px)] w-[clamp(220px,34vw,380px)] rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle at 38% 32%, #C0392B 0%, #5C0A22 28%, #2A0C2E 58%, #12101F 100%)",
-                boxShadow: "0 0 120px 10px rgba(181,48,42,0.35), inset 0 0 80px 10px rgba(18,16,31,0.8)",
-              }}
-            />
-            {/* slow turning sheen */}
-            <motion.div
-              aria-hidden
-              animate={reduce ? undefined : { rotate: 360 }}
-              transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full mix-blend-screen"
-              style={{ background: "conic-gradient(from 0deg, transparent 0%, rgba(201,162,39,0.22) 18%, transparent 38%, transparent 100%)" }}
-            />
+        {/* THE GATE OF LIGHT — brahmarandhra: a luminous aperture at the crown of a dark
+            void, light ascending out of it (the prana rising into moksha). */}
+        <div className="relative mx-auto mt-12 flex h-[clamp(320px,52vw,560px)] w-full max-w-2xl items-center justify-center">
+          <motion.div style={reduce ? undefined : { rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}>
+            <svg viewBox="0 0 420 560" role="img" aria-label="Brahmarandhra — the gate of light" className="h-[clamp(320px,52vw,560px)] w-auto">
+              <defs>
+                <radialGradient id="bgr-dome" cx="50%" cy="44%" r="60%">
+                  <stop offset="0%" stopColor="#5C0A22" />
+                  <stop offset="55%" stopColor="#2A0C2E" />
+                  <stop offset="100%" stopColor="#12101F" />
+                </radialGradient>
+                <radialGradient id="bgr-ap" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#FFF6E6" />
+                  <stop offset="38%" stopColor="#F2C14E" />
+                  <stop offset="100%" stopColor="#C9A227" stopOpacity="0" />
+                </radialGradient>
+                <linearGradient id="bgr-ray" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stopColor="#F2C14E" stopOpacity="0" />
+                  <stop offset="18%" stopColor="#F2C14E" stopOpacity="0.5" />
+                  <stop offset="100%" stopColor="#FFF6E6" stopOpacity="0" />
+                </linearGradient>
+                <filter id="bgr-soft" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="7" />
+                </filter>
+              </defs>
+
+              {/* the dark crown / void */}
+              <ellipse cx="210" cy="380" rx="172" ry="160" fill="url(#bgr-dome)" />
+              <ellipse cx="210" cy="380" rx="172" ry="160" fill="none" stroke="#C9A227" strokeOpacity="0.18" />
+
+              {/* the column of light rising from the aperture (static, soft) */}
+              <path d="M210 300 L168 70 Q210 44 252 70 Z" fill="url(#bgr-ray)" opacity="0.7" />
+
+              {/* the gate itself — pulses like a breath of light */}
+              <motion.g
+                animate={reduce ? undefined : { opacity: [0.7, 1, 0.7] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <circle cx="210" cy="300" r="74" fill="#C9A227" opacity="0.16" filter="url(#bgr-soft)" />
+                <ellipse cx="210" cy="300" rx="17" ry="56" fill="url(#bgr-ap)" filter="url(#bgr-soft)" />
+                <ellipse cx="210" cy="300" rx="6" ry="36" fill="#FFF6E6" />
+              </motion.g>
+
+              {/* ascending sparks */}
+              <circle cx="205" cy="200" r="2.5" fill="#F2C14E" opacity="0.8" />
+              <circle cx="216" cy="150" r="2" fill="#F2C14E" opacity="0.6" />
+              <circle cx="208" cy="104" r="1.6" fill="#FFF6E6" opacity="0.5" />
+            </svg>
           </motion.div>
         </div>
 
