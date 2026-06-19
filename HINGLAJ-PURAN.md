@@ -22,10 +22,12 @@
 
 ## Chapter index & status
 - **Ch 1–64 (Pratham Pravah):** ☐ not yet translated — the bulk of the PDF (Devi puja vidhis, Navratri/Chandi, Devi Mahatmya, Mahishasur-vadha).
-- **Ch 65–87 (Dwitiya Pravah):** translating now, chapter-by-chapter from the PDF.
-  - ✅ **Ch 65–83 verified from PDF (2026-06-19)** — see below. Highlights: corrected the 65/66 boon-split; filled the 67–71 gap; located the Mandakini-rivers detail in ch 68; the full **Parshuram campaign (77–83)** now translated — Ram–Arjuna 7-day duel (78), **Ratnasen Akhyan** (79, not "Ramcharit"), Dadhichi's jyotisha discourse (80), **Ratnasen vadh** + the five princes' refuge & queens' sati (81), Jayasena's abhaya/brahma-vidyā (82), and the **mantra-dīkṣā → Brahmakshatriya** (83).
-  - ◑ **Ch 84–87 — last block** (partly seeded): Hingula shelters the warriors (84), King Jayasena's divine law (85), community origins / Brahmakshatriya·Khatri·Bhatia·Pushkarna (86), grand summary & blessing (87). Next to translate.
-  - ⚠️ Deep-campaign pages (ch 80–83) are heavy-noise scans — several proper names read tentatively; flags inline. Pandit/native review recommended before publishing.
+- **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
+  - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
+  - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
+  - Full **Parshuram campaign (77–83)**: Ram–Arjuna 7-day duel (78), **Ratnasen Akhyan** (79, *not* "Ramcharit"), Dadhichi's jyotisha discourse (80), **Ratnasen vadh** + the five princes' refuge & queens' sati (81), Jayasena's abhaya/brahma-vidyā (82), **mantra-dīkṣā → Brahmakshatriya** (83).
+  - Final block (84–87): Hingula's **vardan** & 1000-year law in ch 84 (not 85); ch 85 = the **dynastic genealogy**; ch 86 names the **Lohana** (48 Rathod sardars / *loha*) + **Pushkarna**; ch 87 = the closing **contents-recap** of the whole grantha (*samāpto'yaṃ granthaḥ*).
+  - ⚠️ Deep-campaign & community pages (ch 80–87) are heavy-noise scans — several proper names read tentatively; flags inline. **Two seed details NOT found in the PDF and flagged: the ch 84 "12-year flesh penance" and the ch 87 reading-blessing + Vajranabh/Yadava.** Pandit/native review recommended before publishing.
 
 ---
 
@@ -112,19 +114,25 @@ Parashurama imparts to **Jayasena and the princes** the **dhanurveda**, the **ma
 The rishi **Gautama** (and the **Saraswata rishi**) give **Jayasena and the princes** **mantra-upadeśa / dīkṣā**. Gautama directs Jayasena to the **Saraswata rishi**, by whose mantra-vidyā the lineage will fulfill its aims and attain **brahman-hood** — completing the transformation of the surviving Kshatriya princes into the protected **Brahmakshatriya** line (leading into ch 84–86).
 **Scenes:** Gautama directing Jayasena to the Saraswata rishi · the mantra-dīkṣā of the princes · the princes rising as Brahmakshatriya.
 
-### Ch 84 — Hingula saves the warriors
-Fleeing Parshuram's extermination, **Sage Dadhichi + surviving Rajput princes** take refuge at **Mount Hingula**; a **12-year penance** (offering their own flesh). Hingula manifests and grants sanctuary, weaving the **"Brahmakshatriya"** disguise. *(Parshuram-reel scenes 6–8.)*
+### Ch 84 — Hingula manifests to the warriors (હિંગુળા દેવોને પ્રકટ થયું) — ✅ verified from PDF (printed pp.280–283)
+**Jayasena**, fearing that becoming a brahmin invites a **Kshatriya curse** (*"your kshatriya-hood is destroyed — you are now brahma-kshatriya"*), performs **tapas** to **Hingula**; she manifests (by **Dadhichi's** grace) and grants her **vardan and law**: *a curse already given cannot be undone, but follow my instruction and you prosper.* She decrees — with your brothers worship me with flowers and full offering, **as Rama (Parashurama) first worshipped here at Hinguladri**; do the **Panchtirth** pilgrimage; **rule your city 1000 years**; always honor the **Saraswat Brahmins** by my command; outwardly keep the Vedic/brahmin rites so your **brahma-kshatriya** line is established in the Vedas. *"Your lineage shall call me its mother (kuldevi)"*; offer me first in puja, homa, fire, before your own use, and I am ever pleased. (This carries the seed's ch 84 + the ch 85 "divine law / 1000-year rule" together.)
+**Scenes:** Jayasena's tapas before Hingula → her manifestation · the goddess granting the vardan (flowers & offering, "worship as Rama did") · the decree of the 1000-year rule + the dual brahma-kshatriya life · "your line shall call me kuldevi."
+> **Flag:** the seed's specific **12-year penance "offering their own flesh"** was not seen on these pages (the tapas is described generally) — verify whether that detail is earlier (ch 81/82) or from another source.
 
-### Ch 85 — The divine law (King Jayasena)
-Hingula instructs **King Jayasena** + princes: rule securely **1000 years**, outwardly practise **Brahmin rituals**, secretly keep the **Kshatriya** martial spirit + duties; hidden weapons + her **secret mantras** protect them from enemies, disease, evil. Rule justly by her law.
-**Scenes:** the goddess instructing the kneeling king · the dual life (priest by day / warrior hidden).
+### Ch 85 — The Brahmakshatriya genealogy (the lineage & its spread) — ✅ verified from PDF (printed pp.283–~289)
+Largely a **dynastic genealogy** of the resulting Brahmakshatriya kings — the lines of **Vijaya, Bahushāla, Chandrasena** and **Ratnasena**; cities founded (**Sohau-nagari, Champānagari**); the Mahishmati line of **Shrutasena & Viharsha** ruling righteously with brahmins and the agnihotra; the Sindhu-region vassal (**māṇḍalika**) kings intermarrying their daughters; and a long roll of countries the line spread into (**Anga, Vanga, Kalinga, Dravida, Kamboja, Gurjar, Huna, China, Magadha…**).
+**Scenes:** the branching family-tree of the Brahmakshatriya kings · Shrutasena & Viharsha's righteous twin-city rule (brahmins + agnihotra) · the lineage spreading across the named lands.
+> **Note (seed correction):** the *"rule 1000 years / outwardly brahmin, secretly kshatriya / secret mantras"* divine law belongs to **ch 84's vardan**, not ch 85; ch 85 is its **dynastic outworking**.
 
-### Ch 86 — Origins of the communities
-The disguised princes live in forest exile (roots + fruit) in terror of Parshuram; the Goddess manifests again and decrees they **abandon weapons + take new professions** — commerce, trade, administrative writing — branching into **Khatri** and **Bhatia** (from the Bhati Rajput line), plus the **Pushkarna Brahmins** (named for the Pushkar lake near Ajmer). All keep eternal devotion to Hingula.
-**Scenes:** forest exile · the goddess's decree · the branching into trades/communities.
+### Ch 86 — Origin of the Brahmakshatriya, Pushkarna & Bhatia communities (બ્રહ્મક્ષત્રી, પુષ્કરણા તથા ભાટિયાની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.290–293)
+Opens with a **lineage chart** (Kshatriya → branches) and narrates the **community-branching**. When **Jayasena** ruled at **Kanauj**, his **48 Rathod sardars** (who managed the realm) embezzled state funds; the furious king resolved to kill them, but the Saraswat brahmin **Durgadeva** mediated (an **upāsanā of the sea-deity** over six months / an eleven-day rite), the king's rule was stabilized, and that chieftain-lineage became the **Lohana** (from *loha*, iron/weapons). The **Pushkarna Brahmins** were sanctified by **Rama (Parashurama)** at the **Pushkar lake near Ajmer** — hence their name. (Per the title, the **Brahmakshatriya** and **Bhatia** branches likewise issue from this stock.)
+**Scenes:** the lineage chart / the branching of the warrior line into communities · King Jayasena's wrath at Kanauj → Durgadeva's sea-deity upāsanā & mediation · the naming of the Lohana (iron) · Rama sanctifying the Pushkarna brahmins at Pushkar/Ajmer.
+> **Flag (seed vs. PDF):** the PDF here names **Lohana** (from the 48 Rathod sardars) and **Pushkarna** explicitly; **Khatri/Bhatia/Brahmakshatriya** are per the chapter title & chart but their specific naming-etymology was hard to read on the noisy scan — verify. The **Kanauj / Rathod / "Jayachand"** framing echoes historical Jaichand of Kanauj; worth a careful re-read.
 
-### Ch 87 — Grand summary & blessing
-Suta Purani recaps the whole grantha — the Goddess's origin, the slaying of **Mahishasur** and **Hingulasur**, **Parshuram's** campaigns, the preservation of the warrior bloodlines. Closing blessing: whoever **reads/recites/listens** is cleansed of sins, granted prosperity, and attains salvation. *(Also references the Yadava massacre at Prabhas Patan + the survival of Krishna's great-grandson **Vajranabh**.)*
+### Ch 87 — The Contents of the Hingulapuran (હિંગુળાપુરાણનાં વૃત્તાંતો) — ✅ verified from PDF (printed pp.293–294, end of book)
+The closing chapter: *"The sages said — in this Hingulapuran the following narratives have come,"* then a **sequential recap of the entire grantha across both pravah** — Devi puja & avatāra, Durga, **Madhu & Kaitabha**, the Mahamaya/enchanting form, **Mahishasura-vadha**, Savitri-vrat, **Hingula's utpatti & Hingulāsura's vadh**, the **Parashurama** campaign, Jayasena's vardan & dīkṣā, and the **Brahmakshatriya**. Ends with the colophon and **"samāpto'yaṃ granthaḥ"** (this grantha is complete).
+**Scenes:** a closing "scroll of the whole account" recap vignette (suits a grand finale / archive-index reel).
+> **Flag (seed vs. PDF):** the seed's explicit **reading/reciting phalashruti-blessing** and the **Yadava massacre at Prabhas Patan + Vajranabh** reference were **not found** on the final pages (293–294, which are the contents-recap + completion); they may sit earlier in ch 87's body or be conflated from another source — verify before using.
 
 ---
 
@@ -133,4 +141,5 @@ Suta Purani recaps the whole grantha — the Goddess's origin, the slaying of **
 - **Parshuram** (Ch 76 + 84) — 8 scenes prompted ✓
 - **51 Shaktipeeth** (Sati origin) — 5 scenes prompted ✓
 ## Future reels surfaced by the text
-- **Mahishasur** · **Bhimasur / Chandika** · **Saraswat / Dadhichi & the Vajra** · **Community origins (Brahmakshatriya/Khatri/Bhatia/Pushkarna)** · **Vajranabh / Yadava**.
+- **Mahishasur** · **Bhimasur / Chandika** · **Saraswat / Dadhichi & the Vajra** · **Community origins (Brahmakshatriya / Lohana / Khatri / Bhatia / Pushkarna)** · **Vajranabh / Yadava**.
+- Surfaced while translating Stream 2: the **Hingula-tirtha glory** (ch 67), **Hingula+Mandakini rivers from Brahma's kumbha** (ch 68), **Rama–Vasishtha moksha discourse** (ch 69), **Ratnasena's refuge & the queens' sati** (ch 79/81), and the closing **"contents of the grantha" archive-index** (ch 87).
