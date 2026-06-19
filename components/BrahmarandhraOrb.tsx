@@ -10,10 +10,10 @@ import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } fro
    Pure CSS/transform (no WebGL). Lore copy is placeholder — refine freely. */
 
 const FACTS = [
-  { t: "The 51st Shakti Peeth", d: "Where Sati's brahmarandhra — the crown of her head — fell to the earth." },
-  { t: "No idol", d: "Worshipped not as a statue but a sindoor-smeared stone in a living cave." },
-  { t: "On the Hingol", d: "The Makran coast, where the Mandakini and Hingula waters meet." },
-  { t: "Nani Maa", d: "The universal Mother — kuldevi of the Kshatriya across three lands." },
+  { t: "The tenth gate", d: "Brahmarandhra — the aperture at the crown of the head, the dwelling of Brahman, the Dasamadvara." },
+  { t: "The door to liberation", d: "Through it the prana rises along the sushumna and the soul departs into light — moksha." },
+  { t: "Sati's crown", d: "When Vishnu's Sudarshan parted Sati into fifty-one, it was her brahmarandhra that fell here." },
+  { t: "The seat of the gate", d: "So at Hinglaj, the very gate of liberation came to rest upon the earth." },
 ];
 
 export function BrahmarandhraOrb() {
