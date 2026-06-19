@@ -21,7 +21,7 @@ export default function Home() {
         </h2>
         <p className="mx-auto mt-6 max-w-xl font-[family-name:var(--font-body)] leading-relaxed text-muted">
           One of the 51 Shakti Peethas, a cave shrine on the Hingol river, and the kuldevi of the
-          Kshatriya. Read her hundred-year-old grantha, walk her legend, and carry the awareness forward.
+          Kshatriya. Read her hundred-year-old grantha, walk her history, and carry the awareness forward.
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Link href="/books" className="rounded-[var(--radius)] bg-accent px-8 py-3 font-[family-name:var(--font-display-latin)] text-sm uppercase tracking-[0.18em] text-accent-foreground transition-transform hover:-translate-y-0.5">
@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Flagship: the legend of Hingul as a horizontal scroll-painting. */}
+      {/* Flagship: the history of Hingul as a horizontal scroll-painting. */}
       <LegendScroll />
 
       {/* Climax: Parshuram lays his sword at her feet. */}

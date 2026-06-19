@@ -6,14 +6,14 @@
 **Digital conservation of the whole Hinglaj Puran.** This 100-year-old Gujarati grantha (**70+ adhyay/chapters**) is at risk of being lost. The mission is to **preserve it and carry it to the next generation** — so it doesn't vanish — by turning **every chapter into a visual representation** (a 2.5D Scene-Reel / archive entry), with the original text always readable + downloadable.
 - **Long arc:** all 70+ adhyay, each with a faithful summary + visual reel. A living, growing archive.
 - **Low-hanging fruit (ship first):** the chapters chosen for the **home page** (Sati/51-Shaktipeeth, Hingul, Parshuram, Brahmarandhra, Kshatriya) — prove the model, then scale chapter-by-chapter via this doc + the admin.
-- **Why the architecture fits:** stories are data-driven + admin-managed, the PDF pipeline feeds summaries, and each chapter is a repeatable reel — so 70+ chapters is a *scalable archive*, not 70 bespoke builds.
+- **Why the architecture fits:** chapters are data-driven + admin-managed, the PDF pipeline feeds summaries, and each chapter is a repeatable reel — so 70+ chapters is a *scalable archive*, not 70 bespoke builds.
 
 ## For the analyzing session — read this first
 - **Project:** *Hingulapuran* — a Hinglaj Mata book + awareness site. Live at `hingulapuran.vercel.app`, repo `PB515/Hingulapuran`, built on the IDP. The grantha is the source the whole site is built from.
 - **Your task:** analyze the **300-page Gujarati PDF** (path: `source/hinglaj-puran.pdf` — confirm with user). Likely scanned page-images of a ~100-yr-old book; the Read tool renders pages (read ~20 at a time) — read the Gujarati visually and translate.
 - **Method:** (1) probe 5 pages → text-vs-scanned + chapter structure; (2) build the chapter index below; (3) batched 20-page passes → per-chapter **English summary** + **scene candidates** (visual beats).
 - **Output format per chapter:** `### Ch N — <title>` → 3–6 line faithful summary → `Scenes:` a short list of visual beats (each beat = a future 2.5D Scene-Reel scene; 3 layers far/subject/near).
-- **Conventions:** translate **faithfully, flag uncertainties**; recommend a **pandit/native review** before any text is published (devotional content). Art style = Mata-ni-Pachedi (see `STYLE.md`); scene structure = `STORY-PROMPTS.md`. Read the auto-memory for full project context.
+- **Conventions:** translate **faithfully, flag uncertainties**; recommend a **pandit/native review** before any text is published (devotional content). Art style = Mata-ni-Pachedi (see `STYLE.md`); scene structure = `SCENE-PROMPTS.md`. Read the auto-memory for full project context.
 - **Structure of the book:** organized into *pravah* (streams) + numbered chapters (≈87). Stream 1 ≈ ch 1–64 (mostly UNTRANSLATED — start here). Stream 2 ≈ ch 65+.
 
 ---
@@ -67,8 +67,8 @@ Suta Purani recaps the whole grantha — the Goddess's origin, the slaying of **
 
 ---
 
-## Ready-to-build story reels (already prompted in STORY-PROMPTS.md)
-- **Hingul legend** (Ch 65–66) — built ✓ / being upgraded to 2.5D
+## Ready-to-build scene reels (already prompted in SCENE-PROMPTS.md)
+- **Hingul history** (Ch 65–66) — built ✓ / being upgraded to 2.5D
 - **Parshuram** (Ch 76 + 84) — 8 scenes prompted ✓
 - **51 Shaktipeeth** (Sati origin) — 5 scenes prompted ✓
 ## Future reels surfaced by the text

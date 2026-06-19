@@ -38,7 +38,7 @@ export function LegendScroll() {
     // accessible fallback: read the cloth top-to-bottom
     return (
       <section className="bg-raat px-6 py-20">
-        <h2 className="mb-10 text-center font-[family-name:var(--font-display)] text-4xl text-patra">हिंगुल की कथा</h2>
+        <h2 className="mb-10 text-center font-[family-name:var(--font-display)] text-4xl text-patra">हिंगुल का इतिहास</h2>
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           {PANELS.map((p) => (
             <figure key={p.src}>
@@ -60,8 +60,8 @@ export function LegendScroll() {
     >
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
         <div className="pointer-events-none absolute left-0 right-0 top-24 z-10 text-center">
-          <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.35em] text-swarna">The legend</p>
-          <h2 className="mt-2 font-[family-name:var(--font-display)] text-4xl text-patra md:text-5xl">हिंगुल की कथा</h2>
+          <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.35em] text-swarna">The history</p>
+          <h2 className="mt-2 font-[family-name:var(--font-display)] text-4xl text-patra md:text-5xl">हिंगुल का इतिहास</h2>
         </div>
 
         <motion.div ref={trackRef} style={{ x }} className="flex w-max items-center gap-[4vw] px-[6vw] will-change-transform">

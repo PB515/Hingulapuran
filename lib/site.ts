@@ -6,7 +6,7 @@ export const site = {
   name: 'Hingulapuran',
   legalName: 'Hingulapuran',
   tagline: 'Goddess of war · Kuldevi of the Kshatriya',
-  description: 'Read Hingulapuran online, explore the legend of Hinglaj Mata, and spread the awareness — a devotional archive of the book, blog, gallery, and the temples of the Mother Goddess.',
+  description: 'Read Hingulapuran online, explore the history of Hinglaj Mata, and spread the awareness — a devotional archive of the book, blog, gallery, and the temples of the Mother Goddess.',
 
   url: 'https://hingulapuran.example', // TODO: production domain
 

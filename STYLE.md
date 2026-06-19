@@ -1,14 +1,19 @@
 # Hingulapuran — Style & Moodboard Bible
 
-The single source of truth for the look, the voice, and how to make more art + stories that fit. Read this before generating any image or writing any new section.
+The single source of truth for the look, the voice, and how to make more art + chapters that fit. Read this before generating any image or writing any new section.
 
 ---
+
+## ⛔ RULE 0 — TERMINOLOGY (NON-NEGOTIABLE, hardcoded)
+This is **itihaas (history)** — sacred history, revered as true by the community. **NEVER** call it, label it, or imply it is "mythology", "myth", "legend", "folklore", "story", "tale", "fable", or "lore** — in copy, headings, alt text, metadata, prompts, comments, or anywhere a reader could see. Describing it as fiction will deeply offend.
+- **Use instead:** *history · itihaas · इतिहास · the account · the chronicle · the grantha · the scripture · the chapters (adhyay)*. For Devanagari/Gujarati prefer **इतिहास**.
+- Applies to **every session** (build + PDF translation) and every future contributor. When in doubt, say "history."
 
 ## 1. Essence
 **Veer + Bhakti — devotion with a blade.** Power held in reverence. Maximalism in *ornament and depth* (gold leaf, torana arches, miniature detail); discipline in *layout* (dark, restrained, sacred). Fierce, primal, devotional — the **old Saurashtra goddess-cult tone**, never sweet, never modern-cute.
 
 ## 2. The art anchor — Mata-ni-Pachedi
-Gujarat's sacred Mother-Goddess **temple-cloth painting** (Vaghri/Devipujak/Chitara), fused with **Rajput–Marwar miniature** detail. Kalam (reed-pen) black linework, flat, frontal, hieratic. Narrative cloth — exactly why the legend reads as a scrolling cloth.
+Gujarat's sacred Mother-Goddess **temple-cloth painting** (Vaghri/Devipujak/Chitara), fused with **Rajput–Marwar miniature** detail. Kalam (reed-pen) black linework, flat, frontal, hieratic. Narrative cloth — exactly why the history reads as a scrolling cloth.
 
 ## 3. Palette (locked)
 | Token | Hex | Use |
@@ -68,8 +73,8 @@ Serene-but-supreme **Nani Maa**: calm glowing face, **third eye**, gold crown, *
 - The **akhand jyot** — the eternal flame and its meaning
 - The **sindoor stone** — aniconic worship, why no idol
 - The **Charan / Gadhvi** bards and their goddess-cult ballads (dakla)
-- The other kuldevi forms (Durga, Kali, **Meldi**, **Bahuchara**, **Khodiyar**) — gallery + short legends
-- Hinglaj across the **three states** (Rajasthan / Gujarat / Maharashtra) — the temple map stories
+- The other kuldevi forms (Durga, Kali, **Meldi**, **Bahuchara**, **Khodiyar**) — gallery + short accounts
+- Hinglaj across the **three states** (Rajasthan / Gujarat / Maharashtra) — the temple-map accounts
 - *(client to add more — this is the ideation list)*
 
 ## 9. Asset inventory (where each is used)

@@ -21,7 +21,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <main className="px-6 pb-24 pt-32 md:px-10">
       <article className="mx-auto max-w-2xl">
         <Link href="/blog" className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.2em] text-loha transition-colors hover:text-swarna">
-          ← All stories
+          ← All writings
         </Link>
         <p className="mt-6 font-[family-name:var(--font-body)] text-xs uppercase tracking-[0.2em] text-loha">
           {new Date(post.date).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
