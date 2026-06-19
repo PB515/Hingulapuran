@@ -10,10 +10,8 @@ import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } fro
    Pure CSS/transform (no WebGL). Lore copy is placeholder — refine freely. */
 
 const FACTS = [
-  { t: "The tenth gate", d: "Brahmarandhra — the aperture at the crown of the head, the dwelling of Brahman, the Dasamadvara." },
-  { t: "The door to liberation", d: "Through it the prana rises along the sushumna and the soul departs into light — moksha." },
-  { t: "Sati's crown", d: "When Vishnu's Sudarshan parted Sati into fifty-one, it was her brahmarandhra that fell here." },
-  { t: "The seat of the gate", d: "So at Hinglaj, the very gate of liberation came to rest upon the earth." },
+  { t: "The tenth gate", d: "Brahmarandhra — the aperture at the crown, the door of Brahman through which the prana rises and the soul departs into light." },
+  { t: "Sati's crown", d: "Of the fifty-one, it was Sati's brahmarandhra that fell here — so Hinglaj is the seat of the gate itself." },
 ];
 
 export function BrahmarandhraOrb() {
@@ -38,15 +36,22 @@ export function BrahmarandhraOrb() {
       className="relative overflow-hidden bg-raat px-6 py-28 md:py-40"
       style={{ perspective: 1000 }}
     >
-      <div className="mx-auto max-w-5xl text-center">
+      <div className="mx-auto max-w-6xl text-center">
         <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.35em] text-loha">Where the crown fell</p>
         <h2 className="mt-4 font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">ब्रह्मरंध्र</h2>
         <p className="mt-3 font-[family-name:var(--font-display-latin)] text-sm tracking-[0.12em] text-swarna">Brahmarandhra</p>
 
-        {/* THE GODDESS + HER CROWN-GATE — Hinglaj Mata's face in minimal divine line,
-            the brahmarandhra lotus turning + a bindu breathing light at her crown. */}
-        <div className="relative mx-auto mt-12 flex h-[clamp(360px,68vw,600px)] w-full max-w-2xl items-center justify-center">
-          <motion.div style={reduce ? undefined : { rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}>
+        {/* The goddess + her crown-gate, flanked by two cards. */}
+        <div className="mt-12 grid items-center gap-6 md:grid-cols-[1fr_minmax(300px,1.05fr)_1fr]">
+          {/* left — The Tenth Gate */}
+          <div className="order-2 rounded-[var(--radius)] border border-border bg-rakta/30 p-6 text-left transition-colors hover:border-swarna/50 md:order-none md:text-right">
+            <p className="font-[family-name:var(--font-display-latin)] text-base uppercase tracking-[0.18em] text-swarna">{FACTS[0].t}</p>
+            <p className="mt-2 font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted">{FACTS[0].d}</p>
+          </div>
+
+          {/* centre — the Goddess's face + the brahmarandhra lotus turning at her crown */}
+          <div className="relative order-first flex items-center justify-center md:order-none">
+            <motion.div style={reduce ? undefined : { rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}>
             <svg viewBox="0 0 420 560" role="img" aria-label="Hinglaj Mata and the gate at her crown" className="h-[clamp(360px,68vw,600px)] w-auto">
               <defs>
                 <radialGradient id="bgr-bindu" cx="50%" cy="50%" r="50%">
@@ -116,16 +121,13 @@ export function BrahmarandhraOrb() {
               <path d="M182 374 Q210 364 238 374 Q210 390 182 374 Z" fill="#B5302A" stroke="#C9A227" strokeWidth="1" />
             </svg>
           </motion.div>
-        </div>
+          </div>
 
-        {/* floating fact-cards */}
-        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {FACTS.map((f) => (
-            <div key={f.t} className="group rounded-[var(--radius)] border border-border bg-rakta/30 p-5 text-left transition-colors hover:border-swarna/50">
-              <p className="font-[family-name:var(--font-display-latin)] text-base uppercase tracking-[0.18em] text-swarna">{f.t}</p>
-              <p className="mt-2 font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted">{f.d}</p>
-            </div>
-          ))}
+          {/* right — Sati's Crown */}
+          <div className="order-3 rounded-[var(--radius)] border border-border bg-rakta/30 p-6 text-left transition-colors hover:border-swarna/50 md:order-none">
+            <p className="font-[family-name:var(--font-display-latin)] text-base uppercase tracking-[0.18em] text-swarna">{FACTS[1].t}</p>
+            <p className="mt-2 font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted">{FACTS[1].d}</p>
+          </div>
         </div>
 
         <div className="mt-12">
