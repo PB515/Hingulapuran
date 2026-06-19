@@ -5,23 +5,42 @@ import { motion, useScroll, useTransform, useReducedMotion, useMotionValueEvent,
 import { shaktipeethReel, type ReelScene, type ReelLayer } from "@/lib/reels";
 import { buildTimeline } from "@/lib/timeline";
 
-/* The fall-of-Sati chapter as ONE pinned, two-column stage:
-   • LEFT  — a text panel (titles + descriptions), cross-fading per beat
-   • RIGHT — the artwork only: the 2.5D scene-reel that flows into the guided map
-   All text lives in the left panel; the artwork carries no captions, only the map's
-   glowing site markers. (Sacred history — STYLE Rule 0; never myth/legend/story.)
+/* ============================================================================
+   ShaktipeethSaga — the Fall of Sati chapter as ONE pinned, two-column stage.
 
-   TUNING:
-   • PACING knobs below (per-beat weight + overall density)
-   • PEETHAS / STOPS x,y are PERCENT positions on the map art */
+   LAYOUT
+     • LEFT  = a text panel. All titles/descriptions live here (never on the art).
+     • RIGHT = the artwork frame, carrying ONLY images (no captions).
+
+   SEQUENCE (one scroll, one weighted timeline)
+     1. REEL  — scenes 1-4: the 2.5D layered reel (far/subject/near, emerge + parallax).
+     2. MAP   — the painted map is revealed; beats light up site markers in turn:
+                 विभाजन (centre) → इकयावन शक्तिपीठ (all dots) → हिंगलाज (the coast).
+     3. FINALE— it holds on Hinglaj (no fade-to-dark). If a real temple photo is set
+                 in FINALE_PHOTO, the saga closes on that photograph.
+
+   TUNING — the only knobs:
+     • PACING:  SCENE_WEIGHT / BEAT_WEIGHT / FINALE_WEIGHT (relative scroll) + VH_PER_UNIT (overall)
+     • MAP:     PEETHAS[] + STOPS[].x/.y are PERCENT positions on the map art
+     • FINALE:  set FINALE_PHOTO to the real Hinglaj/Balochistan photo path to close on it
+   (Sacred history — STYLE Rule 0; never myth/legend/story.)
+   ========================================================================== */
 
 const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
 
-/* PACING — the only knobs. Raise to slow things down / lengthen the scroll. */
-const SCENE_WEIGHT = 1.4; // scroll length per reel scene
-const BEAT_WEIGHT = 1.7;  // scroll length per map beat
-const OUTRO_WEIGHT = 0.9; // a short fade-to-dark AFTER the last beat (the exit transition)
-const VH_PER_UNIT = 170;  // overall scroll density — raise for more scroll everywhere
+// Drop the real Balochistan temple photo at this path, then set FINALE_PHOTO to it.
+const FINALE_PHOTO: string | null = null; // e.g. "/art/temple/hinglaj.webp"
+const FINALE_TEXT = {
+  deva: "हिंगलाज माता",
+  en: "The living shrine · Hingol, Balochistan",
+  body: "Today pilgrims still climb to the cave-shrine on the Hingol — the seat of the fallen crown, alive across the ages.",
+};
+
+/* PACING */
+const SCENE_WEIGHT = 1.4;
+const BEAT_WEIGHT = 1.8;
+const FINALE_WEIGHT = 1.4;
+const VH_PER_UNIT = 150;
 
 type Stop = { deva: string; en: string; body: string; all?: boolean; x?: number; y?: number; hinglaj?: boolean };
 
@@ -39,10 +58,16 @@ const STOPS: Stop[] = [
 
 const OVERVIEW = STOPS.findIndex((s) => s.all);
 
-/** opacity that fades in across [a,b] then out (floor = resting value). */
-function useWindow(p: MotionValue<number>, a: number, b: number, fade = 0.2, floor = 0) {
+/** opacity for a scroll window. `first` = visible from the very start; `hold` = stays to the end. */
+function useWindow(p: MotionValue<number>, a: number, b: number, opts?: { fade?: number; hold?: boolean; first?: boolean }) {
+  const fade = opts?.fade ?? 0.2;
   const f = (b - a) * fade;
-  return useTransform(p, [a, a + f, b - f, b], [floor, 1, 1, floor]);
+  let stops: number[];
+  let out: number[];
+  if (opts?.first) { stops = [a, b - f, b]; out = [1, 1, 0]; }
+  else if (opts?.hold) { stops = [a, a + f, 1]; out = [0, 1, 1]; }
+  else { stops = [a, a + f, b - f, b]; out = [0, 1, 1, 0]; }
+  return useTransform(p, stops, out);
 }
 
 function Img({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue<string>; fit: string; z: string; scale?: number; origin?: string }) {
@@ -58,11 +83,11 @@ function Img({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue
   );
 }
 
-/** one reel scene (artwork only, no caption) animated within its [a,b] window. */
+/** one reel scene (artwork only). `first` = on screen the instant the section pins. */
 function Scene({ scene, a, b, p, first, last }: { scene: ReelScene; a: number; b: number; p: MotionValue<number>; first?: boolean; last?: boolean }) {
   const reduce = useReducedMotion();
   const span = b - a;
-  const f = span * 0.45; // generous overlap so a scene is always covering (no flashes)
+  const f = span * 0.45; // overlap so a scene is always covering (no flashes / map peek)
   const outA = last ? b - f : b;
   const outB = last ? b : b + f;
   const opacity = useTransform(p, first ? [a, outA, outB] : [a - f, a, outA, outB], first ? [1, 1, 0] : [0, 1, 1, 0]);
@@ -93,7 +118,6 @@ function Scene({ scene, a, b, p, first, last }: { scene: ReelScene; a: number; b
             animate={reduce || !ov.spin ? undefined : { rotate: 360 }} transition={ov.spin ? { duration: ov.spin, repeat: Infinity, ease: "linear" } : undefined} />
         </div>
       )}
-      {/* a light vignette for depth (no text scrim — text lives in the left panel) */}
       <div className="pointer-events-none absolute inset-0 z-[26]" style={{ background: "radial-gradient(125% 110% at 50% 45%, transparent 62%, rgba(18,16,31,.4) 100%)" }} />
     </motion.div>
   );
@@ -110,8 +134,8 @@ function PeethaDot({ site, a, b, p }: { site: { x: number; y: number }; a: numbe
 }
 
 /** a glowing site marker on the map (no label — the title is in the left panel). */
-function FocusPin({ stop, a, b, p }: { stop: Stop; a: number; b: number; p: MotionValue<number> }) {
-  const opacity = useWindow(p, a, b);
+function FocusPin({ stop, a, b, p, hold }: { stop: Stop; a: number; b: number; p: MotionValue<number>; hold?: boolean }) {
+  const opacity = useWindow(p, a, b, { hold });
   return (
     <motion.div style={{ left: `${stop.x}%`, top: `${stop.y}%`, opacity }} className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-1/2">
       <span className="relative flex items-center justify-center">
@@ -123,9 +147,9 @@ function FocusPin({ stop, a, b, p }: { stop: Stop; a: number; b: number; p: Moti
   );
 }
 
-/** one entry in the left text panel, cross-fading on its [a,b] window. */
-function TextBlock({ a, b, p, deva, en, body }: { a: number; b: number; p: MotionValue<number>; deva: string; en: string; body?: string }) {
-  const opacity = useWindow(p, a, b);
+/** one entry in the left text panel. `first` shows at the start; `hold` stays at the end. */
+function TextBlock({ a, b, p, deva, en, body, first, hold }: { a: number; b: number; p: MotionValue<number>; deva: string; en: string; body?: string; first?: boolean; hold?: boolean }) {
+  const opacity = useWindow(p, a, b, { first, hold });
   return (
     <motion.div style={{ opacity }} className="absolute inset-0 flex flex-col justify-center">
       <p className="font-[family-name:var(--font-display)] text-4xl leading-tight text-patra md:text-5xl">{deva}</p>
@@ -140,30 +164,35 @@ export function ShaktipeethSaga() {
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
 
-  const S = shaktipeethReel.length; // reel scenes
-  const B = STOPS.length;           // map beats
-  // weighted timeline: scenes, then map beats, then a short outro that fades to dark
-  const weights = [...shaktipeethReel.map(() => SCENE_WEIGHT), ...STOPS.map(() => BEAT_WEIGHT), OUTRO_WEIGHT];
+  const S = shaktipeethReel.length;
+  const B = STOPS.length;
+  const hasPhoto = !!FINALE_PHOTO;
+  const weights = [
+    ...shaktipeethReel.map(() => SCENE_WEIGHT),
+    ...STOPS.map(() => BEAT_WEIGHT),
+    ...(hasPhoto ? [FINALE_WEIGHT] : []),
+  ];
   const { heightVh, windows } = buildTimeline(weights, VH_PER_UNIT);
   const sceneWindows = windows.slice(0, S);
   const beatWindows = windows.slice(S, S + B);
-  const [outroStart, outroEnd] = windows[S + B];
+  const finaleWindow = hasPhoto ? windows[S + B] : null;
   const mapStart = beatWindows[0][0];
 
   const reelOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [1, 0]);
   const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
   const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.02, 1.06]);
-  const outroDark = useTransform(scrollYProgress, [outroStart, outroEnd], [0, 1]);
+  const photoOpacity = useTransform(scrollYProgress, finaleWindow ? [finaleWindow[0] - 0.03, finaleWindow[0]] : [0.98, 1], [0, hasPhoto ? 1 : 0]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
-  // physically unmount the reel once past the boundary — it cannot ghost the map
+  // unmount the reel once past the boundary — it cannot ghost the map
   const [inMap, setInMap] = useState(false);
   useMotionValueEvent(scrollYProgress, "change", (v) => setInMap(v >= mapStart));
 
-  // the left-panel text: each reel scene, then each map beat
+  const lastBeat = B - 1;
   const textItems = [
-    ...shaktipeethReel.map((s, i) => ({ key: `s${i}`, win: sceneWindows[i], deva: s.deva, en: s.en, body: undefined as string | undefined })),
-    ...STOPS.map((s, k) => ({ key: `b${k}`, win: beatWindows[k], deva: s.deva, en: s.en, body: s.body as string | undefined })),
+    ...shaktipeethReel.map((s, i) => ({ key: `s${i}`, win: sceneWindows[i], deva: s.deva, en: s.en, body: undefined as string | undefined, first: i === 0, hold: false })),
+    ...STOPS.map((s, k) => ({ key: `b${k}`, win: beatWindows[k], deva: s.deva, en: s.en, body: s.body as string | undefined, first: false, hold: !hasPhoto && k === lastBeat })),
+    ...(hasPhoto && finaleWindow ? [{ key: "fin", win: finaleWindow, deva: FINALE_TEXT.deva, en: FINALE_TEXT.en, body: FINALE_TEXT.body as string | undefined, first: false, hold: true }] : []),
   ];
 
   if (reduce) {
@@ -182,7 +211,7 @@ export function ShaktipeethSaga() {
           ))}
           <figure className="relative aspect-video overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={MAP} alt="A painted map of the land where the fifty-one parts fell" className="absolute inset-0 h-full w-full object-cover" />
+            <img src={FINALE_PHOTO ?? MAP} alt="The land where the fifty-one parts fell" className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-raat/25" />
           </figure>
           <ol className="space-y-6">
@@ -203,16 +232,16 @@ export function ShaktipeethSaga() {
     <section ref={ref} className="relative bg-raat" style={{ height: `${heightVh}vh` }}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
         <div className="mx-auto grid w-full max-w-7xl items-stretch gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
-          {/* LEFT — text panel (the blue box) */}
+          {/* LEFT — text panel */}
           <div className="relative min-h-[24vh] md:min-h-0">
             {textItems.map((it) => (
-              <TextBlock key={it.key} a={it.win[0]} b={it.win[1]} p={scrollYProgress} deva={it.deva} en={it.en} body={it.body} />
+              <TextBlock key={it.key} a={it.win[0]} b={it.win[1]} p={scrollYProgress} deva={it.deva} en={it.en} body={it.body} first={it.first} hold={it.hold} />
             ))}
           </div>
 
-          {/* RIGHT — artwork only (the yellow box) */}
+          {/* RIGHT — artwork only */}
           <div className="relative aspect-video w-full overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-            {/* REEL — scenes; fades out at the boundary AND fully unmounts past it */}
+            {/* REEL — scenes; fades out at the boundary AND unmounts past it */}
             {!inMap && (
               <motion.div style={{ opacity: reelOpacity }} className="absolute inset-0 z-10">
                 {shaktipeethReel.map((s, i) => {
@@ -222,7 +251,7 @@ export function ShaktipeethSaga() {
               </motion.div>
             )}
 
-            {/* MAP — on top, fades fully opaque at the boundary (cannot be obscured) */}
+            {/* MAP — on top, fully opaque past the boundary; stays lit to the end */}
             <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <motion.img src={MAP} alt="" aria-hidden style={{ scale: mapScale }} className="absolute inset-0 h-full w-full object-cover" />
@@ -235,12 +264,19 @@ export function ShaktipeethSaga() {
               {STOPS.map((s, k) => {
                 if (s.x == null) return null;
                 const [a, b] = beatWindows[k];
-                return <FocusPin key={`fp${k}`} stop={s} a={a} b={b} p={scrollYProgress} />;
+                return <FocusPin key={`fp${k}`} stop={s} a={a} b={b} p={scrollYProgress} hold={!hasPhoto && k === lastBeat} />;
               })}
             </motion.div>
 
-            {/* outro — fade to dark AFTER hinglaj */}
-            <motion.div style={{ opacity: outroDark }} className="pointer-events-none absolute inset-0 z-30 bg-raat" />
+            {/* FINALE — close on the real temple photo (only if provided) */}
+            {hasPhoto && (
+              <motion.div style={{ opacity: photoOpacity }} className="absolute inset-0 z-30">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={FINALE_PHOTO!} alt="The Hinglaj Mata shrine on the Hingol, Balochistan" className="absolute inset-0 h-full w-full object-cover" />
+                <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(130% 110% at 50% 45%, transparent 60%, rgba(18,16,31,.45) 100%)" }} />
+              </motion.div>
+            )}
+
             <div className="pointer-events-none absolute inset-0 z-40 rounded-[inherit] ring-1 ring-inset ring-swarna/15" />
             <motion.div style={{ opacity: scrollHint }} className="absolute inset-x-0 bottom-3 z-40 text-center font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.3em] text-patra/45">
               scroll

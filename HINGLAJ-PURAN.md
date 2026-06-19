@@ -22,7 +22,7 @@
 
 ## Chapter index & status
 - **Ch 1–64 (Pratham Pravah): ✅ first-pass draft COMPLETE (2026-06-19)** — every chapter has a summary + scene candidates below. Coverage: forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas 27–30; **Sudarshana-charita** (consolidated 32–~40); Navratri/kalasha ritual ~41–44; Durga-avatāras 45; the full **Mahishāsura arc 46–64** — culminating in **the Devi born from the gods' combined tejas (ch 52)** and **the slaying of Mahishāsura (ch 62)**, the aftermath (64) bridging into Dwitiya Pravah.
-  - ◑ **Second pass IN PROGRESS (started 2026-06-19):** ✅ Sudarshana **ch 32–36 split** into per-chapter entries (corrected names: rival = **Sudhajit**, sage = **Bharadvāja**, Kāshi king = **Virasena**; found the embedded **Vishvāmitra–Nandinī** tale in ch 34). ☐ **Still queued:** split **Sudarshana 37–~40** (svayaṃvara/battle/enthronement), **battle 56–61**, **ritual ~41–43**, **closing stuti 63**; verify **23/24/26** (philosophy), **30** (shraddha); confirm the **ch 56–61 generals' names** and the **ch 14 title** (tentatively Hayagrīva). Offset drifts ~+4/+5 — locate headings directly.
+  - ◑ **Second pass IN PROGRESS (started 2026-06-19):** ✅ **Sudarshana saga fully split, ch 32–40** into per-chapter entries (names fixed: rival = **Sudhajit** & **Shatrujit**, sage = **Bharadvāja**, Kāshi king = **Virasena**; embedded **Vishvāmitra–Nandinī** tale in ch 34; svayaṃvara 37, war 38, wedding 39, **Chandikā slays Sudhajit & Shatrujit** in ch 40). ☐ **Still queued:** **ritual ~41–43** split (+ pin the ch-40/41 boundary), **Mahishāsura battle 56–61** split (+ generals' names), **closing stuti 63**; verify **23/24/26** (philosophy) & **30** (shraddha); confirm the **ch 14 title** (tentatively Hayagrīva). Offset drifts ~+4/+5 — locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -186,10 +186,22 @@ The princess **Shashikalā of Kāshi (Banaras)**, shown Sudarshana by the **Devi
 Shashikalā's mother counsels caution — Sudarshana is a throneless exile pursued by **Sudhajit** (who killed King **Virasena** and came to the ashram to kill him, but was turned back by Bharadvāja) — yet Shashikalā insists she will wed only Sudarshana, even live in the forest with him; the queen reports her resolve to the king, setting up the **svayaṃvara**.
 **Scenes:** mother & daughter in counsel · Shashikalā's unwavering vow → the svayaṃvara announced.
 
-### Ch 37–~40 — Svayaṃvara, battle & victory (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ◑ 2nd-pass split pending (printed pp.~111–~129)
-The climax: Shashikalā's **svayaṃvara** at Kāshi; Sudarshana comes fearlessly by the **Jaganmātā's** command (Manoramā blessing him with all the Devi's forms — Ambikā, Padmāvatī, Vārāhī, Kālikā…); the rival kings attack; the **Mahādevī manifests and destroys them**; Sudarshana weds Shashikalā, **regains his kingdom**, and institutes her worship — the saga's proof that **klīṃ-devotion secures victory and rule**.
-**Scenes:** the svayaṃvara at Kāshi · the battle — the Mahādevī routing the rival kings · Sudarshana enthroned, instituting Devi-worship.
-> **2nd-pass TODO:** split ch 37–~40 into per-chapter entries (svayaṃvara / battle / enthronement) and confirm the rival kings' names. High-value **Sudarshana / klīṃ-bhakti reel**.
+### Ch 37 — The Svayaṃvara: Shashikalā Chooses Sudarshana (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified, 2nd pass (printed pp.112–115)
+At the **svayaṃvara** the assembled kings debate whether the throneless exile deserves the princess. Her father tells Shashikalā to garland whichever king she likes; she **refuses even to look at the other kings** (a chaste woman looks only to her husband), declares the **Devi ordained Sudarshana** for her, and asks her father to give her to him on an auspicious day.
+**Scenes:** the hall of assembled kings · Shashikalā turning from them all, declaring for Sudarshana.
+
+### Ch 38 — Sudhajit's Plea & the Kings' Outrage (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified, 2nd pass (printed pp.116–~118)
+**Sudhajit** — lacking army and fort, with Sudarshana only a helpless boy — tries to placate the assembled kings; but they, **red-eyed with fury**, accuse the Kāshi king of insulting them by giving his daughter to the exile. **War is declared.**
+**Scenes:** Sudhajit's placating plea · the enraged kings declaring war.
+
+### Ch 39 — The Wedding Arranged (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified, 2nd pass (printed pp.119–~120)
+Amid the war threat the Kāshi king wavers; Shashikalā urges invoking the **Devi (Vishālā/Sāligrī)**, who will see them through. They **marry by Vedic rites at night**; the rejected kings prepare for battle; Shashikalā vows to die with Sudarshana if he falls.
+**Scenes:** the night Vedic wedding under the Devi's protection · the rival kings mustering for war.
+
+### Ch 40 — The Battle & the Devi's Victory (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified, 2nd pass (printed pp.121–~125)
+The wedding complete, the humiliated rival kings — led by **Sudhajit and Shatrujit** — attack to seize the bride and wealth. The **Devi Chandikā, lion-mounted, manifests with a roar**, and in the ensuing battle **slays Sudhajit and Shatrujit** (their bodies fall from the chariots); the awestruck surviving kings **hymn her**. Sudarshana wins through, **regains his kingdom**, and the **klīṃ-devotion's power is vindicated** — the saga's climax. *(The enthronement/conclusion carries into ~ch 41 before the text returns to ritual.)*
+**Scenes:** the rival kings' assault · **the lion-mounted Chandikā slaying Sudhajit & Shatrujit** — the saga's flagship battle beat · the surviving kings hymning the Devi → Sudarshana enthroned.
+> **2nd-pass note:** the rivals are **Sudhajit & Shatrujit** (confirmed). The exact ch-40/41 boundary (where the enthronement ends and the Navratri ritual of ~41 begins) still to pin.
 
 ### Ch ~41–43 — Navratri Vrat & Kalasha-Maṇḍapa Installation (નવરાત્રી વ્રત / મંડપ-કલશ સ્થાપન) — ✅ verified from PDF (printed pp.~129–134)
 After the Sudarshana saga the text returns to **Navratri/Chandi ritual**: the vrat is to be done in **both Sharad and Vasanta** seasons (when disease and death rise); the detailed **maṇḍapa & vedi** construction (toraṇas, canopies), inviting **nine/five/three brahmins**, svastivācana, and installing the **four-armed Ambikā** (bearing conch, chakra, gadā, padma) on a **lion-throne**, with the **kalasha** set on the vedi — the full kalasha-sthāpanā rite. (A Raktabīja/Chandi-pāṭh element sits in this cluster per the TOC.)
