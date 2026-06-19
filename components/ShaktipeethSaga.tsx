@@ -242,7 +242,6 @@ export function ShaktipeethSaga() {
             {/* MAP — on top, fully opaque past the boundary; stays lit to the end */}
             <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={MAP} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
               {PEETHAS.map((s, k) => {
                 const [a, b] = beatWindows[OVERVIEW];
