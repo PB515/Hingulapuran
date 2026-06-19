@@ -3,6 +3,7 @@ import { site } from "@/lib/site";
 import { DoorHero } from "@/components/DoorHero";
 import { LegendScroll } from "@/components/LegendScroll";
 import { ParshuramClimax } from "@/components/ParshuramClimax";
+import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
 
 export default function Home() {
@@ -35,6 +36,9 @@ export default function Home() {
 
       {/* Flagship: the history of Hingul as a horizontal scroll-painting. */}
       <LegendScroll />
+
+      {/* Brahmarandhra — where the crown of the head fell (the 3D orb). */}
+      <BrahmarandhraOrb />
 
       {/* Climax: Parshuram lays his sword at her feet. */}
       <ParshuramClimax />
