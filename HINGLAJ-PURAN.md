@@ -21,7 +21,7 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–5 done** (Devi-worship rite & phala, cosmogony from Mahalakshmi, the Goddess's forms, origin of Durga, names of Shakti). ☐ **ch 6–64 remain** — Navratri/Chandi vidhis & vrat (6–14), Nahuṣa/Kaitabha & the Krishna-Mahamaya stavans (15–27), and the **Devi Mahatmya / Mahishāsura-vadha** arc (≈28–64). Offset +5 in this region (printed N = PDF N+5).
+- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–10 done** (cosmogony & Devi's forms 1–5; the full Devi-worship liturgy 6–10: mantra/nyāsa, Navratri vrat & muhurta, Durga-puja + Kumari-puja, homa, phalashruti/visarjana). ☐ **ch 11–64 remain** — Chandi-pāṭh vidhis (11–14: nav/shata/sahasra-chandi, purashcharaṇa, havya-kavya), Nahuṣa/Kaitabha & the Krishna-Mahamaya stavans (15–27), and the **Devi Mahatmya / Mahishāsura-vadha** arc (≈28–64). Offset +5 in this region; TOC page numbers run ~3pp optimistic, so locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -57,6 +57,26 @@ A mighty asura named **Durga** (son of a Rudra-form), through great tapas, wins 
 ### Ch 5 — The Many Names of Shakti (શક્તિનાં અનેક નામો) — ✅ verified from PDF (printed pp.16–19)
 **Vishnu** asks Shiva to recite the names of the Goddess's **shaktis**; Shiva enumerates them — a **nāma-stotra** litany of the many names/forms of Shakti born of Durga.
 **Scenes:** a nāma-mālā / iconographic array of the named Shakti-forms (suits a "wall of names/forms" gallery vignette).
+
+### Ch 6 — The Rite of Mantra & Nyāsa (મંત્ર તથા ન્યાસનો વિધિ) — ✅ verified from PDF (printed pp.20–25)
+Vishnu asks how Durga is worshipped. Shiva gives the **nine-syllable Chandika mantra (navākṣarī)**, the **mātṛkā** mantra (from the syllable 'a'), and the **bīja-mantras** (Hrīṃ, etc.) with their powers, then the **nyāsa** — placing the mantras and protective deities (Brahmani, Saraswati…) on the body-parts (forehead, eyes, throat, heart, arms) and the directions (**digbandha**). A mantra-śāstra chapter.
+**Scenes:** the navākṣarī mantra/yantra · the nyāsa — syllables & guardian-goddesses set on the body and the quarters.
+
+### Ch 7 — The Navratri Vrat Rite (નવરાત્રી વ્રતનો વિધિ) — ✅ verified from PDF (printed pp.26–29)
+The rules for the Navratri **kalasha/kula installation**, taught through cautionary tales: a king who — against his purohit **Gautama's** counsel — installed the kalasha under the inauspicious **Chitra nakshatra / Vaidhriti yoga** lost his kingdom, wealth and sons; **King Prasannajit** likewise installed under Vaidhriti and met ruin (preta-hood). Lesson: the **muhurta** must be right.
+**Scenes:** the Navratri kalasha-sthāpanā under an auspicious star · the cautionary king losing all after the ill-omened installation.
+
+### Ch 8 — The Durga-Puja Procedure (દુર્ગાનો પૂજનવિધિ) — ✅ verified from PDF (printed pp.30–33)
+The full puja sequence (pādya, snāna, vastra, gandha, pushpa, dhūpa, dīpa, naivedya, tāmbūla, dakṣiṇā, mantra-pushpānjali, nyāsa), recitation of the **three charitas** (Madhu-Kaitabha = first, **Mahishāsura** = middle, Shumbha-Nishumbha = last) with japa-counts, and a detailed **Kumari-puja**: virgin girls aged **2–10 worshipped as forms** — 2–3 = **Tripura**, 4 = Kalyani, 5 = Rohini, 6 = Kali, 7 = **Chandika**, 8 = Shambhavi, 9 = **Durga**, 10 = Subhadra — each with its fruit, and which varna's girl suits which aim.
+**Scenes:** the full Durga-puja tableau (the upacāra offerings before the image) · the **Kumari-puja** — the row of girl-goddesses 2→10 (Tripura to Subhadra).
+
+### Ch 9 — The Devi Homa Rite (દેવી હોમનો વિધિ) — ✅ verified from PDF (printed pp.31–34)
+The fire-oblation procedure: kalasha/kumbha worship, the **mūla-mantra**, the ahutis (ghee, sesame, barley, rice…) with invocation of the **mātṛkās** (Brahmani, Maheshwari, Kaumari, Vaishnavi, Varahi, Aindri, Chamunda) and Devi-forms (Durga, Bhima, Kalika, Shivadūtī), the ahuti-counts, and the closing **brahmin-feeding & dāna**.
+**Scenes:** the homa-kuṇḍa with the seven mātṛkās invoked around the flame · the closing oblation & brahmin-feast.
+
+### Ch 10 — Fruits of the Navratri Vrat (નવરાત્રી વ્રતની ફલશ્રુતિ) — ✅ verified from PDF (printed pp.35–37)
+After the homa: feed brahmins and the **nine kumaris**, perform the night-balidāna, carry the Devi's **image on a chariot through the village** with song, music and Vedic chant, then **visarjana (immersion)**, give dāna, and feast with kin. **Phala:** the vrat yields the merit of all yajnas; the poor gain wealth; sons and grandsons; the Mother's grace; and peace in the home (with fasting variants — nakta, phalāhāra, ashtami-to-navami upavāsa).
+**Scenes:** the Devi pratimā borne on a chariot through the village (song + Vedic chant) → the visarjana immersion · the kumari/brahmin feast.
 
 ---
 
