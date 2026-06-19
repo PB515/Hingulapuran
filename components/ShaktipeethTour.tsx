@@ -3,36 +3,44 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion, type MotionValue } from "motion/react";
 
-/* Guided-tour pin: the painted Jambudvip map pins to the screen, and as you scroll
-   the sacred sites light up one by one while info-cards cross-fade — the fall of Sati
-   → the fifty-one Shakti Peethas → Hinglaj, where her crown came to rest. Then the
-   pin releases to the next section. Pure scroll-driven (Motion), no GSAP.
-   (Sacred history — see STYLE Rule 0. Never myth/legend/story.)
+/* Guided-tour pin: the painted Jambudvip map pins to the screen. As you scroll it
+   moves through beats — first the whole distribution of the fifty-one seats lights
+   up, then it focuses single sites (where Sati's body fell → Hinglaj, where the
+   crown came to rest). Each active site carries a small tooltip label, and a
+   "current section" card cross-fades below. Then the pin releases.
+   Scroll-driven (Motion), no GSAP. (Sacred history — STYLE Rule 0; never myth/legend/story.)
 
-   TUNING: STOPS[].x / .y are PERCENT positions on the map art — nudge them to land
-   exactly on the painted sites. Add/remove stops freely; the section auto-sizes. */
+   TUNING — all positions are PERCENT on the map art, nudge to land on painted sites:
+   • PEETHAS = the scattered seats that all glow on the overview beat
+   • STOPS[].x/.y = the focus sites (a stop with `all:true` has no point — it lights PEETHAS) */
 
-type Stop = { x: number; y: number; deva: string; en: string; body: string; hinglaj?: boolean };
+type Stop = { deva: string; en: string; body: string; all?: boolean; x?: number; y?: number; hinglaj?: boolean };
+
+// the scattered fifty-one (decorative distribution) — tune onto the painted map
+const PEETHAS: { x: number; y: number }[] = [
+  { x: 50, y: 28 }, { x: 60, y: 34 }, { x: 41, y: 36 }, { x: 56, y: 46 },
+  { x: 45, y: 48 }, { x: 51, y: 58 }, { x: 35, y: 44 }, { x: 65, y: 50 },
+  { x: 30, y: 38 }, { x: 68, y: 40 }, { x: 38, y: 58 }, { x: 60, y: 60 },
+];
 
 const STOPS: Stop[] = [
   {
-    x: 50, y: 44,
-    deva: "देह का विभाजन",
-    en: "The body is parted",
-    body: "Borne by grieving Shiva, Devi Sati's body was parted by Vishnu's Sudarshan — and across all of Jambudvip the parts came down to the earth.",
-  },
-  {
-    x: 56, y: 54,
+    all: true,
     deva: "इकयावन शक्तिपीठ",
     en: "The fifty-one Shakti Peethas",
-    body: "Where each part fell, a seat of the Devi arose — fifty-one Shakti Peethas, binding the whole of the land together like beads upon one thread.",
+    body: "Across the whole of Jambudvip the parts of the Devi came to earth — and where each fell, a seat of power arose. Fifty-one Shakti Peethas, binding the land like beads upon one thread.",
   },
   {
-    x: 22, y: 38,
+    x: 50, y: 46,
+    deva: "देह का विभाजन",
+    en: "Where Sati fell",
+    body: "Borne by grieving Shiva, Devi Sati's body was parted by Vishnu's Sudarshan, and scattered far and wide across the land.",
+  },
+  {
+    x: 22, y: 38, hinglaj: true,
     deva: "हिंगलाज",
     en: "Hinglaj — where the crown fell",
-    body: "On the Hingol, in the Makran hills, fell her brahmarandhra — the tenth gate. Of all the fifty-one, the very door of liberation came to rest here.",
-    hinglaj: true,
+    body: "On the Hingol, in the Makran hills, fell her brahmarandhra — the tenth gate. Of all the fifty-one, the westernmost seat, and the very door of liberation, came to rest here.",
   },
 ];
 
@@ -47,15 +55,28 @@ function useStopOpacity(p: MotionValue<number>, index: number, total: number, fl
   return useTransform(p, [a, a + f, b - f, b], [floor, 1, 1, floor]);
 }
 
-function Pin({ stop, index, total, p }: { stop: Stop; index: number; total: number; p: MotionValue<number> }) {
+/** one of the scattered seats — faint always, brightens on the overview beat (stop 0). */
+function PeethaDot({ site, total, p }: { site: { x: number; y: number }; total: number; p: MotionValue<number> }) {
+  const glow = useStopOpacity(p, 0, total);
+  return (
+    <span style={{ left: `${site.x}%`, top: `${site.y}%` }} className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2">
+      <span className="block h-1.5 w-1.5 rounded-full bg-swarna/30" />
+      <motion.span style={{ opacity: glow }} className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-swarna ring-2 ring-swarna/30" />
+    </span>
+  );
+}
+
+/** a focus site — lit dot + breathing halo + a small tooltip label pinned to it. */
+function FocusPin({ stop, index, total, p }: { stop: Stop; index: number; total: number; p: MotionValue<number> }) {
   const opacity = useStopOpacity(p, index, total);
   return (
-    <motion.div
-      style={{ left: `${stop.x}%`, top: `${stop.y}%`, opacity }}
-      className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-1/2"
-    >
+    <motion.div style={{ left: `${stop.x}%`, top: `${stop.y}%`, opacity }} className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-1/2">
+      {/* the label tooltip, sitting above the point */}
+      <span className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md border border-swarna/30 bg-raat/90 px-3 py-1.5 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.18em] text-patra backdrop-blur-sm">
+        {stop.en}
+        <span className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 border-b border-r border-swarna/30 bg-raat/90" />
+      </span>
       <span className="relative flex items-center justify-center">
-        {/* breathing halo */}
         <motion.span
           animate={{ scale: [1, 2, 1], opacity: [0.55, 0, 0.55] }}
           transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
@@ -63,19 +84,12 @@ function Pin({ stop, index, total, p }: { stop: Stop; index: number; total: numb
         />
         <span className={`relative h-3 w-3 rounded-full ring-4 ${stop.hinglaj ? "bg-kesari ring-kesari/25" : "bg-swarna ring-swarna/20"}`} />
       </span>
-      {stop.hinglaj && (
-        <span
-          className="absolute left-1/2 top-5 -translate-x-1/2 whitespace-nowrap font-[family-name:var(--font-display)] text-lg text-patra"
-          style={{ textShadow: "0 2px 12px rgba(18,16,31,1)" }}
-        >
-          हिंगलाज
-        </span>
-      )}
     </motion.div>
   );
 }
 
-function TourCard({ stop, index, total, p }: { stop: Stop; index: number; total: number; p: MotionValue<number> }) {
+/** the cross-fading "current section" card. */
+function SectionCard({ stop, index, total, p }: { stop: Stop; index: number; total: number; p: MotionValue<number> }) {
   const opacity = useStopOpacity(p, index, total);
   return (
     <motion.div style={{ opacity }} className="pointer-events-none absolute inset-x-6 bottom-10">
@@ -88,16 +102,6 @@ function TourCard({ stop, index, total, p }: { stop: Stop; index: number; total:
   );
 }
 
-function Dot({ index, total, p }: { index: number; total: number; p: MotionValue<number> }) {
-  const opacity = useStopOpacity(p, index, total);
-  return (
-    <span className="relative block h-2 w-2">
-      <span className="absolute inset-0 rounded-full bg-swarna/25" />
-      <motion.span style={{ opacity }} className="absolute inset-0 rounded-full bg-kesari" />
-    </span>
-  );
-}
-
 export function ShaktipeethTour() {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -106,7 +110,7 @@ export function ShaktipeethTour() {
   const mapScale = useTransform(scrollYProgress, [0, 1], [1.03, 1.12]);
 
   if (reduce) {
-    // accessible fallback — the map, then the sites read top to bottom
+    // accessible fallback — the map, then the beats read top to bottom
     return (
       <section className="bg-raat px-6 py-16">
         <div className="mx-auto max-w-3xl">
@@ -140,9 +144,13 @@ export function ShaktipeethTour() {
           <div className="pointer-events-none absolute inset-0 bg-raat/25" />
           <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(125% 105% at 50% 42%, transparent 50%, rgba(18,16,31,.62) 100%)" }} />
 
-          {STOPS.map((s, k) => (
-            <Pin key={k} stop={s} index={k} total={n} p={scrollYProgress} />
+          {/* the scattered fifty-one (light up together on the overview beat) */}
+          {PEETHAS.map((s, k) => (
+            <PeethaDot key={`p${k}`} site={s} total={n} p={scrollYProgress} />
           ))}
+
+          {/* focus sites with their tooltip labels */}
+          {STOPS.map((s, k) => (!s.all ? <FocusPin key={`f${k}`} stop={s} index={k} total={n} p={scrollYProgress} /> : null))}
 
           {/* kicker */}
           <div className="absolute inset-x-0 top-0 z-30 px-6 pt-6 text-center">
@@ -151,17 +159,17 @@ export function ShaktipeethTour() {
             </p>
           </div>
 
-          {/* cross-fading cards */}
+          {/* cross-fading "current section" cards */}
           <div className="absolute inset-x-0 bottom-0 z-30">
             {STOPS.map((s, k) => (
-              <TourCard key={k} stop={s} index={k} total={n} p={scrollYProgress} />
+              <SectionCard key={`c${k}`} stop={s} index={k} total={n} p={scrollYProgress} />
             ))}
           </div>
 
           {/* progress dots */}
           <div className="absolute right-4 top-1/2 z-30 hidden -translate-y-1/2 flex-col gap-2.5 md:flex">
             {STOPS.map((_, k) => (
-              <Dot key={k} index={k} total={n} p={scrollYProgress} />
+              <Dot key={`d${k}`} index={k} total={n} p={scrollYProgress} />
             ))}
           </div>
 
@@ -169,5 +177,15 @@ export function ShaktipeethTour() {
         </div>
       </div>
     </section>
+  );
+}
+
+function Dot({ index, total, p }: { index: number; total: number; p: MotionValue<number> }) {
+  const opacity = useStopOpacity(p, index, total);
+  return (
+    <span className="relative block h-2 w-2">
+      <span className="absolute inset-0 rounded-full bg-swarna/25" />
+      <motion.span style={{ opacity }} className="absolute inset-0 rounded-full bg-kesari" />
+    </span>
   );
 }

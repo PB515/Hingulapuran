@@ -78,6 +78,23 @@ The fire-oblation procedure: kalasha/kumbha worship, the **mūla-mantra**, the a
 After the homa: feed brahmins and the **nine kumaris**, perform the night-balidāna, carry the Devi's **image on a chariot through the village** with song, music and Vedic chant, then **visarjana (immersion)**, give dāna, and feast with kin. **Phala:** the vrat yields the merit of all yajnas; the poor gain wealth; sons and grandsons; the Mother's grace; and peace in the home (with fasting variants — nakta, phalāhāra, ashtami-to-navami upavāsa).
 **Scenes:** the Devi pratimā borne on a chariot through the village (song + Vedic chant) → the visarjana immersion · the kumari/brahmin feast.
 
+### Ch 11 — Ordinance of Nava-Chandi & Shata-Chandi (નવ તથા શત ચંડીનું વિધાન) — ✅ verified from PDF (printed pp.38–40)
+The 9-day **Nava-Chandi** vrat from Ashwin pratipada, with the **nine Durga-forms (Navadurga)** named and worshipped (with milk/curd/ghee): (1) **Nandā** (2) **Raktadantikā** (3) **Shākambharī** (4) **Durgā** (5) **Bhīmā** (6) **Bhrāmarī** (7) **Kālikā** (8) **Shivadūtī** (9) **Aindrī** — plus the **Shata-Chandi** (hundredfold recitation) ordinance. Grants all wishes, sons & prosperity, the Devi's grace.
+**Scenes:** the nine Navadurga forms in sequence (a nine-panel vrat array) · the daily Chandi worship over the nine nights.
+
+### Ch 12 — Ordinance of Sahasra-Chandi (સહસ્ર ચંડીનું વિધાન) — ✅ verified from PDF (printed pp.41–42)
+The **thousandfold Chandi** recitation — for grave calamities, enemies, or loss of kingdom. Feed a thousand brahmins; give dāna (seven grains, a gift of earth, a **white horse**, gold mohurs, a five-mohur Devi image); reciters subsist on milk/fruit; perform the puja, kumari-puja, homa, kumbha-puja, an all-night **jāgaraṇa**, **pradakṣiṇā** of the temple/city, balidāna and anna-dāna.
+**Scenes:** the mass thousand-brahmin recitation & homa · the night vigil + temple-circumambulation · the great dāna (white horse, gold, Devi image).
+
+### Ch 13 — The Purashcharaṇa Rite (પુરશ્ચરણની વિધિ) — ✅ verified from PDF (printed pp.~42–43) *(briefly read)*
+The **purashcharaṇa** discipline — the formal preparatory observance of mantra-repetition (japa) that empowers the mantra — together with the **auspicious tithis** and their merits for undertaking it.
+**Scenes:** the solitary japa-observance before the Devi (a contemplative rite vignette).
+> **Flag:** read only in passing on a dense page; verify the specific purashcharaṇa prescriptions on re-read.
+
+### Ch 14 — The Origin of Havyashrī (હવ્યશ્રીની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.43–44)
+The sages, amazed, ask **Suta** about the **origin of Havyashrī** (the spirit/goddess of the oblation-offerings) from the body of **Madhava (Vishnu)**. This is the **frame that opens the narrative arc** — Suta begins the charitra of the *nirguṇa* Bhagavan, leading directly into the **Madhu-Kaitabha** episode (Vishnu in yoga-nidrā; Brahma seeking to wake him).
+**Scenes:** the sages questioning Suta (the bard begins the great account) · Havyashrī issuing from Vishnu's body · Vishnu reclining in yoga-nidrā (opening of the Madhu-Kaitabha tale).
+
 ---
 
 ## Dwitiya Pravah — chapters 65–87 (✅ all verified from PDF, 2026-06-19)
