@@ -21,7 +21,7 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–10 done** (cosmogony & Devi's forms 1–5; the full Devi-worship liturgy 6–10: mantra/nyāsa, Navratri vrat & muhurta, Durga-puja + Kumari-puja, homa, phalashruti/visarjana). ☐ **ch 11–64 remain** — Chandi-pāṭh vidhis (11–14: nav/shata/sahasra-chandi, purashcharaṇa, havya-kavya), Nahuṣa/Kaitabha & the Krishna-Mahamaya stavans (15–27), and the **Devi Mahatmya / Mahishāsura-vadha** arc (≈28–64). Offset +5 in this region; TOC page numbers run ~3pp optimistic, so locate headings directly.
+- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–14 done** (cosmogony & Devi's forms 1–5; the Devi-worship liturgy 6–10; the Chandi-pāṭh vidhis 11–14: nava/shata-Chandi + Navadurga names, sahasra-Chandi, purashcharaṇa, and **Havyashrī-utpatti** which frames the narrative). ☐ **ch 15–64 remain** — the **Madhu-Kaitabha** episode (15–18; note: "Madhu", not "Nahu" — earlier TOC misread), Brahma/Krishna-Mahamaya stavans & nirguṇa-saguṇa/virāṭ discourses (19–27), then the big **Devi Mahatmya / Mahishāsura-vadha** arc (≈28–64). Offset ~+4/+5 (drifts); TOC page numbers run optimistic — locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).

@@ -4,46 +4,46 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion, type MotionValue } from "motion/react";
 
 /* Guided-tour pin: the painted Jambudvip map pins to the screen. As you scroll it
-   moves through beats — first the whole distribution of the fifty-one seats lights
-   up, then it focuses single sites (where Sati's body fell → Hinglaj, where the
-   crown came to rest). Each active site carries a small tooltip label, and a
-   "current section" card cross-fades below. Then the pin releases.
+   moves through beats — first the parting (the body scattered across the land), then
+   the whole distribution of the fifty-one seats lights up, then it focuses Hinglaj,
+   where the crown came to rest. The narration card sits at the TOP; each active site
+   carries a small tooltip dropping below its point. Then the pin releases.
    Scroll-driven (Motion), no GSAP. (Sacred history — STYLE Rule 0; never myth/legend/story.)
 
-   TUNING — all positions are PERCENT on the map art, nudge to land on painted sites:
-   • PEETHAS = the scattered seats that all glow on the overview beat
-   • STOPS[].x/.y = the focus sites (a stop with `all:true` has no point — it lights PEETHAS) */
+   TUNING — all positions are PERCENT on the map art (cream land on maroon sea):
+   • PEETHAS = the scattered seats that all glow on the overview beat (keep them on land)
+   • STOPS[].x/.y = focus sites (a stop with `all:true` lights PEETHAS; one with neither is intro) */
 
 type Stop = { deva: string; en: string; body: string; all?: boolean; x?: number; y?: number; hinglaj?: boolean };
 
-// the scattered fifty-one (decorative distribution) — tune onto the painted map
+// the scattered fifty-one (decorative distribution) — placed on the cream landmass
 const PEETHAS: { x: number; y: number }[] = [
-  { x: 50, y: 28 }, { x: 60, y: 34 }, { x: 41, y: 36 }, { x: 56, y: 46 },
-  { x: 45, y: 48 }, { x: 51, y: 58 }, { x: 35, y: 44 }, { x: 65, y: 50 },
-  { x: 30, y: 38 }, { x: 68, y: 40 }, { x: 38, y: 58 }, { x: 60, y: 60 },
+  { x: 34, y: 26 }, { x: 44, y: 23 }, { x: 54, y: 24 }, { x: 62, y: 29 },
+  { x: 30, y: 33 }, { x: 41, y: 36 }, { x: 50, y: 34 }, { x: 57, y: 39 },
+  { x: 46, y: 45 }, { x: 52, y: 51 }, { x: 48, y: 60 }, { x: 36, y: 42 },
 ];
 
 const STOPS: Stop[] = [
   {
+    deva: "देह का विभाजन",
+    en: "The body is parted",
+    body: "Borne by grieving Shiva, Devi Sati's body was parted by Vishnu's Sudarshan — and across all of Jambudvip the parts came down to the earth.",
+  },
+  {
     all: true,
     deva: "इकयावन शक्तिपीठ",
     en: "The fifty-one Shakti Peethas",
-    body: "Across the whole of Jambudvip the parts of the Devi came to earth — and where each fell, a seat of power arose. Fifty-one Shakti Peethas, binding the land like beads upon one thread.",
+    body: "Where each part fell, a seat of power arose — fifty-one Shakti Peethas, binding the whole of the land together like beads upon one thread.",
   },
   {
-    x: 50, y: 46,
-    deva: "देह का विभाजन",
-    en: "Where Sati fell",
-    body: "Borne by grieving Shiva, Devi Sati's body was parted by Vishnu's Sudarshan, and scattered far and wide across the land.",
-  },
-  {
-    x: 22, y: 38, hinglaj: true,
+    x: 17, y: 27, hinglaj: true,
     deva: "हिंगलाज",
     en: "Hinglaj — where the crown fell",
     body: "On the Hingol, in the Makran hills, fell her brahmarandhra — the tenth gate. Of all the fifty-one, the westernmost seat, and the very door of liberation, came to rest here.",
   },
 ];
 
+const OVERVIEW = STOPS.findIndex((s) => s.all); // which beat lights the whole distribution
 const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
 
 /** opacity that fades in for this stop's scroll window, then out (floor = resting value). */
@@ -55,9 +55,9 @@ function useStopOpacity(p: MotionValue<number>, index: number, total: number, fl
   return useTransform(p, [a, a + f, b - f, b], [floor, 1, 1, floor]);
 }
 
-/** one of the scattered seats — faint always, brightens on the overview beat (stop 0). */
+/** one of the scattered seats — faint always, brightens on the overview beat. */
 function PeethaDot({ site, total, p }: { site: { x: number; y: number }; total: number; p: MotionValue<number> }) {
-  const glow = useStopOpacity(p, 0, total);
+  const glow = useStopOpacity(p, OVERVIEW, total);
   return (
     <span style={{ left: `${site.x}%`, top: `${site.y}%` }} className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2">
       <span className="block h-1.5 w-1.5 rounded-full bg-swarna/30" />
@@ -66,16 +66,11 @@ function PeethaDot({ site, total, p }: { site: { x: number; y: number }; total: 
   );
 }
 
-/** a focus site — lit dot + breathing halo + a small tooltip label pinned to it. */
+/** a focus site — lit dot + breathing halo + a small tooltip label dropping below it. */
 function FocusPin({ stop, index, total, p }: { stop: Stop; index: number; total: number; p: MotionValue<number> }) {
   const opacity = useStopOpacity(p, index, total);
   return (
     <motion.div style={{ left: `${stop.x}%`, top: `${stop.y}%`, opacity }} className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-1/2">
-      {/* the label tooltip, sitting above the point */}
-      <span className="absolute bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md border border-swarna/30 bg-raat/90 px-3 py-1.5 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.18em] text-patra backdrop-blur-sm">
-        {stop.en}
-        <span className="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 border-b border-r border-swarna/30 bg-raat/90" />
-      </span>
       <span className="relative flex items-center justify-center">
         <motion.span
           animate={{ scale: [1, 2, 1], opacity: [0.55, 0, 0.55] }}
@@ -84,21 +79,36 @@ function FocusPin({ stop, index, total, p }: { stop: Stop; index: number; total:
         />
         <span className={`relative h-3 w-3 rounded-full ring-4 ${stop.hinglaj ? "bg-kesari ring-kesari/25" : "bg-swarna ring-swarna/20"}`} />
       </span>
+      {/* tooltip label, dropping below the point */}
+      <span className="absolute left-1/2 top-5 -translate-x-1/2 whitespace-nowrap rounded-md border border-swarna/30 bg-raat/90 px-3 py-1.5 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.18em] text-patra backdrop-blur-sm">
+        <span className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 border-l border-t border-swarna/30 bg-raat/90" />
+        {stop.en}
+      </span>
     </motion.div>
   );
 }
 
-/** the cross-fading "current section" card. */
+/** the cross-fading narration card, sitting at the TOP of the frame. */
 function SectionCard({ stop, index, total, p }: { stop: Stop; index: number; total: number; p: MotionValue<number> }) {
   const opacity = useStopOpacity(p, index, total);
   return (
-    <motion.div style={{ opacity }} className="pointer-events-none absolute inset-x-6 bottom-10">
-      <div className="mx-auto max-w-xl rounded-[var(--radius)] border border-swarna/25 bg-raat/85 p-5 backdrop-blur-sm md:p-6">
+    <motion.div style={{ opacity }} className="pointer-events-none absolute inset-x-6 top-6 z-30">
+      <div className="mx-auto max-w-xl rounded-[var(--radius)] border border-swarna/25 bg-raat/85 p-5 text-center backdrop-blur-sm md:p-6">
         <p className="font-[family-name:var(--font-display)] text-2xl text-patra md:text-3xl">{stop.deva}</p>
         <p className="mt-1 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.26em] text-swarna">{stop.en}</p>
         <p className="mt-3 font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted">{stop.body}</p>
       </div>
     </motion.div>
+  );
+}
+
+function Dot({ index, total, p }: { index: number; total: number; p: MotionValue<number> }) {
+  const opacity = useStopOpacity(p, index, total);
+  return (
+    <span className="relative block h-2 w-2">
+      <span className="absolute inset-0 rounded-full bg-swarna/25" />
+      <motion.span style={{ opacity }} className="absolute inset-0 rounded-full bg-kesari" />
+    </span>
   );
 }
 
@@ -150,21 +160,12 @@ export function ShaktipeethTour() {
           ))}
 
           {/* focus sites with their tooltip labels */}
-          {STOPS.map((s, k) => (!s.all ? <FocusPin key={`f${k}`} stop={s} index={k} total={n} p={scrollYProgress} /> : null))}
+          {STOPS.map((s, k) => (s.x != null ? <FocusPin key={`f${k}`} stop={s} index={k} total={n} p={scrollYProgress} /> : null))}
 
-          {/* kicker */}
-          <div className="absolute inset-x-0 top-0 z-30 px-6 pt-6 text-center">
-            <p className="font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.32em] text-swarna" style={{ textShadow: "0 2px 10px rgba(18,16,31,1)" }}>
-              The fifty-one Shakti Peethas
-            </p>
-          </div>
-
-          {/* cross-fading "current section" cards */}
-          <div className="absolute inset-x-0 bottom-0 z-30">
-            {STOPS.map((s, k) => (
-              <SectionCard key={`c${k}`} stop={s} index={k} total={n} p={scrollYProgress} />
-            ))}
-          </div>
+          {/* cross-fading narration cards, at the top */}
+          {STOPS.map((s, k) => (
+            <SectionCard key={`c${k}`} stop={s} index={k} total={n} p={scrollYProgress} />
+          ))}
 
           {/* progress dots */}
           <div className="absolute right-4 top-1/2 z-30 hidden -translate-y-1/2 flex-col gap-2.5 md:flex">
@@ -177,15 +178,5 @@ export function ShaktipeethTour() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Dot({ index, total, p }: { index: number; total: number; p: MotionValue<number> }) {
-  const opacity = useStopOpacity(p, index, total);
-  return (
-    <span className="relative block h-2 w-2">
-      <span className="absolute inset-0 rounded-full bg-swarna/25" />
-      <motion.span style={{ opacity }} className="absolute inset-0 rounded-full bg-kesari" />
-    </span>
   );
 }
