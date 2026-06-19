@@ -22,7 +22,8 @@
 
 ## Chapter index & status
 - **Ch 1–64 (Pratham Pravah): ✅ first-pass draft COMPLETE (2026-06-19)** — every chapter has a summary + scene candidates below. Coverage: forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas 27–30; **Sudarshana-charita** (consolidated 32–~40); Navratri/kalasha ritual ~41–44; Durga-avatāras 45; the full **Mahishāsura arc 46–64** — culminating in **the Devi born from the gods' combined tejas (ch 52)** and **the slaying of Mahishāsura (ch 62)**, the aftermath (64) bridging into Dwitiya Pravah.
-  - ◑ **Second pass IN PROGRESS (started 2026-06-19):** ✅ **Sudarshana saga split, ch 32–40** (names fixed: **Sudhajit**, **Shatrujit**, **Bharadvāja**, **Virasena**; embedded **Vishvāmitra–Nandinī** in ch 34). ✅ **Mahishāsura battle split, ch 56–61** (generals named — **Durmukha** 57, **Chikṣura & Tāmrāksha** 58, **Asilomā & Biḍāla** 59–60; the Devi's dharma-declaration 59; embedded **Mandodarī kathā** in ch 61). ☐ **Still queued:** **ritual ~41–43** split (+ pin the ch-40/41 boundary), **closing stuti 63**; verify **23/24/26** (philosophy) & **30** (shraddha); confirm the **ch 14 title** (tentatively Hayagrīva). Offset drifts ~+4/+5 — locate headings directly.
+  - ✅ **Second pass COMPLETE (2026-06-19):** **Sudarshana saga split, ch 32–42** (names fixed: **Sudhajit**, **Shatrujit**, **Bharadvāja**, **Virasena**; embedded **Vishvāmitra–Nandinī** in ch 34; saga concludes ch 41–42 — enthronement & reconciliation). **Mahishāsura battle split, ch 56–61** (generals named — **Durmukha** 57, **Chikṣura & Tāmrāksha** 58, **Asilomā & Biḍāla** 59–60; embedded **Mandodarī kathā** in ch 61). **Ritual ch 43** (Navratri/kalasha) and **closing stuti ch 63** (Devi-stuti + Sāvitrī-vrat) split. **Verified:** philosophy **24** (nirguṇa/saṅkhya), **26** (Devi as universal Shakti), **23** (in context); **ch 14 title = Hayashrī** (= Hayagrīva). **Corrected:** **ch 30** was mis-titled "shraddha/ancestor-redemption" → it is the **cosmogony / Devi-yajna** (the naraka/Gaya-shraddha bit belongs to ch 29's tail).
+  - ☐ **Remaining for the pandit/native pass only:** confirm tentatively-read proper names (the ch 67 river names, ch 71 "Punyada", minor battle/saga names) and the two seed details not found in the PDF (ch 84 "12-yr flesh penance", ch 87 reading-blessing + Vajranabh/Yadava). Offset drifts ~+4/+5 — locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -92,8 +93,8 @@ The **purashcharaṇa** discipline — the formal preparatory observance of mant
 **Scenes:** the solitary japa-observance before the Devi (a contemplative rite vignette).
 > **Flag:** read only in passing on a dense page; verify the specific purashcharaṇa prescriptions on re-read.
 
-### Ch 14 — The Origin of Hayagrīva (હયગ્રીવની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.43–49)
-*(Title read tentatively as "Havyashrī/Hayashrī" — but the chapter's content is wholly the Hayagrīva myth.)* The sages, amazed, ask **Suta** how the great frame-event came about. An asura named **Hayagrīva** wins from the Devi a boon that he can be slain **only by a horse-headed being**, then torments the three worlds. Meanwhile **Brahma**, touching Vishnu's bow, makes the **bowstring snap and sever Vishnu's head** — the cosmos trembles, the gods despair, and **Brihaspati** counsels intellect (buddhi) over lament. On the gods' resolve, a **horse's head is affixed to Vishnu's body** — he becomes **Hayagrīva (horse-faced)** by Mahāmāyā's grace and slays the asura Hayagrīva. (This is the Hayagrīva-avatāra origin; it sets up the Madhu-Kaitabha arc.)
+### Ch 14 — The Origin of Hayashrī / Hayagrīva (હયશ્રીની ઉત્પત્તિ) — ✅ verified, 2nd pass (printed pp.43–49)
+*(Title confirmed: **Hayashrī** — "the horse-headed glory," i.e. the Hayagrīva form; the chapter's content is wholly the Hayagrīva myth.)* The sages, amazed, ask **Suta** how the great frame-event came about. An asura named **Hayagrīva** wins from the Devi a boon that he can be slain **only by a horse-headed being**, then torments the three worlds. Meanwhile **Brahma**, touching Vishnu's bow, makes the **bowstring snap and sever Vishnu's head** — the cosmos trembles, the gods despair, and **Brihaspati** counsels intellect (buddhi) over lament. On the gods' resolve, a **horse's head is affixed to Vishnu's body** — he becomes **Hayagrīva (horse-faced)** by Mahāmāyā's grace and slays the asura Hayagrīva. (This is the Hayagrīva-avatāra origin; it sets up the Madhu-Kaitabha arc.)
 **Scenes:** the asura Hayagrīva's boon-empowered terror · the snapped bowstring severing Vishnu's head, cosmos trembling · the gods affixing the horse-head → Vishnu-Hayagrīva · the slaying of the asura.
 
 ### Ch 15 — The Origin of Madhu & Kaitabha (મધુ તથા કૈટભની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.49–~52)
@@ -124,24 +125,21 @@ The **vimāna cosmic tour**: Brahma narrates flying through wondrous worlds — 
 Two **stavans** glorifying the Devi as **Prakṛti/Mahāmāyā**: *"O Prakṛti, O Vidhātrī, source and abode of all; the Shakti without whom the gods are powerless — Brahma creates, Vishnu protects, Umāpati destroys, but only when empowered by you; by your power the very sun shines."* (The two chapters are paired stavans — the second framed as a hymn in distress, *sankaṭ*.)
 **Scenes:** the gods/Vishnu before the radiant Mahāmāyā singing her praise (a devotional stavan tableau).
 
-### Ch 23 — The Tasks Mahāmāyā Assigns the Gods (મહામાયાએ દેવોને સોંપેલાં કાર્યો) — ✅ verified from PDF (printed pp.71–74) *(read in context)*
-Following the vision and hymns, the Devi **assigns the gods their cosmic offices** — confirming Brahma, Vishnu and Rudra in their functions and dispatching them to their work by her grace.
+### Ch 23 — The Tasks Mahāmāyā Assigns the Gods (મહામાયાએ દેવોને સોંપેલાં કાર્યો) — ✅ verified in context, 2nd pass (printed pp.71–~73)
+Following the vimāna-vision and the Mahāmāyā stavans, the Devi **assigns the gods their cosmic offices** — confirming Brahma, Vishnu and Rudra in their functions and dispatching them to their work by her grace (she pervades them all as their Shakti).
 **Scenes:** the Devi enthroned, apportioning their duties to the assembled gods.
-> **Flag:** read in passing (philosophical/assignment chapter) — verify specifics on re-read.
 
-### Ch 24 — The Nirguṇa Principle (નિર્ગુણ તત્ત્વ કેવી રીતે?) — ✅ verified from PDF (printed pp.74–76) *(read in context)*
-A discourse on the **nirguṇa** (attributeless) nature of the supreme reality/Devi — how the formless Brahman-Shakti relates to the world of forms.
-**Scenes:** a contemplative nirguṇa vignette (formless light / aniconic emblem — fits the project's aniconic-worship motif).
-> **Flag:** characterized from the title & surrounding discourse; verify on re-read.
+### Ch 24 — The Nirguṇa Principle (નિર્ગુણ તત્ત્વ કેવી રીતે?) — ✅ verified, 2nd pass (printed pp.74–76)
+The Devi expounds the **nirguṇa/saguṇa** nature of the supreme reality: she is **saguṇa for the sake of causation but nirguṇa in essence**, and from her unfold the Sāṅkhya **evolutes** — mahat-tattva, ahaṅkāra, and the categories born of them. How the formless Brahman-Shakti gives rise to the world of forms.
+**Scenes:** a contemplative nirguṇa vignette (formless light / aniconic emblem — fits the project's aniconic-worship motif) · the evolutes unfolding from the one Shakti.
 
 ### Ch 25 — Discourse on the Three Guṇas (ગુણોનું વર્ણન) — ✅ verified from PDF (printed pp.76–83)
 A **Narada–Brahma dialogue** on **sattva, rajas and tamas**: when rajas grows one is driven to action and desire; when tamas grows, delusion and loss of faith in dharma; when sattva grows, dispassion and **moksha**. Narada asks how three mutually-opposed guṇas can coexist; Brahma answers with the **lamp analogy** — wick, oil and flame, though distinct, together give light.
 **Scenes:** the three guṇas personified · the lamp (wick/oil/flame) as the emblem of their union.
 
-### Ch 26 — The Virāṭ (Cosmic) Form (વિરાટ્ સ્વરૂપ) — ✅ verified from PDF (printed pp.~83–84) *(brief chapter)*
-A short cosmological chapter on the **Virāṭ-svarūpa** — the universal/cosmic form, how the Devi's vast form manifests as the world.
-**Scenes:** the Virāṭ cosmic-form tableau (the worlds arrayed within the Devi's body).
-> **Flag:** brief chapter, read only in passing; verify on re-read.
+### Ch 26 — The Devi as Universal Shakti / Virāṭ (વિરાટ્ સ્વરૂપ) — ✅ verified, 2nd pass (printed pp.~81–83)
+Concluding the guṇa/prakṛti discourse (Narada–Brahma): **all the gods — Brahma, Vishnu, Rudra, Surya, Kubera, Agni, Vāyu — act only by the Devi's Shakti**; she (Mahālakṣmī, Mahāsaraswatī, the **nirguṇā Īśwarī**) is the cause of all beings, worshipped even by the trimūrti. The king is exhorted to perform her **yajna** by the proper rite.
+**Scenes:** the Virāṭ tableau — the gods arrayed, each animated by the one Devi-Shakti · the king enjoined to her yajna.
 
 ### Ch 27 — The Tale of Satyavrata (સત્યવ્રત આખ્યાન) — ✅ verified from PDF (printed pp.84–~88)
 At **Naimishāraṇya** the assembled gods ask which deity is most worthy of worship; sage **Lomasha** answers: **Shakti / Ādi-Prakṛti**, who pervades all. This is illustrated by an itihaas: a brahmin **Devadatta** of Kaushala-desha holds a yajna where an aged, Veda-less brahmin's chanting falters; cursed/scorned as a "fool," the episode turns on the worth of learning and the danger of anger — opening the **Satyavrata** story (the fool redeemed by the Devi's grace). Includes the maxim that a Veda-less brahmin is reckoned no better than a beast or shudra.
@@ -157,10 +155,10 @@ Conclusion of the Satyavrata story: the **fool, by the Devi's grace, becomes a r
 **Vyasa** to Janamejaya: the Devi-yajna is of **three kinds** — **sāttvika** (for munis), **rājasa** (for kings), **tāmasa** (for rakshasas, who are cruel). A true sāttvika yajna requires purity of place, time, materials, mantra and brahmins, sāttvika faith, and **wealth honestly earned** (never ill-gotten gains).
 **Scenes:** the three-fold yajna contrasted (the muni's pure rite vs. the king's vs. the rakshasa's) — a classification tableau.
 
-### Ch 30 — The Redemption of the Ancestors (shraddha / pitṛ-uddhāra) — ✅ verified from PDF (printed pp.~91–94) *(read in passing)*
-An ākhyāna on **shraddha and the redemption of ancestors**: a father who neglected snāna, dāna and the remembrance of Vishnu at death — and slighted a sage — falls into naraka; **King Janamejaya**, learning his own father languishes there, weeps and asks how to save him (the **Gaya-shraddha** remedy). Stresses that proper rites and Devi-devotion redeem the pitṛs.
-**Scenes:** the father fallen into naraka · Janamejaya's grief · the Gaya-shraddha that lifts the ancestor to heaven.
-> **Flag:** read only in passing; verify the chapter's exact bounds & detail on re-read.
+### Ch 30 — The Devi-Yajna Ordained by Bhagavan / the Cosmogony (ભગવાને દીધેલ દેવીયજ્ઞ) — ✅ verified, 2nd pass (printed pp.93–~95)
+The king asks how **Vishnu** performed the Devi-yajna; Vyasa narrates the **cosmogony**: after Madhu-Kaitabha the earth is steadied with mountains, golden **Meru** rises, the **prajāpatis** (Marīchi, Nārada, Atri, Pulastya, Dakṣa) are born, **Kashyapa** from Marīchi and Dakṣa's daughters, then devas/daityas/humans; Brahma, Vishnu and Shiva take their abodes (Brahmaloka, Vaikuṇṭha, Kailāsa) and Indra's heaven is made; the **samudra-manthana** yields Kāmadhenu, Ucchaiśravas, Rambhā, Dhanvantari — the cosmic order within which the Devi-yajna is set.
+**Scenes:** golden Meru rising over the steadied earth · the prajāpatis & the lineages born · the samudra-manthana (the churning, the treasures emerging).
+> **2nd-pass correction:** the first-pass title "Redemption of the Ancestors / shraddha" was a **misattribution** — that naraka/Gaya-shraddha passage belongs to ch 29's tail; **ch 30 is the cosmogony / Devi-yajna**.
 
 ### Ch 31 — The Dhruvasandhi Ākhyāna (ધ્રુવસંધિ આખ્યાન) — ✅ verified from PDF (printed pp.95+)
 Opens the major **Dhruvasandhi / Sudarshana** saga: the righteous **solar-dynasty** king **Dhruvasandhi**, under whom all varnas live happily and crime is unknown, and his two queens — the wise **Manoramā** and the lovely **Līlāvatī**. (This is the Devi-Bhāgavata tale that leads to the exiled prince **Sudarshana** mastering the Devi's bīja-mantra and regaining his kingdom — likely spanning several chapters.)

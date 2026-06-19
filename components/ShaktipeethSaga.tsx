@@ -28,8 +28,8 @@ import { buildTimeline } from "@/lib/timeline";
 
 const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
 
-// Drop the real Balochistan temple photo at this path, then set FINALE_PHOTO to it.
-const FINALE_PHOTO: string | null = null; // e.g. "/art/temple/hinglaj.webp"
+// The real Balochistan shrine photo — save the provided image to public/art/temple/hinglaj.jpg
+const FINALE_PHOTO: string | null = "/art/temple/hinglaj.jpg";
 const FINALE_TEXT = {
   deva: "हिंगलाज माता",
   en: "The living shrine · Hingol, Balochistan",
@@ -84,15 +84,11 @@ function Img({ src, y, fit, z, scale, origin }: { src: ReelLayer; y: MotionValue
   );
 }
 
-/** one reel scene (artwork only). `first` = on screen the instant the section pins. */
-function Scene({ scene, a, b, p, first, last }: { scene: ReelScene; a: number; b: number; p: MotionValue<number>; first?: boolean; last?: boolean }) {
+/** one reel scene (artwork only). Only the active scene is ever mounted, so there is
+   no cross-fade and nothing can overlap; the emerge-scale + parallax run within it. */
+function Scene({ scene, a, b, p }: { scene: ReelScene; a: number; b: number; p: MotionValue<number> }) {
   const reduce = useReducedMotion();
-  const span = b - a;
-  const f = span * 0.45; // overlap so a scene is always covering (no flashes / map peek)
-  const outA = last ? b - f : b;
-  const outB = last ? b : b + f;
-  const opacity = useTransform(p, first ? [a, outA, outB] : [a - f, a, outA, outB], first ? [1, 1, 0] : [0, 1, 1, 0]);
-  const scale = useTransform(p, [a, (a + b) / 2, b], first ? [1, 1, 1.06] : [0.84, 1, 1.08]);
+  const scale = useTransform(p, [a, (a + b) / 2, b], [0.94, 1, 1.06]);
   const farY = useTransform(p, [a, b], ["-2%", "2%"]);
   const subjY = useTransform(p, [a, b], ["-6%", "6%"]);
   const nearY = useTransform(p, [a, b], ["-12%", "12%"]);
@@ -104,7 +100,7 @@ function Scene({ scene, a, b, p, first, last }: { scene: ReelScene; a: number; b
   const ov = scene.overlay;
 
   return (
-    <motion.div style={{ opacity, scale }} className="absolute inset-0 isolate will-change-transform">
+    <motion.div style={{ scale }} className="absolute inset-0 isolate will-change-transform">
       <Img src={scene.far} y={farY} fit="object-cover" z="z-0" />
       <div className="pointer-events-none absolute inset-0 z-[5] bg-raat/20" />
       <Img src={scene.subject} y={subjY} fit="object-contain" z="z-10" scale={subjScale} origin="center bottom" />
@@ -167,18 +163,15 @@ export function ShaktipeethSaga() {
   const finaleWindow = hasPhoto ? windows[S + B] : null;
   const mapStart = beatWindows[0][0];
 
-  const reelOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [1, 0]);
   const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
   const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.02, 1.06]);
   const photoOpacity = useTransform(scrollYProgress, finaleWindow ? [finaleWindow[0] - 0.03, finaleWindow[0]] : [0.98, 1], [0, hasPhoto ? 1 : 0]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
-  // discrete state from scroll: unmount the reel past the boundary, and pick the ONE
-  // active text item (hard swap — no cross-fade, so panel text can never overlap)
-  const [inMap, setInMap] = useState(false);
+  // discrete active index from scroll — only ONE scene/text is mounted at a time
+  // (hard swap, no cross-fade), so nothing can ever overlap.
   const [active, setActive] = useState(0);
   useMotionValueEvent(scrollYProgress, "change", (v) => {
-    setInMap(v >= mapStart);
     let idx = 0;
     for (let i = 0; i < windows.length; i++) if (v >= windows[i][0]) idx = i;
     setActive(idx);
@@ -241,14 +234,11 @@ export function ShaktipeethSaga() {
 
           {/* RIGHT — artwork only */}
           <div className="relative aspect-video w-full overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-            {/* REEL — scenes; fades out at the boundary AND unmounts past it */}
-            {!inMap && (
-              <motion.div style={{ opacity: reelOpacity }} className="absolute inset-0 z-10">
-                {shaktipeethReel.map((s, i) => {
-                  const [a, b] = sceneWindows[i];
-                  return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} last={i === S - 1} />;
-                })}
-              </motion.div>
+            {/* REEL — only the active scene is mounted (hard swap, no overlap) */}
+            {active < S && (
+              <div className="absolute inset-0 z-10">
+                <Scene key={`sc${active}`} scene={shaktipeethReel[active]} a={sceneWindows[active][0]} b={sceneWindows[active][1]} p={scrollYProgress} />
+              </div>
             )}
 
             {/* MAP — on top, fully opaque past the boundary; stays lit to the end */}
