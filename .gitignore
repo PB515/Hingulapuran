@@ -42,3 +42,7 @@ next-env.d.ts
 
 # logs
 *.log
+
+# large local source (read by the PDF-analysis chat; not for git)
+source/
+*.pdf
