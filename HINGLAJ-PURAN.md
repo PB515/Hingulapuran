@@ -22,7 +22,7 @@
 
 ## Chapter index & status
 - **Ch 1–64 (Pratham Pravah): ✅ first-pass draft COMPLETE (2026-06-19)** — every chapter has a summary + scene candidates below. Coverage: forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas 27–30; **Sudarshana-charita** (consolidated 32–~40); Navratri/kalasha ritual ~41–44; Durga-avatāras 45; the full **Mahishāsura arc 46–64** — culminating in **the Devi born from the gods' combined tejas (ch 52)** and **the slaying of Mahishāsura (ch 62)**, the aftermath (64) bridging into Dwitiya Pravah.
-  - ◑ **Second pass IN PROGRESS (started 2026-06-19):** ✅ **Sudarshana saga fully split, ch 32–40** into per-chapter entries (names fixed: rival = **Sudhajit** & **Shatrujit**, sage = **Bharadvāja**, Kāshi king = **Virasena**; embedded **Vishvāmitra–Nandinī** tale in ch 34; svayaṃvara 37, war 38, wedding 39, **Chandikā slays Sudhajit & Shatrujit** in ch 40). ☐ **Still queued:** **ritual ~41–43** split (+ pin the ch-40/41 boundary), **Mahishāsura battle 56–61** split (+ generals' names), **closing stuti 63**; verify **23/24/26** (philosophy) & **30** (shraddha); confirm the **ch 14 title** (tentatively Hayagrīva). Offset drifts ~+4/+5 — locate headings directly.
+  - ◑ **Second pass IN PROGRESS (started 2026-06-19):** ✅ **Sudarshana saga split, ch 32–40** (names fixed: **Sudhajit**, **Shatrujit**, **Bharadvāja**, **Virasena**; embedded **Vishvāmitra–Nandinī** in ch 34). ✅ **Mahishāsura battle split, ch 56–61** (generals named — **Durmukha** 57, **Chikṣura & Tāmrāksha** 58, **Asilomā & Biḍāla** 59–60; the Devi's dharma-declaration 59; embedded **Mandodarī kathā** in ch 61). ☐ **Still queued:** **ritual ~41–43** split (+ pin the ch-40/41 boundary), **closing stuti 63**; verify **23/24/26** (philosophy) & **30** (shraddha); confirm the **ch 14 title** (tentatively Hayagrīva). Offset drifts ~+4/+5 — locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -252,10 +252,29 @@ The Devi, **sinha-vāhinī** (lion-mounted), divine and fully armed, is praised 
 The envoy (**Tāmrāksha**) returns to Mahisha; reporting that *"the gods made this Devi from their combined tejas, and she stands alone,"* a minister gives statecraft counsel (never underestimate a foe; consult ministers; weigh fate vs. effort). Mahisha, struck by her beauty, wavers between fighting and wooing her.
 **Scenes:** the envoy reporting to Mahisha · the demon court's deliberation · Mahisha smitten by the Devi's described beauty.
 
-### Ch 56–61 — The Great Battle (દેવીના ક્રોધનું વર્ણન / દેવ-દૈત્ય યુદ્ધ) — ✅ verified from PDF (printed pp.~172–194), battle arc
-The **Devi's wrath** unleashed: she battles and destroys **Mahisha's generals and his vast army** in a continuous war (the text names the generals — to verify on re-read). Includes the "Mahishārī" (slayer-of-Mahisha) narrative and the description of the Devi's fury.
-**Scenes:** the Devi on her lion mowing through the demon host · the fall of Mahisha's generals one by one · the battlefield tableau (the Saptashati war).
-> **Flag:** treated as a battle arc (ch 56–61); split per-chapter and confirm the generals' names on re-read.
+### Ch 56 — The Demon Court's Statecraft (નીતિ-વિચાર) — ✅ verified, 2nd pass (printed pp.~172–175)
+Mahisha's ministers debate policy — the three kinds of counsel (sāttvika/rājasa/tāmasa), whether to fight or treat with the Devi — extending the deliberation begun at ch 54–55. (A nīti-śāstra interlude before the fighting.)
+**Scenes:** Mahisha's war-council weighing war vs. treaty.
+
+### Ch 57 — The Devi Slays Durmukha (દેવ-દૈત્ય યુદ્ધ) — ✅ verified, 2nd pass (printed pp.~176–179)
+The fighting opens: the Devi battles and **slays the general Durmukha** (and another commander), throwing the demon army into dismay. *(Established by ch 58's opening, which laments Durmukha's death.)*
+**Scenes:** the first clash · the fall of general Durmukha.
+
+### Ch 58 — The Devi vs Chikṣura & Tāmrāksha (દેવી તથા ચિક્ષુર તામ્રાક્ષનું યુદ્ધ) — ✅ verified, 2nd pass (printed pp.179+)
+Mahisha, enraged at Durmukha's death, sends **Chikṣura**, who rallies the fleeing demon host, blows his conch, confronts and mocks the lion-mounted Devi — and battles her alongside **Tāmrāksha**.
+**Scenes:** Chikṣura rallying the routed demons · his single combat with the Devi · Tāmrāksha joining the fray.
+
+### Ch 59 — The Devi Declares Her Dharma (દેવીના ક્રોધનું વર્ણન) — ✅ verified, 2nd pass (printed pp.~182–185)
+The Devi proclaims her purpose: *"I roam to protect the good (sādhu-rakṣaṇa) and destroy the wicked (asādhu-hanan); the wicked Mahisha rose to slay the gods, so I have come for his vadh — let him fight, or surrender, return the gods' wealth, and go to Patala."* The ministers **Asilomā** and **Biḍāla** debate war vs. treaty.
+**Scenes:** the Devi declaring her dharma over the battlefield · Asilomā & Biḍāla in anxious counsel.
+
+### Ch 60 — The Battle Continues (દેવ-દૈત્ય યુદ્ધ–ચાલુ) — ◑ verified in context, 2nd pass (printed pp.~185–188)
+The war presses on — the Devi destroying further generals/ministers (Asilomā / Biḍāla and the host). *(Read in context; confirm the per-general beats on re-read.)*
+**Scenes:** the Devi mowing through the demon commanders · the battlefield turning against the daityas.
+
+### Ch 61 — The Tale of Mandodarī (મંદોદરી કથા) — ✅ verified, 2nd pass (printed pp.189+)
+An **embedded ākhyāna**: the Devi asks Mahisha who **Mandodarī** was. He tells of her — daughter of the righteous King **Chandrasena** and Queen **Gunavatī** of **Siṃhala-desha**, beautiful as the waxing moon — who at ten **refused marriage and resolved on tapas** (a tale of a maiden's devotion, set within the battle's lull).
+**Scenes:** Mandodarī as a girl in Chandrasena's court · her refusal of marriage → her vow of tapas.
 
 ### Ch 62 — The Slaying of Mahishāsura (મહિષાસુર વધ) — ✅ verified from PDF (printed p.195)
 The climax. The Devi **drinks wine from a golden cup** and charges the buffalo-demon; as **Mahisha shifts between forms** and, half-felled, rises to mock her, she strikes him down with her **mace and beheads him** — blood gushes from the demon's neck. **Mahishāsura is slain** (Mahishāsura-mardinī). The gods rain flowers, the dundubhis sound, rishis/siddhas/gandharvas rejoice; the surviving demons flee to Patala; the gods praise the victorious Devi.

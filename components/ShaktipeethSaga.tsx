@@ -147,18 +147,6 @@ function FocusPin({ stop, a, b, p, hold }: { stop: Stop; a: number; b: number; p
   );
 }
 
-/** one entry in the left text panel. `first` shows at the start; `hold` stays at the end. */
-function TextBlock({ a, b, p, deva, en, body, first, hold }: { a: number; b: number; p: MotionValue<number>; deva: string; en: string; body?: string; first?: boolean; hold?: boolean }) {
-  const opacity = useWindow(p, a, b, { first, hold });
-  return (
-    <motion.div style={{ opacity }} className="absolute inset-0 flex flex-col justify-center">
-      <p className="font-[family-name:var(--font-display)] text-4xl leading-tight text-patra md:text-5xl">{deva}</p>
-      <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.26em] text-swarna">{en}</p>
-      {body && <p className="mt-4 font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted md:text-base">{body}</p>}
-    </motion.div>
-  );
-}
-
 export function ShaktipeethSaga() {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
@@ -184,9 +172,16 @@ export function ShaktipeethSaga() {
   const photoOpacity = useTransform(scrollYProgress, finaleWindow ? [finaleWindow[0] - 0.03, finaleWindow[0]] : [0.98, 1], [0, hasPhoto ? 1 : 0]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
-  // unmount the reel once past the boundary — it cannot ghost the map
+  // discrete state from scroll: unmount the reel past the boundary, and pick the ONE
+  // active text item (hard swap — no cross-fade, so panel text can never overlap)
   const [inMap, setInMap] = useState(false);
-  useMotionValueEvent(scrollYProgress, "change", (v) => setInMap(v >= mapStart));
+  const [active, setActive] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    setInMap(v >= mapStart);
+    let idx = 0;
+    for (let i = 0; i < windows.length; i++) if (v >= windows[i][0]) idx = i;
+    setActive(idx);
+  });
 
   const lastBeat = B - 1;
   const textItems = [
@@ -232,11 +227,15 @@ export function ShaktipeethSaga() {
     <section ref={ref} className="relative bg-raat" style={{ height: `${heightVh}vh` }}>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
         <div className="mx-auto grid w-full max-w-7xl items-stretch gap-8 md:grid-cols-[minmax(0,320px)_1fr]">
-          {/* LEFT — text panel */}
-          <div className="relative min-h-[24vh] md:min-h-0">
-            {textItems.map((it) => (
-              <TextBlock key={it.key} a={it.win[0]} b={it.win[1]} p={scrollYProgress} deva={it.deva} en={it.en} body={it.body} first={it.first} hold={it.hold} />
-            ))}
+          {/* LEFT — text panel (one item at a time, hard swap, no overlap) */}
+          <div className="flex min-h-[24vh] flex-col justify-center md:min-h-0">
+            <div key={textItems[active]?.key} className="flex flex-col justify-center">
+              <p className="font-[family-name:var(--font-display)] text-4xl leading-tight text-patra md:text-5xl">{textItems[active]?.deva}</p>
+              <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.26em] text-swarna">{textItems[active]?.en}</p>
+              {textItems[active]?.body && (
+                <p className="mt-4 font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted md:text-base">{textItems[active]?.body}</p>
+              )}
+            </div>
           </div>
 
           {/* RIGHT — artwork only */}
