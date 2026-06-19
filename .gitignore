@@ -46,3 +46,7 @@ next-env.d.ts
 # large local source (read by the PDF-analysis chat; not for git)
 source/
 *.pdf
+# PDF page-probe scratch images (translation work, not the site)
+probe/
+# scene-art PNG originals — the site serves the .webp; PNGs stay local as source
+public/art/stories/**/*.png

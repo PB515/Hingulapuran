@@ -23,8 +23,9 @@
 ## Chapter index & status
 - **Ch 1–64 (Pratham Pravah):** ☐ not yet translated — the bulk of the PDF (Devi puja vidhis, Navratri/Chandi, Devi Mahatmya, Mahishasur-vadha).
 - **Ch 65–87 (Dwitiya Pravah):** translating now, chapter-by-chapter from the PDF.
-  - ✅ **Ch 65–66 verified from PDF (2026-06-19)** — see below (seed was broadly right but mis-split the boon/conquest; corrected).
-  - ◑ Ch 67–87 — seed summaries below; verify + expand from PDF.
+  - ✅ **Ch 65–76 verified from PDF (2026-06-19)** — see below (corrected the 65/66 boon-split; filled the 67–71 gap; located the Mandakini-rivers detail in ch 68 and a compressed Parashurama/Kamadhenu telling in ch 73).
+  - ☐ **Ch 77–83 — the big remaining gap** (the Parshuram-kshetra campaign: Ram–Bhargava yuddha, Dadhichi's decision, a "vadh", Shri-Devi abhaya, mantra-diksha). Next to translate.
+  - ◑ Ch 84–87 — seed summaries below; verify + expand from PDF.
 
 ---
 
@@ -68,14 +69,18 @@ In a degenerate later age people abandon dharma — cruel, untruthful, atheist; 
 **Scenes:** the degenerate age — adharma over a depopulated earth · Vishnu on Garuda assuring the rishis at Badarikāshrama · Parashurama's birth to Jamadagni & Renuka · the cow seized by the Narmada-king · Parashurama's 16-year tapas on Mount Hingula, cosmos trembling · Shiva & Ambika granting the boon → the Muktiganga springing from his tears · the installing of the Bindeshwar linga / founding of Ramkshetra.
 > **Flag (seed vs. PDF):** the seed placed the **Kamadhenu theft** only at ch 76, but a compressed telling (a Narmada-king seizing Jamadagni's cow → Parashurama's vow → niḥkṣatriya campaign) already appears here in **ch 73**; the **Sahasrarjuna** version (ch 76) and the full campaign (ch 77+) expand it. Confirm whether these are the same episode retold or distinct events.
 
-### Ch 74 — Origin of the Saraswat Brahmins
-Sage **Dadhichi** sacrifices his life, giving his indestructible **bones to forge Indra's Vajra**. His lineage is preserved through Goddess **Saraswati**; a radiant son is born, blessed with mastery of the Vedas + weapons. These **Saraswat Brahmins** later give **secret refuge to surviving Kshatriya children** during Parshuram's purge.
-**Scenes:** Dadhichi's sacrifice · the forging of the Vajra · the divine child · Saraswats sheltering the children.
+### Ch 74 — Origin of the Saraswat Brahmins (સારસ્વત બ્રાહ્મણોની ઉત્પત્તિ) — ✅ verified from PDF (printed pp.230–232)
+Frame: the sages ask Suta how the **Saraswata** rishis, born of **Saraswati**, came to be; Suta relays a **Kartikeya–Shiva** dialogue on Mount Kailasa. A cosmic crisis — **drought/barrenness** and a tormenting enemy afflict the gods and munis (the Vritra / Indra-Vajra setting). The gods petition **Brahma**; a bodiless **akashvani** reveals the remedy: from **Saraswati's womb** a sun-radiant son will be born — the progenitor of the **Saraswata Brahmin lineage** — to enable **Indra's power** and restore rain. The gods praise Saraswati; she manifests (sun-bright, moon-pure, gold-adorned, four-armed), and Brahma begs her to protect the gods and complete their work — none in the mortal world is greater than she.
+**Scenes:** Kartikeya questioning Shiva on Kailasa · the drought-stricken earth + tormented gods petitioning Brahma · the akashvani over the assembly · Saraswati manifesting radiant by her river → Brahma's supplication · the birth of the Saraswata progenitor.
+> **Flag (seed vs. PDF):** the seed's specifics — **Dadhichi sacrificing his bones to forge Indra's Vajra**, and the Saraswats later **sheltering surviving Kshatriya children** — fit this chapter's frame (Dadhichi appears in ch 70 & 72; the Vajra/Indra crisis is here) but were **not fully legible** on the dense scan of p.231; verify the Dadhichi-bones detail directly when re-read. The refuge-of-Kshatriya-children thread connects forward to ch 84.
 
-### Ch 75 — ◑ (Saraswat protection continued — expand from PDF)
+### Ch 75 — Origin of the Saraswat Brahmins, cont. (સારસ્વત બ્રાહ્મણોની ઉત્પત્તિ–ચાલુ) — ✅ verified from PDF (printed pp.233+)
+**Skanda (Kartikeya)** asks Shiva exactly how the son was born from Saraswati; Shiva narrates: the gods and rishis offer **amrita (nectar)** to the Devi; **Saraswati conceives**, is settled by the river, and in due season **bears the radiant Saraswata son** — amid celestial drums, dancing apsaras, and cries of victory from the siddhas and gods. From him issues the **Saraswata Brahmin lineage**.
+**Scenes:** the gods/rishis offering amrita to Saraswati · Saraswati bearing the luminous child on the river-bank · the heavens' celebration — drums, apsaras dancing, gods crying victory.
 
-### Ch 76 — The theft of Kamadhenu
-**Kartavirya Arjuna (Sahastrarjun)**, on a hunt with his army, is hosted by Sage **Jamadagni** to a miraculous feast manifested by the wish-cow **Kamadhenu**. Greedy, the king **steals the cow** — the spark of Parshuram's wrath. *(This is Parshuram-reel scene 1–2.)*
+### Ch 76 — The theft of Kamadhenu (સહસ્રાર્જુનની કામધેનુ-હરણ) — ✅ verified from PDF (printed pp.238+)
+**Kartavirya Arjuna (Sahasrarjuna)**, king of **Mahishmati**, comes to sage **Jamadagni's** ashram. **Renuka** tells Jamadagni that grihastha-dharma demands they host him; Jamadagni orders the feast prepared, and the wish-cow **Kamadhenu** manifests a miraculous banquet for the king and his army. Coveting the cow, the king **seizes Kamadhenu** — the spark of Parashurama's wrath. *(Parshuram-reel scene 1–2; the niḥkṣatriya campaign it ignites is told compressed in ch 73 and at length in ch 77+.)*
+**Scenes:** Sahasrarjuna and his army arriving at the ashram · Kamadhenu manifesting the miraculous feast · the king seizing the cow → Jamadagni & Renuka's grief.
 
 ### Ch 77–83 — ☐ gap (translate from PDF — likely the Parshuram campaign + more)
 

@@ -5,6 +5,8 @@ import { LegendScroll } from "@/components/LegendScroll";
 import { ParshuramClimax } from "@/components/ParshuramClimax";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
+import { SceneReel } from "@/components/SceneReel";
+import { shaktipeethReel } from "@/lib/reels";
 
 export default function Home() {
   return (
@@ -33,6 +35,9 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* The fall of Sati — the fifty-one Shakti Peethas, as a 2.5D scene-reel. */}
+      <SceneReel scenes={shaktipeethReel} />
 
       {/* Flagship: the history of Hingul as a horizontal scroll-painting. */}
       <LegendScroll />
