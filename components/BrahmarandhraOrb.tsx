@@ -16,6 +16,12 @@ const FACTS = [
   { t: "The seat of the gate", d: "So at Hinglaj, the very gate of liberation came to rest upon the earth." },
 ];
 
+/* yantra geometry (centre 240,240) — petals point outward (tip up), rotated into rings */
+const OUTER_PETAL = "M240 92 C 250 70, 246 46, 240 36 C 234 46, 230 70, 240 92 Z";
+const INNER_PETAL = "M240 174 C 263 150, 258 118, 240 104 C 222 118, 217 150, 240 174 Z";
+const TRI_UP = "M240 176 L296 273 L184 273 Z";
+const TRI_DOWN = "M240 304 L184 207 L296 207 Z";
+
 export function BrahmarandhraOrb() {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
@@ -43,53 +49,60 @@ export function BrahmarandhraOrb() {
         <h2 className="mt-4 font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">ब्रह्मरंध्र</h2>
         <p className="mt-3 font-[family-name:var(--font-display-latin)] text-sm tracking-[0.12em] text-swarna">Brahmarandhra</p>
 
-        {/* THE GATE OF LIGHT — brahmarandhra: a luminous aperture at the crown of a dark
-            void, light ascending out of it (the prana rising into moksha). */}
-        <div className="relative mx-auto mt-12 flex h-[clamp(320px,52vw,560px)] w-full max-w-2xl items-center justify-center">
+        {/* THE SAHASRARA YANTRA — the thousand-petalled lotus / sacred geometry of the
+            crown, in gold line on the dark ground, slowly turning + breathing. */}
+        <div className="relative mx-auto mt-12 flex h-[clamp(320px,64vw,560px)] w-full max-w-2xl items-center justify-center">
           <motion.div style={reduce ? undefined : { rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" }}>
-            <svg viewBox="0 0 420 560" role="img" aria-label="Brahmarandhra — the gate of light" className="h-[clamp(320px,52vw,560px)] w-auto">
+            <svg viewBox="0 0 480 480" role="img" aria-label="Brahmarandhra — the Sahasrara yantra" className="h-[clamp(320px,64vw,560px)] w-auto">
               <defs>
-                <radialGradient id="bgr-dome" cx="50%" cy="44%" r="60%">
-                  <stop offset="0%" stopColor="#5C0A22" />
-                  <stop offset="55%" stopColor="#2A0C2E" />
-                  <stop offset="100%" stopColor="#12101F" />
-                </radialGradient>
-                <radialGradient id="bgr-ap" cx="50%" cy="50%" r="50%">
+                <radialGradient id="bgr-bindu" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stopColor="#FFF6E6" />
-                  <stop offset="38%" stopColor="#F2C14E" />
+                  <stop offset="45%" stopColor="#F2C14E" />
                   <stop offset="100%" stopColor="#C9A227" stopOpacity="0" />
                 </radialGradient>
-                <linearGradient id="bgr-ray" x1="0" y1="1" x2="0" y2="0">
-                  <stop offset="0%" stopColor="#F2C14E" stopOpacity="0" />
-                  <stop offset="18%" stopColor="#F2C14E" stopOpacity="0.5" />
-                  <stop offset="100%" stopColor="#FFF6E6" stopOpacity="0" />
-                </linearGradient>
-                <filter id="bgr-soft" x="-60%" y="-60%" width="220%" height="220%">
-                  <feGaussianBlur stdDeviation="7" />
+                <filter id="bgr-soft" x="-80%" y="-80%" width="260%" height="260%">
+                  <feGaussianBlur stdDeviation="6" />
                 </filter>
               </defs>
 
-              {/* the dark crown / void */}
-              <ellipse cx="210" cy="380" rx="172" ry="160" fill="url(#bgr-dome)" />
-              <ellipse cx="210" cy="380" rx="172" ry="160" fill="none" stroke="#C9A227" strokeOpacity="0.18" />
+              {/* soft maroon halo behind the whole yantra */}
+              <circle cx="240" cy="240" r="230" fill="#5C0A22" opacity="0.25" filter="url(#bgr-soft)" />
 
-              {/* the column of light rising from the aperture (static, soft) */}
-              <path d="M210 300 L168 70 Q210 44 252 70 Z" fill="url(#bgr-ray)" opacity="0.7" />
-
-              {/* the gate itself — pulses like a breath of light */}
+              {/* outer ring — the thousand petals (slow clockwise) */}
               <motion.g
-                animate={reduce ? undefined : { opacity: [0.7, 1, 0.7] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                animate={reduce ? undefined : { rotate: 360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                style={{ transformOrigin: "240px 240px" }}
               >
-                <circle cx="210" cy="300" r="74" fill="#C9A227" opacity="0.16" filter="url(#bgr-soft)" />
-                <ellipse cx="210" cy="300" rx="17" ry="56" fill="url(#bgr-ap)" filter="url(#bgr-soft)" />
-                <ellipse cx="210" cy="300" rx="6" ry="36" fill="#FFF6E6" />
+                <circle cx="240" cy="240" r="212" fill="none" stroke="#C9A227" strokeOpacity="0.25" />
+                <circle cx="240" cy="240" r="150" fill="none" stroke="#C9A227" strokeOpacity="0.35" />
+                {Array.from({ length: 36 }).map((_, i) => (
+                  <path key={i} d={OUTER_PETAL} transform={`rotate(${(i * 360) / 36} 240 240)`} fill="none" stroke="#C9A227" strokeWidth="1" strokeOpacity="0.65" />
+                ))}
               </motion.g>
 
-              {/* ascending sparks */}
-              <circle cx="205" cy="200" r="2.5" fill="#F2C14E" opacity="0.8" />
-              <circle cx="216" cy="150" r="2" fill="#F2C14E" opacity="0.6" />
-              <circle cx="208" cy="104" r="1.6" fill="#FFF6E6" opacity="0.5" />
+              {/* inner ring — the lotus (slow counter-clockwise) + the yantra triangles */}
+              <motion.g
+                animate={reduce ? undefined : { rotate: -360 }}
+                transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+                style={{ transformOrigin: "240px 240px" }}
+              >
+                {Array.from({ length: 16 }).map((_, i) => (
+                  <path key={i} d={INNER_PETAL} transform={`rotate(${(i * 360) / 16} 240 240)`} fill="#5C0A22" fillOpacity="0.35" stroke="#C9A227" strokeWidth="1.2" strokeOpacity="0.75" />
+                ))}
+                <circle cx="240" cy="240" r="68" fill="none" stroke="#C9A227" strokeOpacity="0.4" />
+                <path d={TRI_UP} fill="none" stroke="#F2C14E" strokeOpacity="0.5" />
+                <path d={TRI_DOWN} fill="none" stroke="#F2C14E" strokeOpacity="0.5" />
+              </motion.g>
+
+              {/* the bindu — breathes light at the centre */}
+              <motion.g
+                animate={reduce ? undefined : { opacity: [0.65, 1, 0.65] }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <circle cx="240" cy="240" r="46" fill="url(#bgr-bindu)" filter="url(#bgr-soft)" />
+                <circle cx="240" cy="240" r="9" fill="#FFF6E6" />
+              </motion.g>
             </svg>
           </motion.div>
         </div>
