@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion, type MotionValue } from "motion/react";
+import { useRef, useState } from "react";
+import { motion, useScroll, useTransform, useReducedMotion, useMotionValueEvent, type MotionValue } from "motion/react";
 import { shaktipeethReel, type ReelScene, type ReelLayer } from "@/lib/reels";
 import { buildTimeline } from "@/lib/timeline";
 
@@ -30,7 +30,7 @@ const PEETHAS: { x: number; y: number }[] = [
 ];
 
 const STOPS: Stop[] = [
-  { deva: "देह का विभाजन", en: "The body is parted", body: "Borne by grieving Shiva, Devi Sati's body was parted by Vishnu's Sudarshan — and across all of Jambudvip the parts came down to the earth." },
+  { x: 50, y: 42, deva: "देह का विभाजन", en: "The body is parted", body: "Borne by grieving Shiva, Devi Sati's body was parted by Vishnu's Sudarshan — and across all of Jambudvip the parts came down to the earth." },
   { all: true, deva: "इकयावन शक्तिपीठ", en: "The fifty-one Shakti Peethas", body: "Where each part fell, a seat of power arose — fifty-one Shakti Peethas, binding the whole of the land together like beads upon one thread." },
   { x: 17, y: 27, hinglaj: true, deva: "हिंगलाज", en: "Hinglaj — where the crown fell", body: "On the Hingol, in the Makran hills, fell her brahmarandhra — the tenth gate. Of all the fifty-one, the westernmost seat, and the very door of liberation, came to rest here." },
 ];
@@ -166,6 +166,10 @@ export function ShaktipeethSaga() {
   const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.03, 1.12]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
+  // physically unmount the reel once past the boundary — if it's not in the DOM it cannot ghost
+  const [inMap, setInMap] = useState(false);
+  useMotionValueEvent(scrollYProgress, "change", (v) => setInMap(v >= mapStart));
+
   if (reduce) {
     return (
       <section className="bg-raat px-6 py-16">
@@ -204,13 +208,15 @@ export function ShaktipeethSaga() {
     <section ref={ref} className="relative bg-raat" style={{ height: `${heightVh}vh` }}>
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden px-4 py-16 md:px-10">
         <div className="relative aspect-video w-full max-w-6xl overflow-hidden rounded-[calc(var(--radius)*1.5)] border border-swarna/25 shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-          {/* REEL LAYER — scenes; whole layer fades out at the boundary */}
-          <motion.div style={{ opacity: reelOpacity }} className="absolute inset-0 z-10">
-            {shaktipeethReel.map((s, i) => {
-              const [a, b] = sceneWindows[i];
-              return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} last={i === S - 1} />;
-            })}
-          </motion.div>
+          {/* REEL LAYER — scenes; fades out at the boundary AND fully unmounts past it */}
+          {!inMap && (
+            <motion.div style={{ opacity: reelOpacity }} className="absolute inset-0 z-10">
+              {shaktipeethReel.map((s, i) => {
+                const [a, b] = sceneWindows[i];
+                return <Scene key={`sc${i}`} scene={s} a={a} b={b} p={scrollYProgress} first={i === 0} last={i === S - 1} />;
+              })}
+            </motion.div>
+          )}
 
           {/* MAP LAYER — on top, fades fully opaque at the boundary (cannot be obscured) */}
           <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">

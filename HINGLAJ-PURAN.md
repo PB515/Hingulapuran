@@ -21,8 +21,8 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–~40 + 44–53 done** (forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas 27–30; **Sudarshana-charita** consolidated 32–~40; Navratri-phala/Kumari 44; Durga-avatāras 45; the **Mahishāsura arc** 46–53: utpatti, conquest, Brihaspati's counsel, the deva-daitya war, Rudra's counsel, **the Devi born from the gods' combined tejas (ch 52)**, and her vow + Mahisha's envoy). ☐ **ch ~41–43 + 54–64 remain** — Sudarshana tail + Chandi/Raktabīja ritual (~41–43), and the **climactic battle & slaying of Mahishāsura** (54–63; ch 64 aftermath already summarized as the Stream-1→2 bridge). Offset drifts ~+4/+5; locate headings directly.
-  - ⚠️ Read in passing/consolidated & flagged: philosophy ch 23/24/26; ākhyāna ch 30; Sudarshana saga (32–~40); ch 54–64 to split; ~41–43 to map. ch 14 title read tentatively as Hayagrīva.
+- **Ch 1–64 (Pratham Pravah): ✅ first-pass draft COMPLETE (2026-06-19)** — every chapter has a summary + scene candidates below. Coverage: forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas 27–30; **Sudarshana-charita** (consolidated 32–~40); Navratri/kalasha ritual ~41–44; Durga-avatāras 45; the full **Mahishāsura arc 46–64** — culminating in **the Devi born from the gods' combined tejas (ch 52)** and **the slaying of Mahishāsura (ch 62)**, the aftermath (64) bridging into Dwitiya Pravah.
+  - ⚠️ **Second-pass / pandit-review TODO (Stream 1):** split the consolidated arcs into per-chapter entries — **Sudarshana 32–~40**, **battle 56–61**, **ritual ~41–43**, **closing stuti 63**; verify chapters read in passing — **23/24/26** (philosophy), **30** (shraddha); confirm names — the **ch 56–61 generals**, the rival in the Sudarshana saga; and the **ch 14 title** (read tentatively as Hayagrīva). Offset drifts ~+4/+5 — locate headings directly.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -171,8 +171,10 @@ Opens the major **Dhruvasandhi / Sudarshana** saga: the righteous **solar-dynast
 **Scenes:** the exile of Sudarshana & Manoramā to the forest ashram · the child receiving & repeating the **klīṃ** bīja · the Devi's armed darshan on her lion · Shashikalā's svayaṃvara at Banaras · the battle — the Mahādevī destroying the rival kings · Sudarshana enthroned, instituting Devi-worship.
 > **Flag:** treated as a consolidated arc (ch 32–~40); the exact chapter splits, the rival king's name (Sudhanvā/Subāhu?), and minor names need a re-read. High-value as a potential **Sudarshana / klīṃ-bhakti reel**.
 
-### Ch ~41–43 — Sudarshana-saga tail + Chandi/Raktabīja ritual — ◑ partly mapped
-The Sudarshana saga tail and a return to **Chandi-pāṭh ritual** (the TOC shows a Raktabīja/nava-Chandi vidhi around here). **To split & detail** on re-read (offset ~+4).
+### Ch ~41–43 — Navratri Vrat & Kalasha-Maṇḍapa Installation (નવરાત્રી વ્રત / મંડપ-કલશ સ્થાપન) — ✅ verified from PDF (printed pp.~129–134)
+After the Sudarshana saga the text returns to **Navratri/Chandi ritual**: the vrat is to be done in **both Sharad and Vasanta** seasons (when disease and death rise); the detailed **maṇḍapa & vedi** construction (toraṇas, canopies), inviting **nine/five/three brahmins**, svastivācana, and installing the **four-armed Ambikā** (bearing conch, chakra, gadā, padma) on a **lion-throne**, with the **kalasha** set on the vedi — the full kalasha-sthāpanā rite. (A Raktabīja/Chandi-pāṭh element sits in this cluster per the TOC.)
+**Scenes:** the decorated Navratri maṇḍapa with toraṇas · the four-armed Ambikā enthroned on the lion · the kalasha installation & brahmin rites.
+> **Flag:** read in passing; split into exact per-chapter entries and confirm the Raktabīja/Chandi placement on re-read.
 
 ### Ch 44 — Fruits of the Navratri Vrat / Kumari-puja eligibility (નવરાત્રી વ્રત કરવાથી થતાં ફળ) — ✅ verified from PDF (printed pp.~135–138)
 Returns to **Kumari-puja** detail: which girls to **avoid** (diseased, blind, deaf, deformed, low-born) and to choose (by varna — Brahmin girl best for all aims, Kshatriya for victory, Vaishya for gain, Shudra for the rest); the **nine-day** worship, or ashtami/three-day (saptami–ashtami–navami) fasting if unable; homa and brahmin-feeding. Reiterates the vrat's fruits.
@@ -214,8 +216,26 @@ Defeated, the gods despair. **Rudra** counsels that **none of them alone** — B
 The Devi, **sinha-vāhinī** (lion-mounted), divine and fully armed, is praised by the gods; she vows *"abandon fear — I shall slay this asura,"* and lets out a **world-shaking roar** that terrifies the demons. **Mahisha sends an envoy/minister** to discover who she is.
 **Scenes:** the gods praising the lion-mounted Devi · her terrifying roar shaking the worlds · Mahisha's envoy approaching her.
 
-### Ch 54–64 — The Battle & Slaying of Mahishāsura — ◑ to detail (printed pp.~166–204)
-The climactic war: the Devi battles and destroys **Mahisha's generals** (Chikṣura, Chāmara, Asilomā, Biḍāla and the rest) and his armies, then the **final duel with Mahishāsura** — who shifts between buffalo, lion, man and elephant forms — ending in the **slaying of the buffalo-demon** (**Mahishāsura-mardinī**), the Devi's stuti, and **ch 64 = "the state of the earth after Mahisha's slaying"** (already summarized — it is the bridge into Dwitiya Pravah / the Hingula story). **To split into per-chapter entries on the next pass** (offset drifts ~+4/+5; locate headings directly). High-value finale reel.
+### Ch 54–55 — Mahisha's Envoy & Deliberation (મહિષના દૂત / મંત્રીની સલાહ) — ✅ verified from PDF (printed pp.~166–172)
+The envoy (**Tāmrāksha**) returns to Mahisha; reporting that *"the gods made this Devi from their combined tejas, and she stands alone,"* a minister gives statecraft counsel (never underestimate a foe; consult ministers; weigh fate vs. effort). Mahisha, struck by her beauty, wavers between fighting and wooing her.
+**Scenes:** the envoy reporting to Mahisha · the demon court's deliberation · Mahisha smitten by the Devi's described beauty.
+
+### Ch 56–61 — The Great Battle (દેવીના ક્રોધનું વર્ણન / દેવ-દૈત્ય યુદ્ધ) — ✅ verified from PDF (printed pp.~172–194), battle arc
+The **Devi's wrath** unleashed: she battles and destroys **Mahisha's generals and his vast army** in a continuous war (the text names the generals — to verify on re-read). Includes the "Mahishārī" (slayer-of-Mahisha) narrative and the description of the Devi's fury.
+**Scenes:** the Devi on her lion mowing through the demon host · the fall of Mahisha's generals one by one · the battlefield tableau (the Saptashati war).
+> **Flag:** treated as a battle arc (ch 56–61); split per-chapter and confirm the generals' names on re-read.
+
+### Ch 62 — The Slaying of Mahishāsura (મહિષાસુર વધ) — ✅ verified from PDF (printed p.195)
+The climax. The Devi **drinks wine from a golden cup** and charges the buffalo-demon; as **Mahisha shifts between forms** and, half-felled, rises to mock her, she strikes him down with her **mace and beheads him** — blood gushes from the demon's neck. **Mahishāsura is slain** (Mahishāsura-mardinī). The gods rain flowers, the dundubhis sound, rishis/siddhas/gandharvas rejoice; the surviving demons flee to Patala; the gods praise the victorious Devi.
+**Scenes:** the Devi with the golden cup charging · the shape-shifting last duel · the **beheading of the buffalo-demon — the flagship Mahishāsura-mardinī slaying reel** · flower-rain & the gods' jubilation.
+
+### Ch 63 — The Devi's Stuti / closing worship (દેવી સ્તુતિ — Sāvitrī pujā-vidhi) — ◑ to detail (printed pp.~195–200)
+The victorious Devi is hymned by the gods; closing worship (the TOC links a Sāvitrī puja-vidhi here). Leads directly into ch 64. **To detail on re-read.**
+**Scenes:** the gods' victory-hymn to the Devi · the closing worship.
+
+### Ch 64 — The State of the Earth after Mahisha's Slaying (મહિષ વધ પછી પૃથ્વીની સ્થિતિ) — ✅ verified from PDF (printed pp.~200–204)
+Closes Pratham Pravah: the world restored after Mahisha's death, and the bridging verse introducing **Hingulāmbikā** (*"red-eyed, born of a red lotus, she arose; to protect the gods she manifested, self-arisen"*) — the hinge into **Dwitiya Pravah** and the Hingula story (see ch 65).
+**Scenes:** the earth at peace after the victory · the bridge-vision of Hingulāmbikā rising (transition into the Hingula reel).
 
 ---
 
