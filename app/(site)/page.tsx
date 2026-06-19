@@ -5,9 +5,7 @@ import { LegendScroll } from "@/components/LegendScroll";
 import { ParshuramClimax } from "@/components/ParshuramClimax";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
-import { SceneReel } from "@/components/SceneReel";
-import { ShaktipeethTour } from "@/components/ShaktipeethTour";
-import { shaktipeethReel } from "@/lib/reels";
+import { ShaktipeethSaga } from "@/components/ShaktipeethSaga";
 
 export default function Home() {
   return (
@@ -37,11 +35,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The fall of Sati — the fifty-one Shakti Peethas, as a 2.5D scene-reel. */}
-      <SceneReel scenes={shaktipeethReel} />
-
-      {/* Guided-tour pin: the map of the land, sites lighting up to Hinglaj. */}
-      <ShaktipeethTour />
+      {/* The fall of Sati — one pinned stage: 2.5D scene-reel flowing into the guided map. */}
+      <ShaktipeethSaga />
 
       {/* Flagship: the history of Hingul as a horizontal scroll-painting. */}
       <LegendScroll />
