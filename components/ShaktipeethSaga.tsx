@@ -26,7 +26,7 @@ import { buildTimeline } from "@/lib/timeline";
    (Sacred history — STYLE Rule 0; never myth/legend/story.)
    ========================================================================== */
 
-const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp";
+const MAP = "/art/stories/shaktipeeth/desktop/s5-far.webp?v=2";
 
 // The real Balochistan shrine photo — save the provided image to public/art/temple/hinglaj.jpg
 const FINALE_PHOTO: string | null = "/art/temple/hinglaj.jpg";
