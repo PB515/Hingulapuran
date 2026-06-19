@@ -21,8 +21,8 @@
 ---
 
 ## Chapter index & status
-- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–31 done** (forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; then the **Vyasa→Janamejaya ākhyāna block** begins: Satyavrata 27–28, Devi-yajna vidhi 29, ancestor-redemption/shraddha 30, and the **Dhruvasandhi/Sudarshana** saga from 31). ☐ **ch 32–64 remain** — the rest of the Sudarshana saga & other ākhyānas (32–45), then the big **Mahishāsura-vadha** arc (**ch 46 = Mahishāsura-utpatti** per TOC, through ch 64). Offset ~+4 (drifts); TOC pages run optimistic — locate headings directly.
-  - ⚠️ Read in passing & flagged: philosophy ch 23/24/26; ākhyāna ch 30. ch 14 title read tentatively as Hayagrīva.
+- **Ch 1–64 (Pratham Pravah):** ◑ in progress (started 2026-06-19). ✅ **Mangalacharan + ch 1–~40 + 44–46 done** (forms/liturgy 1–10; Chandi vidhis 11–13; Hayagrīva 14; Madhu-Kaitabha 15–18; cosmic-vision & philosophy 19–27; Vyasa→Janamejaya ākhyānas — Satyavrata 27–28, Devi-yajna 29, shraddha 30; **Sudarshana-charita** consolidated ch 32–~40; Navratri-phala/Kumari 44; Durga-avatāras 45; **Mahishāsura-utpatti 46**). ☐ **ch ~41–43 + 47–64 remain** — the Sudarshana tail + Chandi/Raktabīja ritual (~41–43), and the **rest of the Mahishāsura-vadha** (47–64: the gods' combined tejas forming the Devi → the war → the slaying). Offset ~+4 (drifts); locate headings directly.
+  - ⚠️ Read in passing/consolidated & flagged: philosophy ch 23/24/26; ākhyāna ch 30; Sudarshana saga (32–~40, splits TBD); ~41–43 still to map. ch 14 title read tentatively as Hayagrīva.
 - **Ch 65–87 (Dwitiya Pravah): ✅ ALL TRANSLATED from PDF (2026-06-19)** — full verified summaries + scene candidates below. Highlights & corrections to the seed:
   - Corrected the **65/66 boon-split** (boon + Swarga-conquest are in ch 65).
   - Filled the **67–71 gap**; located the **Mandakini-rivers** origin in ch 68 (Brahma's kumbha).
@@ -165,6 +165,30 @@ An ākhyāna on **shraddha and the redemption of ancestors**: a father who negle
 ### Ch 31 — The Dhruvasandhi Ākhyāna (ધ્રુવસંધિ આખ્યાન) — ✅ verified from PDF (printed pp.95+)
 Opens the major **Dhruvasandhi / Sudarshana** saga: the righteous **solar-dynasty** king **Dhruvasandhi**, under whom all varnas live happily and crime is unknown, and his two queens — the wise **Manoramā** and the lovely **Līlāvatī**. (This is the Devi-Bhāgavata tale that leads to the exiled prince **Sudarshana** mastering the Devi's bīja-mantra and regaining his kingdom — likely spanning several chapters.)
 **Scenes:** King Dhruvasandhi's just reign · the two queens Manoramā & Līlāvatī (opening of the Sudarshana saga).
+
+### Ch 32–~40 — The Sudarshana-charita (ધ્રુવસંધિ આખ્યાન–ચાલુ) — ✅ verified from PDF (printed pp.~96–~135), summarized as one arc
+*A continuous multi-chapter saga (the Devi-Bhāgavata Sudarshana story), here told with explicit **Ramayana parallels** and read as a unit; per-chapter boundaries to be split on a re-read.* When **Dhruvasandhi** dies, the queen **Līlāvatī's** faction (a Kaikeyī-like intrigue with a scheming minister) drives out the rightful prince **Sudarshana**, who goes into **forest exile** with his mother **Manoramā** and is sheltered at a sage's ashram. There a sage gives him the Devi's **bīja-mantra "klīṃ"**; repeating it even as a child, after his upanayana he masters the **dhanurveda** and all vidyās, and the **Devi — red-robed, fully armed, on her lion — grants him darshan**. The princess **Shashikalā of Banaras (Kāshi)**, shown Sudarshana by the Devi in a dream, chooses him at her **svayaṃvara** (vowing to die rather than wed another). Summoned, Sudarshana goes fearlessly by the **Jaganmātā's** command (Manoramā blessing him with the protection of all the Devi's forms — Ambikā, Padmāvatī, Vārāhī, Kālikā…). The rival kings attack; the **Mahādevī manifests and destroys them**, and Sudarshana weds Shashikalā, **regains his kingdom (Ayodhyā)**, and institutes her worship — the saga's proof that the Devi's klīṃ-devotion secures victory and rule.
+**Scenes:** the exile of Sudarshana & Manoramā to the forest ashram · the child receiving & repeating the **klīṃ** bīja · the Devi's armed darshan on her lion · Shashikalā's svayaṃvara at Banaras · the battle — the Mahādevī destroying the rival kings · Sudarshana enthroned, instituting Devi-worship.
+> **Flag:** treated as a consolidated arc (ch 32–~40); the exact chapter splits, the rival king's name (Sudhanvā/Subāhu?), and minor names need a re-read. High-value as a potential **Sudarshana / klīṃ-bhakti reel**.
+
+### Ch ~41–43 — Sudarshana-saga tail + Chandi/Raktabīja ritual — ◑ partly mapped
+The Sudarshana saga tail and a return to **Chandi-pāṭh ritual** (the TOC shows a Raktabīja/nava-Chandi vidhi around here). **To split & detail** on re-read (offset ~+4).
+
+### Ch 44 — Fruits of the Navratri Vrat / Kumari-puja eligibility (નવરાત્રી વ્રત કરવાથી થતાં ફળ) — ✅ verified from PDF (printed pp.~135–138)
+Returns to **Kumari-puja** detail: which girls to **avoid** (diseased, blind, deaf, deformed, low-born) and to choose (by varna — Brahmin girl best for all aims, Kshatriya for victory, Vaishya for gain, Shudra for the rest); the **nine-day** worship, or ashtami/three-day (saptami–ashtami–navami) fasting if unable; homa and brahmin-feeding. Reiterates the vrat's fruits.
+**Scenes:** the selection of the kumari to be worshipped · the three-day fast & homa.
+
+### Ch 45 — The Various Avatāras of Durga (દુર્ગના ભિન્ન ભિન્ન અવતારો) — ✅ verified from PDF (printed pp.138–141)
+A recap of the **Devi's role across the avatāras** — Brahma as Soma, Hari as Indra, Hara as Durga; the **Narasiṃha** and **Vāmana** forms; **Bhārgava (Parashurama)** annihilating the Kshatriyas 21 times; Rama — all enabled by her — and a discourse on the Devi as **Māyā / Vidyā / Avidyā** that pervades the world. A transition chapter into the Mahishāsura arc.
+**Scenes:** a gallery of the avatāras the Devi empowers (Narasiṃha, Vāmana, Bhārgava…) · the Devi as Māyā veiling/revealing the world.
+
+---
+
+## The Mahishāsura-vadha arc (ch 46–64) — the Devi Mahatmya battle climax
+
+### Ch 46 — The Origin of Mahishāsura (મહિષાસુર ઉત્પત્તિ) — ✅ verified from PDF (printed pp.142+)
+**Janamejaya** asks Vyasa for the Devi's charita. A great dānava-king **Mahisha** performs fierce tapas on **Hemagiri** for **10,000 years**; **Brahma**, pleased, appears and Mahisha asks for immortality. Brahma refuses absolute deathlessness (the born must die) but grants that **no deva, daitya, or any male** can slay him — leaving only a *woman* able to kill him. Mahisha returns triumphant to his realm. (The chapter then turns to whose son he was and how he gained the **buffalo (mahiṣa) form**.)
+**Scenes:** Mahisha's 10,000-year tapas on Hemagiri · Brahma granting the "no male may slay me" boon · the buffalo-demon exulting in his invincibility.
 
 ---
 

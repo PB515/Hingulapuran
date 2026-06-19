@@ -29,7 +29,7 @@ const scene = (chapter: string, s: number, deva: string, en: string): ReelScene 
 /** Chapter A — The Fall of Sati (51 Shaktipeeth); scene 5 is the live map, not a reel scene. */
 export const shaktipeethReel: ReelScene[] = [
   // Sati larger + the fire shrunk and anchored to the floor so she stays visible
-  { ...scene("shaktipeeth", 1, "सती का अग्नि-प्रवेश", "Sati enters the sacred fire"), subjectScale: 1.06, nearScale: 0.58, nearAlign: "bottom" },
+  { ...scene("shaktipeeth", 1, "सती का अग्नि-प्रवेश", "Sati enters the sacred fire"), subjectScale: 1.0, nearScale: 0.55, nearAlign: "bottom" },
   scene("shaktipeeth", 2, "शिव का तांडव", "Shiva bears her, and dances his grief"),
   // The hinge of the origin, staged as separate layers: Vishnu (left, no chakra),
   // grieving Shiva bearing Sati (right), and a small spinning Sudarshan chakra between.
