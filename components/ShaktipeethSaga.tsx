@@ -164,7 +164,6 @@ export function ShaktipeethSaga() {
   const mapStart = beatWindows[0][0];
 
   const mapOpacity = useTransform(scrollYProgress, [mapStart - 0.03, mapStart], [0, 1]);
-  const mapScale = useTransform(scrollYProgress, [mapStart, 1], [1.02, 1.06]);
   const photoOpacity = useTransform(scrollYProgress, finaleWindow ? [finaleWindow[0] - 0.03, finaleWindow[0]] : [0.98, 1], [0, hasPhoto ? 1 : 0]);
   const scrollHint = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
@@ -244,7 +243,8 @@ export function ShaktipeethSaga() {
             {/* MAP — on top, fully opaque past the boundary; stays lit to the end */}
             <motion.div style={{ opacity: mapOpacity }} className="absolute inset-0 z-20">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <motion.img src={MAP} alt="" aria-hidden style={{ scale: mapScale }} className="absolute inset-0 h-full w-full object-cover" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={MAP} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover" />
               <div className="pointer-events-none absolute inset-0 bg-raat/12" />
               <div className="pointer-events-none absolute inset-0" style={{ background: "radial-gradient(130% 110% at 50% 45%, transparent 58%, rgba(18,16,31,.42) 100%)" }} />
               {PEETHAS.map((s, k) => {
