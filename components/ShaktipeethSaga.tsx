@@ -124,8 +124,8 @@ function PeethaDot({ site, a, b, p }: { site: { x: number; y: number }; a: numbe
   const glow = useWindow(p, a, b);
   return (
     <span style={{ left: `${site.x}%`, top: `${site.y}%` }} className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-1/2">
-      <span className="block h-1.5 w-1.5 rounded-full bg-swarna/30" />
-      <motion.span style={{ opacity: glow }} className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-swarna ring-2 ring-swarna/30" />
+      <span className="block h-1.5 w-1.5 rounded-full bg-[#FF4D3A]/40" />
+      <motion.span style={{ opacity: glow }} className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF4D3A] ring-2 ring-[#FF4D3A]/40 shadow-[0_0_10px_2px_rgba(255,77,58,0.65)]" />
     </span>
   );
 }
@@ -137,8 +137,10 @@ function FocusPin({ stop, a, b, p, hold }: { stop: Stop; a: number; b: number; p
     <motion.div style={{ left: `${stop.x}%`, top: `${stop.y}%`, opacity }} className="pointer-events-none absolute z-20 -translate-x-1/2 -translate-y-1/2">
       <span className="relative flex items-center justify-center">
         <motion.span animate={{ scale: [1, 2, 1], opacity: [0.55, 0, 0.55] }} transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
-          className={`absolute h-7 w-7 rounded-full ${stop.hinglaj ? "bg-kesari/60" : "bg-swarna/50"}`} />
-        <span className={`relative h-3 w-3 rounded-full ring-4 ${stop.hinglaj ? "bg-kesari ring-kesari/25" : "bg-swarna ring-swarna/20"}`} />
+          className={`absolute rounded-full ${stop.hinglaj ? "h-9 w-9 bg-[#FFE08A]/55" : "h-7 w-7 bg-[#FF4D3A]/55"}`} />
+        <span className={stop.hinglaj
+          ? "relative h-4 w-4 rounded-full bg-white ring-4 ring-[#FFD23F]/40 shadow-[0_0_16px_5px_rgba(255,210,63,0.8)]"
+          : "relative h-3 w-3 rounded-full bg-[#FF4D3A] ring-4 ring-[#FF4D3A]/30 shadow-[0_0_10px_2px_rgba(255,77,58,0.65)]"} />
       </span>
     </motion.div>
   );
