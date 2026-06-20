@@ -27,7 +27,12 @@ export default async function GranthaPage({ params }: { params: Promise<{ slug: 
         {doc.deva && <p className="mt-6 font-[family-name:var(--font-display)] text-3xl text-swarna">{doc.deva}</p>}
         <h1 className="mt-2 font-[family-name:var(--font-display-latin)] text-4xl leading-tight text-patra md:text-5xl">{doc.title}</h1>
 
-        <div className="grantha-prose mt-8" dangerouslySetInnerHTML={{ __html: html }} />
+        {/* plain-language framing for a reader with zero prior context */}
+        <p className="mt-5 border-l-2 border-swarna/40 pl-5 font-[family-name:var(--font-body)] text-lg italic leading-relaxed text-patra/90">
+          {doc.intro}
+        </p>
+
+        <div className="grantha-prose mt-10" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </main>
   );
