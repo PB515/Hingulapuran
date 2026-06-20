@@ -16,7 +16,7 @@ export default async function GranthaPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const rendered = await renderGrantha(slug);
   if (!rendered) notFound();
-  const { doc, html } = rendered;
+  const { doc, html, toc } = rendered;
 
   return (
     <main className="px-6 pb-24 pt-32 md:px-10">
@@ -32,7 +32,21 @@ export default async function GranthaPage({ params }: { params: Promise<{ slug: 
           {doc.intro}
         </p>
 
-        <div className="grantha-prose mt-10" dangerouslySetInnerHTML={{ __html: html }} />
+        {/* chapter jump-nav for multi-section docs (e.g. the chapter-by-chapter transcript) */}
+        {toc.length >= 3 && (
+          <nav className="mt-8 rounded-[var(--radius)] border border-border bg-rakta/30 p-5">
+            <p className="font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.25em] text-loha">On this page</p>
+            <ul className="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-2">
+              {toc.map((t) => (
+                <li key={t.id}>
+                  <a href={`#${t.id}`} className="font-[family-name:var(--font-body)] text-sm text-muted transition-colors hover:text-swarna">{t.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        <div className="grantha-prose mt-10 scroll-smooth" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </main>
   );
