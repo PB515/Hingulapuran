@@ -10,7 +10,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const book = getBook(slug);
-  return { title: book ? `${book.titleEn} — Hingulapuran` : "Book" };
+  return { title: book ? `${book.titleEn} · Hingulapuran` : "Book" };
 }
 
 export default async function BookDetail({ params }: { params: Promise<{ slug: string }> }) {
@@ -50,7 +50,7 @@ export default async function BookDetail({ params }: { params: Promise<{ slug: s
         <section className="mt-12 rounded-[var(--radius)] border border-border bg-rakta/30 p-8 text-center">
           <h2 className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.25em] text-swarna">Take it with you</h2>
           <p className="mx-auto mt-3 max-w-md font-[family-name:var(--font-body)] text-sm text-muted">
-            Download the book and share it freely — that is how the awareness spreads.
+            Download the book and share it freely. That is how the awareness spreads.
           </p>
           <div className="mt-6 flex justify-center">
             <BookDownloadGate pdf={book.pdf} title={book.titleEn} />

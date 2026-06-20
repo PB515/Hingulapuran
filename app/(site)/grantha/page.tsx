@@ -23,10 +23,10 @@ export default function GranthaIndex() {
         <section key={g.category} className="mt-14">
           <h2 className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.28em] text-swarna">{g.category}</h2>
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {g.docs.map((d) => (
+            {g.cards.map((d) => (
               <Link
-                key={d.slug}
-                href={`/grantha/${d.slug}`}
+                key={d.href}
+                href={d.href}
                 className="group rounded-[var(--radius)] border border-border bg-rakta/30 p-5 transition-colors hover:border-swarna/50"
               >
                 {d.deva && <p className="font-[family-name:var(--font-display)] text-xl text-patra">{d.deva}</p>}

@@ -10,8 +10,8 @@ import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } fro
    Pure CSS/transform (no WebGL). Lore copy is placeholder — refine freely. */
 
 const FACTS = [
-  { t: "The tenth gate", d: "Brahmarandhra — the aperture at the crown, the door of Brahman through which the prana rises and the soul departs into light." },
-  { t: "Sati's crown", d: "Of the fifty-one, it was Sati's brahmarandhra that fell here — so Hinglaj is the seat of the gate itself." },
+  { t: "The tenth gate", d: "Brahmarandhra: the aperture at the crown, the door of Brahman through which the prana rises and the soul departs into light." },
+  { t: "Sati's crown", d: "Of the fifty-one, it was Sati's brahmarandhra that fell here, so Hinglaj is the seat of the gate itself." },
 ];
 
 export function BrahmarandhraOrb() {

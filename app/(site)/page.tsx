@@ -48,7 +48,7 @@ export default function Home() {
       <ParshuramClimax />
 
       {/* Scene band — the Hingol river / mool sthan */}
-      <SceneBand src="/art/scene/hingol-river.webp" line="हिंगोल नदी के तट पर" sub="The cave on the Hingol — the mool sthan" />
+      <SceneBand src="/art/scene/hingol-river.webp" line="हिंगोल नदी के तट पर" sub="The cave on the Hingol: the mool sthan" />
     </main>
   );
 }

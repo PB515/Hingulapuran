@@ -50,7 +50,7 @@ export const hingulReel: ReelScene[] = [
   scene("hingul", 2, "स्वर्ग पर विजय", "The conquest of the heavens"),
   scene("hingul", 3, "देवी का प्रण", "The vow of the Devi"),
   scene("hingul", 4, "अभूतपूर्व प्रकाश", "The unprecedented light"),
-  scene("hingul", 5, "वरदान", "The boon — Hingula Peeth"),
+  scene("hingul", 5, "वरदान", "The boon: Hingula Peeth"),
 ];
 
 /** Chapter C — Parashurama & the Brahmakshatriya. */
@@ -62,5 +62,5 @@ export const parshuramReel: ReelScene[] = [
   scene("parshuram", 5, "पृथ्वी का शुद्धिकरण", "The cleansing of the earth"),
   scene("parshuram", 6, "हिंगुल पर्वत", "Refuge at Mount Hingula"),
   scene("parshuram", 7, "बारह वर्ष की तपस्या", "The twelve-year penance"),
-  scene("parshuram", 8, "हिंगुल माता का प्रकट्य", "Hingula manifests — the Brahmakshatriya"),
+  scene("parshuram", 8, "हिंगुल माता का प्रकट्य", "Hingula manifests: the Brahmakshatriya"),
 ];

@@ -32,11 +32,6 @@ export const GRANTHA: GranthaDoc[] = [
     intro: "A map of the whole book. All 87 chapters in plain English, across its two halves. Skim it to see the shape of the text; the full word-for-word readings live under “The Full Translation.”",
   },
   {
-    slug: "dwitiya-translation", file: "DWITIYA-TRANSLATION.md", title: "The Full Translation", category: "Read the story",
-    blurb: "The actual words, translated. In progress.",
-    intro: "The book’s own words, rendered into English sentence by sentence, beginning with its Hinglaj heart. A living work in progress that grows chapter by chapter.",
-  },
-  {
     slug: "glossary", file: "GLOSSARY.md", title: "Who’s Who", deva: "पात्र-परिचय", category: "Look things up",
     blurb: "Every god, demon, sage, king, place and term.",
     intro: "Lost in a name? Every deity, asura, sage, king, place and key term in the grantha, each in a line, with where it appears.",
@@ -64,13 +59,34 @@ export const GRANTHA: GranthaDoc[] = [
 ];
 
 const CATEGORIES = ["Begin here", "Read the story", "Look things up"] as const;
+
+/* The full translation is no longer one long dump page — it is read one chapter
+   per page under /grantha/translation. This meta drives its card + index. */
+export const TRANSLATION = {
+  slug: "translation",
+  title: "The Full Translation",
+  blurb: "The actual words, translated. One chapter at a time.",
+  intro: "The book’s own words, rendered into English sentence by sentence, beginning with its Hinglaj heart. Read it one chapter at a time. A living work in progress that grows as more of the text is translated.",
+};
+
 const slugByFile = new Map(GRANTHA.map((d) => [d.file, d.slug]));
+slugByFile.set("DWITIYA-TRANSLATION.md", "translation"); // cross-links point at the chapter index
+
+export type GranthaCard = { href: string; title: string; deva?: string; blurb: string };
 
 export function getGranthaDoc(slug: string): GranthaDoc | null {
   return GRANTHA.find((d) => d.slug === slug) ?? null;
 }
-export function granthaByCategory(): { category: string; docs: GranthaDoc[] }[] {
-  return CATEGORIES.map((category) => ({ category, docs: GRANTHA.filter((d) => d.category === category) }));
+export function granthaByCategory(): { category: string; cards: GranthaCard[] }[] {
+  return CATEGORIES.map((category) => {
+    const cards: GranthaCard[] = GRANTHA.filter((d) => d.category === category).map((d) => ({
+      href: `/grantha/${d.slug}`, title: d.title, deva: d.deva, blurb: d.blurb,
+    }));
+    if (category === "Read the story") {
+      cards.push({ href: "/grantha/translation", title: TRANSLATION.title, blurb: TRANSLATION.blurb });
+    }
+    return { category, cards };
+  });
 }
 
 /* a blockquote / fenced block is "machine scaffolding" if it mentions any of these */
@@ -111,4 +127,43 @@ export async function renderGrantha(slug: string): Promise<{ doc: GranthaDoc; ht
   });
 
   return { doc, html, toc };
+}
+
+/* ── The full translation, read one chapter per page ───────────────────────── */
+
+export type TransChapter = { num: number; title: string; deva?: string; bodyHtml: string };
+
+// "The Origin of Hingulā (હિંગુળા ઉત્પત્તિ)" → { title, deva } (deva only if Indic script)
+function splitDeva(raw: string): { title: string; deva?: string } {
+  const m = raw.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
+  if (m && /[ऀ-ॿ઀-૿]/.test(m[2])) return { title: m[1].trim(), deva: m[2].trim() };
+  return { title: raw.trim() };
+}
+
+export async function getTranslationChapters(): Promise<TransChapter[]> {
+  const md = fs.readFileSync(path.join(process.cwd(), "docs", "DWITIYA-TRANSLATION.md"), "utf8");
+  const parts = md.split(/^##\s+Adhyāy\s+/m).slice(1); // drop the preamble before ch 65
+  const chapters: TransChapter[] = [];
+  for (const part of parts) {
+    const head = part.match(/^(\d+)\s*[—–-]\s*([^\n]+)\r?\n/);
+    if (!head) continue;
+    const num = parseInt(head[1], 10);
+    let body = part.slice(head[0].length);
+    if (/to translate next|to translate\b/i.test(body) && body.trim().length < 90) continue; // skip stub chapters
+    body = body
+      .replace(/(?:^[ \t]*>[^\n]*\r?\n?)+/gm, (bq) => (META.test(bq) ? "" : bq)) // drop Flags / scan notes
+      .replace(/\s*\(PDF[^)]*\)/g, "")        // drop "(PDF 211–214)" source refs
+      .replace(/^\s*---\s*$/gm, "");           // drop chapter-divider rules
+    const { title, deva } = splitDeva(head[2].trim());
+    const bodyHtml = (await marked.parse(body)) as string;
+    chapters.push({ num, title, deva, bodyHtml });
+  }
+  return chapters.sort((a, b) => a.num - b.num);
+}
+
+export async function getTranslationChapter(num: number): Promise<{ chapter: TransChapter; prev: TransChapter | null; next: TransChapter | null; total: number } | null> {
+  const all = await getTranslationChapters();
+  const i = all.findIndex((c) => c.num === num);
+  if (i === -1) return null;
+  return { chapter: all[i], prev: all[i - 1] ?? null, next: all[i + 1] ?? null, total: all.length };
 }

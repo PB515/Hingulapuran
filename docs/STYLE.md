@@ -37,6 +37,8 @@ Gujarat's sacred Mother-Goddess **temple-cloth painting** (Vaghri/Devipujak/Chit
 ## 5. Voice — Dingal / Pingal
 From the language's own history: **Dingal** = fierce Charan warrior-poetry (percussive, thunderous) → the **Veer** register (battle, Parshuram, headlines). **Pingal** = soft lyrical bhakti → the **Bhakti** register (the jyot, shlokas, reading). The site breathes between them. Narrator voice = the **Charan bard**, keeper of the fort's history.
 
+**House style (all prose — copy, summaries, translations):** **no em-dashes (—).** Use commas, colons, semicolons, periods or parentheses as the sentence needs. (En-dashes in number ranges like 65–87 are fine.) Keep the prose natural, not AI-flavoured.
+
 ---
 
 ## 6. IMAGE GENERATION — the recipe

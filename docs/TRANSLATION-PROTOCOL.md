@@ -35,6 +35,7 @@ To translate the full grantha faster by running translation across **many AI age
 6. **Shlokas** — transliterate only if legible; otherwise flag. **Never invent Sanskrit.**
 7. **Keep the colophon line** — "Thus ends the Nth chapter…".
 8. **One chapter per file.** Don't merge or split chapters.
+9. **No em-dashes (—).** Use commas, colons, semicolons, periods or parentheses as the sentence needs. *(En-dashes in number ranges like 65–87 are fine.)* This keeps the prose natural and consistent across agents.
 
 ## Translator self-check (before status → `ready`)
 - [ ] Covered the whole chapter (heading → colophon), every page.

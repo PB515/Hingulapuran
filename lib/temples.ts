@@ -18,7 +18,7 @@ export const temples: Temple[] = [
     place: "Hingol, Lasbela, Balochistan, Pakistan",
     lat: 25.5126,
     lng: 65.5152,
-    note: "The original Shakti Peetha — the cave shrine on the Hingol river.",
+    note: "The original Shakti Peetha: the cave shrine on the Hingol river.",
   },
   // Example shrines across the three Kshatriya states — APPROXIMATE, to verify/replace via admin.
   { name: "Hinglaj Mata Temple", place: "Gujarat", lat: 22.3, lng: 70.8, verify: true },

@@ -22,7 +22,7 @@ export const books: Book[] = [
     language: "Gujarati",
     year: "c. 1920s",
     blurb:
-      "The hundred-year-old Gujarati grantha of Hinglaj Mata — her origin, her history, and the devotion of the Kshatriya. Read it online, or take it with you to spread the awareness.",
+      "The hundred-year-old Gujarati grantha of Hinglaj Mata: her origin, her history, and the devotion of the Kshatriya. Read it online, or take it with you to spread the awareness.",
     cover: "/art/parshuram/full.webp",
     pdf: "/books/hingulapuran.pdf",
   },
