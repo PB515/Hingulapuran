@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const NAV = [
+  { href: "/grantha", en: "Grantha" },
   { href: "/books", en: "Books" },
   { href: "/blog", en: "Blog" },
   { href: "/gallery", en: "Gallery" },
