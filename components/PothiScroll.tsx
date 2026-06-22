@@ -82,9 +82,9 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
           {rod ? (
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={rod} alt="" aria-hidden style={{ height: "138%" }} className="pointer-events-none absolute left-0 top-1/2 z-30 w-auto -translate-x-1/2 -translate-y-1/2" />
+              <img src={rod} alt="" aria-hidden style={{ height: "155%" }} className="pointer-events-none absolute left-0 top-1/2 z-30 w-auto -translate-x-1/2 -translate-y-1/2" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={rod} alt="" aria-hidden style={{ height: "138%" }} className="pointer-events-none absolute right-0 top-1/2 z-30 w-auto -translate-y-1/2 translate-x-1/2 -scale-x-100" />
+              <img src={rod} alt="" aria-hidden style={{ height: "155%" }} className="pointer-events-none absolute right-0 top-1/2 z-30 w-auto -translate-y-1/2 translate-x-1/2 -scale-x-100" />
             </>
           ) : null}
         </div>

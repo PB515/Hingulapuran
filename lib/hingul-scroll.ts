@@ -19,7 +19,7 @@ export const hingulScroll: PothiConfig = {
     },
     {
       img: "/art/stories/hingul/scroll/s2.webp",
-      deva: "गणपति का वध",
+      deva: "सिंदुर का वध",
       en: "Parvati's son slays Sindur",
       body: "Parvati brings forth a son from her own body, who slays the demon Sindur.",
     },
