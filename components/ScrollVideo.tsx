@@ -1,12 +1,19 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { AnimatePresence, motion, useReducedMotion, useScroll, useMotionValueEvent } from "motion/react";
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "motion/react";
 
 /* Scroll-scrubbed video in the framed box. The section is pinned; scroll
    progress drives video.currentTime (Raang-style), and the caption hard-swaps
-   to the beat for that progress. The ornate border is baked into the video, so
-   no overlay frame here. Reduced-motion / load failure shows the poster still. */
+   to the beat for that progress. The ornate border is baked into the video.
+
+   Two things make scrubbing actually paint reliably:
+   - the video is "primed" (a muted play→pause) once it can play, or many
+     browsers leave it stuck on the poster and never render seeked frames;
+   - duration is read live from the element each frame, not cached, so we never
+     depend on a single onLoadedMetadata firing.
+   We always render and scrub the video (no reduced-motion poster freeze — that
+   looked broken: a still frame while the captions advanced). */
 
 export type ScrollVideoBeat = { from: number; to: number; deva: string; en: string; body: string };
 export type ScrollVideoConfig = {
@@ -19,30 +26,48 @@ export type ScrollVideoConfig = {
 export function ScrollVideo({ src, poster, beats, heightVh = 360 }: ScrollVideoConfig) {
   const wrap = useRef<HTMLDivElement>(null);
   const vid = useRef<HTMLVideoElement>(null);
-  const dur = useRef(0);
   const target = useRef(0);
   const raf = useRef(0);
+  const primed = useRef(false);
   const [active, setActive] = useState(0);
-  const reduce = useReducedMotion();
 
   const { scrollYProgress } = useScroll({ target: wrap, offset: ["start start", "end end"] });
+
+  const seek = () => {
+    const v = vid.current;
+    if (!v) return;
+    const d = v.duration;
+    if (!d || !isFinite(d)) return;
+    const t = Math.max(0, Math.min(d - 0.05, target.current * d));
+    if (Math.abs((v.currentTime || 0) - t) > 0.03) {
+      try {
+        v.currentTime = t;
+      } catch {}
+    }
+  };
+
+  // a muted play→pause unlocks frame rendering on seek in most browsers
+  const prime = () => {
+    const v = vid.current;
+    if (!v || primed.current) return;
+    primed.current = true;
+    const done = () => {
+      v.pause();
+      seek();
+    };
+    const p = v.play();
+    if (p && typeof p.then === "function") p.then(done).catch(() => seek());
+    else done();
+  };
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     const i = beats.findIndex((b) => p >= b.from && p < b.to);
     setActive(i === -1 ? (p >= 1 ? beats.length - 1 : 0) : i);
-    if (reduce) return;
     target.current = p;
     if (!raf.current) {
       raf.current = requestAnimationFrame(() => {
         raf.current = 0;
-        const v = vid.current;
-        if (!v || !dur.current) return;
-        const t = Math.max(0, Math.min(dur.current - 0.05, target.current * dur.current));
-        if (Math.abs(v.currentTime - t) > 0.02) {
-          try {
-            v.currentTime = t;
-          } catch {}
-        }
+        seek();
       });
     }
   });
@@ -50,7 +75,7 @@ export function ScrollVideo({ src, poster, beats, heightVh = 360 }: ScrollVideoC
   const beat = beats[active] ?? beats[0];
 
   return (
-    <section ref={wrap} style={{ height: reduce ? undefined : `${heightVh}vh` }} className="relative">
+    <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
         <div className="mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[0.85fr_1.5fr]">
           {/* caption */}
@@ -72,23 +97,18 @@ export function ScrollVideo({ src, poster, beats, heightVh = 360 }: ScrollVideoC
 
           {/* video box (border is baked into the footage) */}
           <div className="relative aspect-video w-full overflow-hidden rounded-[calc(var(--radius)*1.5)] shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-            {reduce ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={poster} alt="" className="absolute inset-0 h-full w-full object-cover" />
-            ) : (
-              <video
-                ref={vid}
-                src={src}
-                poster={poster}
-                muted
-                playsInline
-                preload="auto"
-                onLoadedMetadata={(e) => {
-                  dur.current = e.currentTarget.duration || 0;
-                }}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            )}
+            <video
+              ref={vid}
+              src={src}
+              poster={poster}
+              muted
+              playsInline
+              preload="auto"
+              onLoadedMetadata={seek}
+              onLoadedData={prime}
+              onCanPlay={prime}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
