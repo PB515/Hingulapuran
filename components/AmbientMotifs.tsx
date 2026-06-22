@@ -57,18 +57,18 @@ const MOTIFS = { rosette: Rosette, sun: Sun, paisley: Paisley, diya: Diya, lotus
 type Place = { m: keyof typeof MOTIFS; pos: string; size: number; op: number; float: number; dur: number; delay: number; spin?: boolean };
 
 const PLACE: Place[] = [
-  { m: "rosette", pos: "left-[5%] top-[15%]", size: 66, op: 0.13, float: 10, dur: 9, delay: 0, spin: true },
-  { m: "sun", pos: "right-[7%] top-[12%]", size: 54, op: 0.12, float: 8, dur: 11, delay: 0.6, spin: true },
-  { m: "paisley", pos: "left-[8%] top-[57%]", size: 58, op: 0.11, float: 12, dur: 10, delay: 1.2 },
-  { m: "lotus", pos: "right-[5%] top-[60%]", size: 60, op: 0.12, float: 10, dur: 12, delay: 0.3 },
-  { m: "diya", pos: "left-[16%] bottom-[12%]", size: 48, op: 0.13, float: 9, dur: 8, delay: 0.9 },
-  { m: "rosette", pos: "right-[14%] bottom-[14%]", size: 52, op: 0.11, float: 11, dur: 10, delay: 1.6, spin: true },
+  { m: "rosette", pos: "left-[5%] top-[14%]", size: 76, op: 0.3, float: 10, dur: 9, delay: 0, spin: true },
+  { m: "sun", pos: "right-[7%] top-[12%]", size: 62, op: 0.28, float: 8, dur: 11, delay: 0.6, spin: true },
+  { m: "paisley", pos: "left-[7%] top-[56%]", size: 64, op: 0.26, float: 12, dur: 10, delay: 1.2 },
+  { m: "lotus", pos: "right-[5%] top-[58%]", size: 66, op: 0.28, float: 10, dur: 12, delay: 0.3 },
+  { m: "diya", pos: "left-[15%] bottom-[12%]", size: 54, op: 0.3, float: 9, dur: 8, delay: 0.9 },
+  { m: "rosette", pos: "right-[13%] bottom-[13%]", size: 58, op: 0.26, float: 11, dur: 10, delay: 1.6, spin: true },
 ];
 
 export function AmbientMotifs({ className = "" }: { className?: string }) {
   const reduce = useReducedMotion();
   return (
-    <div aria-hidden className={`pointer-events-none absolute inset-0 -z-10 overflow-hidden ${className}`}>
+    <div aria-hidden className={`pointer-events-none absolute inset-0 z-0 overflow-hidden ${className}`}>
       {PLACE.map((p, i) => (
         <motion.svg
           key={i}

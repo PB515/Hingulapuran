@@ -53,14 +53,14 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
       >
         <AmbientMotifs />
         {(title || titleEn) && (
-          <div className="text-center">
+          <div className="relative z-10 text-center">
             {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}
             {titleEn && <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.32em] text-loha">{titleEn}</p>}
           </div>
         )}
 
         {/* stage: top border / 16:9 viewport (no crop) / bottom border; rods straddle the edges */}
-        <div className="relative w-full max-w-4xl">
+        <div className="relative z-10 w-full max-w-4xl">
           <div className="flex flex-col">
             <div className="h-7 md:h-9" style={borderStyle} />
             <div className="relative aspect-[2/1] w-full overflow-hidden bg-rakta">
@@ -92,7 +92,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         </div>
 
         {/* caption below the scroll */}
-        <div className="min-h-[96px] w-full max-w-3xl text-center">
+        <div className="relative z-10 min-h-[96px] w-full max-w-3xl text-center">
           <AnimatePresence mode="wait">
             <motion.div key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
               <h3 className="font-[family-name:var(--font-display)] text-2xl leading-tight text-patra md:text-3xl">{s.deva}</h3>
