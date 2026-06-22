@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent, type MotionValue } from "motion/react";
+import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent } from "motion/react";
 
 /* The pothi (scroll) reel — a manuscript that unrolls sideways. Layout:
    a headline above; a framed stage (scroll-rods in the gutters left/right, a
@@ -28,21 +28,6 @@ function Img({ src, className }: { src: string; className: string }) {
   return <img src={src} alt="" aria-hidden loading="eager" onError={() => setBad(true)} className={className} />;
 }
 
-function Rod({ src, spin, side }: { src: string; spin: MotionValue<number>; side: "left" | "right" }) {
-  const glint = "conic-gradient(from 0deg, rgba(231,215,184,0) 0deg, rgba(231,215,184,0.5) 28deg, rgba(231,215,184,0) 78deg, rgba(231,215,184,0) 360deg)";
-  return (
-    <div
-      className={`pointer-events-none absolute top-1/2 z-30 -translate-y-1/2 ${side === "left" ? "left-0 -translate-x-1/2" : "right-0 translate-x-1/2"}`}
-      style={{ height: "74vh", width: "12.5vh" }}
-    >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt="" aria-hidden className="absolute inset-0 h-full w-full object-contain" />
-      <motion.div style={{ rotate: spin, x: "-50%", background: glint, mixBlendMode: "screen" }} className="absolute left-1/2 top-[1%] h-[8.5vh] w-[8.5vh] rounded-full" />
-      <motion.div style={{ rotate: spin, x: "-50%", background: glint, mixBlendMode: "screen" }} className="absolute bottom-[1%] left-1/2 h-[8.5vh] w-[8.5vh] rounded-full" />
-    </div>
-  );
-}
-
 export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, title, titleEn, heightVh = 760 }: PothiConfig) {
   const wrap = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -50,7 +35,6 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
 
   const { scrollYProgress } = useScroll({ target: wrap, offset: ["start start", "end end"] });
   const trackX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100}%`]);
-  const rodSpin = useTransform(scrollYProgress, [0, 1], [0, 720]);
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     setActive(Math.max(0, Math.min(N - 1, Math.round(p * (N - 1)))));
   });
@@ -69,31 +53,34 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
           </div>
         )}
 
-        {/* stage: the image viewport, with taller scroll-rods straddling each edge */}
-        <div className="relative w-full max-w-6xl" style={{ height: "54vh" }}>
-          <div className="absolute inset-0 overflow-hidden bg-rakta">
-            <motion.div style={{ x: trackX }} className="absolute inset-x-0 top-7 bottom-7 flex md:top-9 md:bottom-9">
-              {scenes.map((sc, i) => (
-                <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
-                  <div className="absolute inset-0 grid place-items-center bg-gradient-to-b from-rakta to-raat">
-                    <span className="font-[family-name:var(--font-display)] text-6xl text-swarna/15">{sc.deva}</span>
+        {/* stage: top border / 16:9 viewport (no crop) / bottom border; rods straddle the edges */}
+        <div className="relative w-full max-w-5xl">
+          <div className="flex flex-col">
+            <div className="h-7 md:h-9" style={borderStyle} />
+            <div className="relative aspect-video w-full overflow-hidden bg-rakta">
+              <motion.div style={{ x: trackX }} className="absolute inset-0 flex">
+                {scenes.map((sc, i) => (
+                  <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
+                    <div className="absolute inset-0 grid place-items-center bg-gradient-to-b from-rakta to-raat">
+                      <span className="font-[family-name:var(--font-display)] text-6xl text-swarna/15">{sc.deva}</span>
+                    </div>
+                    <Img src={sc.img ?? sc.bg ?? ""} className="absolute inset-0 h-full w-full object-cover" />
+                    {!sc.img && sc.fig ? <Img src={sc.fig} className="absolute inset-0 h-full w-full object-contain" /> : null}
+                    {i < N - 1 && <div className="absolute inset-y-0 right-0 z-10 w-3 md:w-4" style={{ background: seam }} />}
                   </div>
-                  <Img src={sc.img ?? sc.bg ?? ""} className="absolute inset-0 h-full w-full object-cover" />
-                  {!sc.img && sc.fig ? <Img src={sc.fig} className="absolute inset-0 h-full w-full object-contain" /> : null}
-                  {i < N - 1 && <div className="absolute inset-y-0 right-0 z-10 w-3 md:w-4" style={{ background: seam }} />}
-                </div>
-              ))}
-            </motion.div>
-
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-7 md:h-9" style={borderStyle} />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-7 -scale-y-100 md:h-9" style={borderStyle} />
+                ))}
+              </motion.div>
+            </div>
+            <div className="h-7 -scale-y-100 md:h-9" style={borderStyle} />
           </div>
 
-          {/* scroll-rods: natural shape, straddling the edges; a glint sweeps the knobs as you scroll */}
+          {/* scroll-rods: natural shape, straddling each edge, knobs protruding above + below (static) */}
           {rod ? (
             <>
-              <Rod src={rod} spin={rodSpin} side="left" />
-              <Rod src={rod} spin={rodSpin} side="right" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={rod} alt="" aria-hidden style={{ height: "82vh" }} className="pointer-events-none absolute left-0 top-1/2 z-30 w-auto -translate-x-1/2 -translate-y-1/2" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={rod} alt="" aria-hidden style={{ height: "82vh" }} className="pointer-events-none absolute right-0 top-1/2 z-30 w-auto -translate-y-1/2 translate-x-1/2 -scale-x-100" />
             </>
           ) : null}
         </div>
