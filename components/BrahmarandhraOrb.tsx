@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "motion/react";
+import { AmbientMotifs } from "@/components/AmbientMotifs";
 
 /* Brahmarandhra — the home section for "where the crown of the head fell".
    A dark gradient orb (maroon core → deep indigo/black) that breathes + turns,
@@ -36,7 +37,8 @@ export function BrahmarandhraOrb() {
       className="relative overflow-hidden bg-raat px-6 py-28 md:py-40"
       style={{ perspective: 1000 }}
     >
-      <div className="mx-auto max-w-6xl text-center">
+      <AmbientMotifs />
+      <div className="relative z-10 mx-auto max-w-6xl text-center">
         <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.35em] text-loha">Where the crown fell</p>
         <h2 className="mt-4 font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">ब्रह्मरंध्र</h2>
         <p className="mt-3 font-[family-name:var(--font-display-latin)] text-sm tracking-[0.12em] text-swarna">Brahmarandhra</p>
