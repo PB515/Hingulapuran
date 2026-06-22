@@ -5,6 +5,8 @@ import type { PothiConfig } from "@/components/PothiScroll";
    until they land, each scene shows a calm placeholder. */
 export const hingulScroll: PothiConfig = {
   heightVh: 760,
+  title: "हिंगुल की कथा",
+  titleEn: "The story of Hingul",
   border: "/art/stories/hingul/scroll/frame-border.webp",
   rod: "/art/stories/hingul/scroll/frame-rod.webp",
   scenes: [

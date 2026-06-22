@@ -3,105 +3,101 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useTransform, useMotionValueEvent } from "motion/react";
 
-/* The pothi (scroll) reel: a manuscript that unrolls sideways. The section is
-   pinned; scroll pans through the scenes. Each scene is two layers (a background
-   and a figure) that move at slightly different rates for a 2.5D feel. A tiling
-   border runs top and bottom, spinning rod-wheels sit left and right, and the
-   caption hard-swaps per scene. Missing art shows a calm placeholder. */
+/* The pothi (scroll) reel — a manuscript that unrolls sideways. Layout:
+   a headline above; a framed stage (scroll-rods in the gutters left/right, a
+   continuous border top and bottom); inside, the scenes pan horizontally with a
+   vertical seam between each; the caption sits BELOW the stage, so the bright art
+   is never darkened. One image per scene (merge bg+figure in art); a scene may
+   instead carry bg(+fig) which render flat until the merged image lands. Missing
+   art shows a calm placeholder. */
 
-export type PothiScene = { bg: string; fig: string; deva: string; en: string; body: string };
+export type PothiScene = { img?: string; bg?: string; fig?: string; deva: string; en: string; body: string };
 export type PothiConfig = {
   scenes: PothiScene[];
-  border?: string; // tiling border strip
-  rod?: string; // vertical scroll-rod image (left + mirrored right)
+  border?: string;
+  rod?: string;
+  title?: string;
+  titleEn?: string;
   heightVh?: number;
 };
 
 function Img({ src, className }: { src: string; className: string }) {
   const [bad, setBad] = useState(false);
-  if (bad) return null;
+  if (!src || bad) return null;
   // eslint-disable-next-line @next/next/no-img-element
   return <img src={src} alt="" aria-hidden loading="lazy" onError={() => setBad(true)} className={className} />;
 }
 
-export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, heightVh = 720 }: PothiConfig) {
+export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, title, titleEn, heightVh = 760 }: PothiConfig) {
   const wrap = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const N = scenes.length;
 
   const { scrollYProgress } = useScroll({ target: wrap, offset: ["start start", "end end"] });
-  const bgX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100}%`]);
-  const figX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100 + 6}%`]); // a touch faster = parallax
-  const rodW = { width: "clamp(22px,3.6%,52px)", objectFit: "fill" as const };
-
+  const trackX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100}%`]);
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     setActive(Math.max(0, Math.min(N - 1, Math.round(p * (N - 1)))));
   });
 
-  const beat = scenes[active] ?? scenes[0];
-  const borderStyle = { backgroundImage: `url(${border})`, backgroundRepeat: "repeat-x", backgroundSize: "auto 100%" };
+  const s = scenes[active] ?? scenes[0];
+  const borderStyle = { backgroundImage: `url(${border})`, backgroundRepeat: "repeat-x", backgroundSize: "auto 100%" } as const;
+  const rodStyle = { width: "clamp(26px,3.5%,58px)", objectFit: "fill" as const };
+  const seam = "linear-gradient(90deg, rgba(26,17,16,0), #C9A227 38%, #E7D7B8 50%, #C9A227 62%, rgba(26,17,16,0))";
 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
-        <div className="mx-auto w-full max-w-6xl">
-          {/* the unrolling scroll */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-[calc(var(--radius)*1.2)] shadow-[0_40px_140px_rgba(0,0,0,.65)]">
-            {/* background track */}
-            <motion.div style={{ x: bgX }} className="absolute inset-0 flex">
-              {scenes.map((s, i) => (
+      <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-5 overflow-hidden px-4 md:px-8">
+        {(title || titleEn) && (
+          <div className="text-center">
+            {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}
+            {titleEn && <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.32em] text-loha">{titleEn}</p>}
+          </div>
+        )}
+
+        {/* stage: rod | viewport | rod */}
+        <div className="relative flex w-full max-w-6xl items-stretch" style={{ height: "54vh" }}>
+          {rod ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={rod} alt="" aria-hidden style={rodStyle} className="z-20 h-full shrink-0" />
+          ) : (
+            <div className="z-20 w-5 shrink-0 bg-gradient-to-r from-kajal to-swarna/60" />
+          )}
+
+          <div className="relative flex-1 overflow-hidden bg-rakta">
+            <motion.div style={{ x: trackX }} className="absolute inset-0 flex">
+              {scenes.map((sc, i) => (
                 <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
                   <div className="absolute inset-0 grid place-items-center bg-gradient-to-b from-rakta to-raat">
-                    <span className="font-[family-name:var(--font-display)] text-6xl text-swarna/15">{s.deva}</span>
+                    <span className="font-[family-name:var(--font-display)] text-6xl text-swarna/15">{sc.deva}</span>
                   </div>
-                  <Img src={s.bg} className="absolute inset-0 h-full w-full object-cover" />
+                  <Img src={sc.img ?? sc.bg ?? ""} className="absolute inset-0 h-full w-full object-cover" />
+                  {!sc.img && sc.fig ? <Img src={sc.fig} className="absolute inset-0 h-full w-full object-contain" /> : null}
+                  {i < N - 1 && <div className="absolute inset-y-0 right-0 z-10 w-3 md:w-4" style={{ background: seam }} />}
                 </div>
               ))}
             </motion.div>
 
-            {/* figure track (parallax) */}
-            <motion.div style={{ x: figX }} className="absolute inset-0 flex">
-              {scenes.map((s, i) => (
-                <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
-                  <Img src={s.fig} className="absolute inset-0 h-full w-full object-contain" />
-                </div>
-              ))}
-            </motion.div>
-
-            {/* pothi frame: borders + rods */}
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-6 md:h-7" style={borderStyle} />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-6 -scale-y-100 md:h-7" style={borderStyle} />
-            {rod ? (
-              <>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={rod} alt="" aria-hidden style={rodW} className="pointer-events-none absolute inset-y-0 left-0 z-20 h-full" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={rod} alt="" aria-hidden style={rodW} className="pointer-events-none absolute inset-y-0 right-0 z-20 h-full -scale-x-100" />
-              </>
-            ) : (
-              <>
-                <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-6 bg-gradient-to-r from-kajal via-swarna/70 to-kajal md:w-8" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-6 bg-gradient-to-l from-kajal via-swarna/70 to-kajal md:w-8" />
-              </>
-            )}
-
-            {/* caption */}
-            <div className="absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-raat via-raat/80 to-transparent px-8 pb-10 pt-20 md:px-14">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={active}
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -14 }}
-                  transition={{ duration: 0.45 }}
-                >
-                  <h3 className="font-[family-name:var(--font-display)] text-3xl leading-tight text-patra md:text-4xl">{beat.deva}</h3>
-                  <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.25em] text-swarna">{beat.en}</p>
-                  <p className="mt-2 max-w-lg font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted md:text-base">{beat.body}</p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-7 md:h-9" style={borderStyle} />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-7 -scale-y-100 md:h-9" style={borderStyle} />
           </div>
+
+          {rod ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={rod} alt="" aria-hidden style={rodStyle} className="z-20 h-full shrink-0 -scale-x-100" />
+          ) : (
+            <div className="z-20 w-5 shrink-0 bg-gradient-to-l from-kajal to-swarna/60" />
+          )}
+        </div>
+
+        {/* caption below the scroll */}
+        <div className="min-h-[96px] w-full max-w-3xl text-center">
+          <AnimatePresence mode="wait">
+            <motion.div key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
+              <h3 className="font-[family-name:var(--font-display)] text-2xl leading-tight text-patra md:text-3xl">{s.deva}</h3>
+              <p className="mt-1 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.25em] text-swarna">{s.en}</p>
+              <p className="mx-auto mt-2 max-w-xl font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted md:text-base">{s.body}</p>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
