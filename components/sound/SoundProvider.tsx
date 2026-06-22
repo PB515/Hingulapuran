@@ -6,7 +6,12 @@ import { SOUNDS } from "@/lib/sound/manifest";
 /* The audio engine. Default MUTED (browser autoplay policy + reverence).
    The header toggle is the user gesture that unlocks sound; after that,
    scrolling into a section crossfades its bed and fires its cues. The user's
-   choice is remembered. Missing audio files are a silent no-op. */
+   choice is remembered. Missing audio files are a silent no-op.
+
+   Every bed element is tracked in `beds` so muting stops ALL of them — including
+   any still crossfading — and there are no orphaned loops. `current` is assigned
+   synchronously (not in a play() callback) so rapid setBed() calls during a
+   scroll always fade out the right element. */
 
 type SoundCtx = {
   muted: boolean;
@@ -21,59 +26,86 @@ export const useSound = (): SoundCtx =>
 
 const FADE_MS = 1100;
 
-function ramp(el: HTMLAudioElement, to: number, ms: number, done?: () => void) {
+type FadeEl = HTMLAudioElement & { _fi?: ReturnType<typeof setInterval> | null };
+
+function fade(el: FadeEl, to: number, ms: number, done?: () => void) {
+  if (el._fi) clearInterval(el._fi);
   const from = el.volume;
   const steps = Math.max(1, Math.round(ms / 40));
   let i = 0;
-  const iv = setInterval(() => {
+  el._fi = setInterval(() => {
     i++;
     el.volume = Math.min(1, Math.max(0, from + (to - from) * (i / steps)));
     if (i >= steps) {
-      clearInterval(iv);
+      if (el._fi) clearInterval(el._fi);
+      el._fi = null;
       done?.();
     }
   }, 40);
-  return iv;
 }
 
 export function SoundProvider({ children }: { children: React.ReactNode }) {
   const [muted, setMuted] = useState(true);
   const mutedRef = useRef(true);
   const desiredBed = useRef<string | null>("bed-base");
-  const current = useRef<{ id: string; el: HTMLAudioElement; fade?: ReturnType<typeof setInterval> } | null>(null);
+  const beds = useRef<Set<FadeEl>>(new Set());
+  const current = useRef<{ id: string; el: FadeEl } | null>(null);
 
-  // restore the user's prior choice
-  useEffect(() => {
-    try {
-      if (localStorage.getItem("hp-sound") === "on") {
-        mutedRef.current = false;
-        setMuted(false);
-      }
-    } catch {}
+  const stopAllBeds = useCallback(() => {
+    beds.current.forEach((el) => {
+      if (el._fi) clearInterval(el._fi);
+      el._fi = null;
+      try {
+        el.pause();
+      } catch {}
+    });
+    beds.current.clear();
+    current.current = null;
   }, []);
 
   const startBed = useCallback((id: string | null) => {
     if (mutedRef.current) return;
     if (current.current?.id === id) return;
 
+    // fade out + stop the current bed (it stays tracked until the fade ends)
     const old = current.current;
     if (old) {
-      if (old.fade) clearInterval(old.fade);
-      old.fade = ramp(old.el, 0, FADE_MS, () => old.el.pause());
+      fade(old.el, 0, FADE_MS, () => {
+        try {
+          old.el.pause();
+        } catch {}
+        beds.current.delete(old.el);
+      });
     }
-    current.current = null;
-    if (!id) return;
 
+    if (!id) {
+      current.current = null;
+      return;
+    }
     const def = SOUNDS[id];
-    if (!def) return;
-    const el = new Audio(def.src);
+    if (!def) {
+      current.current = null;
+      return;
+    }
+
+    const el = new Audio(def.src) as FadeEl;
     el.loop = def.loop ?? true;
     el.volume = 0;
+    beds.current.add(el);
+    current.current = { id, el }; // assign synchronously so the next setBed fades THIS one
     el.play()
       .then(() => {
-        current.current = { id, el, fade: ramp(el, def.volume, FADE_MS) };
+        if (mutedRef.current) {
+          el.pause();
+          beds.current.delete(el);
+          return;
+        }
+        fade(el, def.volume, FADE_MS);
       })
-      .catch(() => {});
+      .catch(() => {
+        beds.current.delete(el);
+        if (current.current?.el === el) current.current = null;
+      });
   }, []);
 
   const setBed = useCallback(
@@ -101,29 +133,27 @@ export function SoundProvider({ children }: { children: React.ReactNode }) {
         localStorage.setItem("hp-sound", nm ? "off" : "on");
       } catch {}
       if (nm) {
-        const c = current.current;
-        if (c) {
-          if (c.fade) clearInterval(c.fade);
-          c.fade = ramp(c.el, 0, 400, () => c.el.pause());
-        }
-        current.current = null;
+        stopAllBeds(); // kill every bed, tracked or crossfading
       } else {
         startBed(desiredBed.current);
       }
       return nm;
     });
+  }, [startBed, stopAllBeds]);
+
+  // restore the user's prior choice (and resume its bed)
+  useEffect(() => {
+    try {
+      if (localStorage.getItem("hp-sound") === "on") {
+        mutedRef.current = false;
+        setMuted(false);
+        startBed(desiredBed.current);
+      }
+    } catch {}
   }, [startBed]);
 
-  // stop everything on unmount
-  useEffect(() => {
-    return () => {
-      const c = current.current;
-      if (c) {
-        if (c.fade) clearInterval(c.fade);
-        c.el.pause();
-      }
-    };
-  }, []);
+  // stop all audio on unmount
+  useEffect(() => stopAllBeds, [stopAllBeds]);
 
   return <Ctx.Provider value={{ muted, toggle, setBed, play }}>{children}</Ctx.Provider>;
 }
