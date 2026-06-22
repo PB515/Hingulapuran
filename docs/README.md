@@ -1,12 +1,12 @@
-# Hingulapuran — Documentation
+# Hingulapuran: Documentation
 
 All grantha documentation lives here (flat, so the cross-links between docs resolve by bare filename). The Next.js app, configs and project `README.md` stay at the repo root.
 
 ## Core source-of-truth & translation
 | Doc | What it is |
 |---|---|
-| [STYLE.md](STYLE.md) | The style & moodboard bible — palette, voice, art recipe. **Rule 0:** this is *itihaas (history)*, never myth. Read first. |
-| [HINGLAJ-PURAN.md](HINGLAJ-PURAN.md) | The per-chapter archive — all 87 chapters, summaries + scene candidates. The working source-of-truth. |
+| [STYLE.md](STYLE.md) | The style & moodboard bible, palette, voice, art recipe. **Rule 0:** this is *itihaas (history)*, never myth. Read first. |
+| [HINGLAJ-PURAN.md](HINGLAJ-PURAN.md) | The per-chapter archive, all 87 chapters, summaries + scene candidates. The working source-of-truth. |
 | [DWITIYA-TRANSLATION.md](DWITIYA-TRANSLATION.md) | The full sentence-level English transcript (ch 65– onward, in progress). |
 | [SCAN-QUALITY-NOTES.md](SCAN-QUALITY-NOTES.md) | Which scanned pages to re-upload (priority list). |
 
@@ -16,7 +16,7 @@ All grantha documentation lives here (flat, so the cross-links between docs reso
 | [WHAT-IS-HINGLAJ-PURAN.md](WHAT-IS-HINGLAJ-PURAN.md) | Accessible "About" + provenance. |
 | [FAQ.md](FAQ.md) | Q&A for the site. |
 | [CHAPTER-INDEX.md](CHAPTER-INDEX.md) | Public English Anukramaṇikā (all 87). |
-| [GLOSSARY.md](GLOSSARY.md) | Dramatis personae — deities, asuras, sages, kings, places, terms. |
+| [GLOSSARY.md](GLOSSARY.md) | Dramatis personae, deities, asuras, sages, kings, places, terms. |
 | [COMMUNITY-ORIGINS.md](COMMUNITY-ORIGINS.md) | The Brahmakṣatriya / Lohana / Bhāṭiā / Khatri / Pushkarṇā origins. |
 | [NARRATIVE-TIMELINE.md](NARRATIVE-TIMELINE.md) | The sacred-history arc in seven movements. |
 | [TIRTHA-GAZETTEER.md](TIRTHA-GAZETTEER.md) | Sacred places + JSON map data for the temple-map. |
@@ -30,4 +30,4 @@ All grantha documentation lives here (flat, so the cross-links between docs reso
 | [ART-PROMPTS.md](ART-PROMPTS.md) | The image-generation prompts. |
 
 ---
-*The source PDF is at `/source/`. Render tooling (mupdf) is at `/probe/` (gitignored). Working drafts await pandit/native review before publishing — see SCAN-QUALITY-NOTES.md.*
+*The source PDF is at `/source/`. Render tooling (mupdf) is at `/probe/` (gitignored). Working drafts await pandit/native review before publishing, see SCAN-QUALITY-NOTES.md.*

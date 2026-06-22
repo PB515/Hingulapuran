@@ -1,10 +1,10 @@
-# Hingulapuran — AI image prompts (v3)
+# Hingulapuran: AI image prompts (v3)
 
-Each image = one **complete prompt in a code block** (full style baked in — copy the block, paste, go). Above each: its **exact save filename**, size, background, and **"Used as"** (where it sits on the site, so you compose it right).
+Each image = one **complete prompt in a code block** (full style baked in, copy the block, paste, go). Above each: its **exact save filename**, size, background, and **"Used as"** (where it sits on the site, so you compose it right).
 
 **The v3 rules (what changed):**
-- **Fill the frame.** Each asset is generated **full-bleed at its own natural shape** — never an element floating in half an empty canvas. We position + scale + parallax them in code. Bigger element = more resolution = sharper.
-- **White background** for anything that must be transparent. Then cut it out with a **subject-based remover** (remove.bg, Photoshop "Remove Background", Photopea) — these detect the subject, so the cream/white *inside* the art is kept. (Don't colour-key.)
+- **Fill the frame.** Each asset is generated **full-bleed at its own natural shape**: never an element floating in half an empty canvas. We position + scale + parallax them in code. Bigger element = more resolution = sharper.
+- **White background** for anything that must be transparent. Then cut it out with a **subject-based remover** (remove.bg, Photoshop "Remove Background", Photopea), these detect the subject, so the cream/white *inside* the art is kept. (Don't colour-key.)
 - **Generate `door/01-backdrop` first**, approve it, then use it as a **style reference** (Midjourney `--sref <url>` or attach as image prompt) for every other image so all 100 stay on-model.
 - Tool tags are Midjourney-style; for Flux/Imagen just use the aspect ratio.
 
@@ -30,20 +30,20 @@ no photorealism, no 3d render, no soft pastel, no cute, no chibi, no disney styl
 | `public/art/motifs/border-strip.png` | 2400×200 | transparent (white) | repeating CSS border |
 | `public/art/motifs/cloth-texture.png` | 2048×2048 | opaque | tiling background texture |
 
-*(Old door 02–06 names are retired — the warrior leaf you already made = `02-leaf`, the jyot = `03-jyot`, the cave/torana piece = `01-backdrop`.)*
+*(Old door 02–06 names are retired, the warrior leaf you already made = `02-leaf`, the jyot = `03-jyot`, the cave/torana piece = `01-backdrop`.)*
 
 ---
 
-# DOOR / TORANA — the intro gateway (4 assets)
+# DOOR / TORANA: the intro gateway (4 assets)
 Two leaves slide apart to reveal the backdrop; the flame grows; the toran drifts.
 
 ### `public/art/door/01-backdrop.png` · 1600×2400 · opaque · GENERATE FIRST
-**Used as:** full-screen layer revealed when the doors open — the cave sanctum with the goddess and the flame.
+**Used as:** full-screen layer revealed when the doors open, the cave sanctum with the goddess and the flame.
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic shrine-cloth look, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110 outlines, warm cream #E7D7B8, antique gold #C9A227 for halos and lamps, cold steel-grey #6E757C for weapons. Aged hand-spun cotton texture with uneven natural-dye mottling. Fierce, primal, devotional, old-Saurashtra goddess-cult tone, never sweet, never modern. Scene fills the entire tall frame: a dark rock cave sanctum (garbhagriha) inside an ornate scalloped temple arch, hanging oil lamps on chains, a sindoor-smeared sacred stone glowing in the central niche with a small flame above it, a guardian deity standing in each side niche, two heraldic lions and rows of oil lamps along the base, dense floral block-print border on all four sides, two small sun-faces in the upper corners. Symmetrical, candle-lit, very deep and rich. Vertical 2:3.
 ```
 
-### `public/art/door/02-leaf.png` · 800×1600 · transparent (white bg) — ONE leaf, mirrored in code
+### `public/art/door/02-leaf.png` · 800×1600 · transparent (white bg): ONE leaf, mirrored in code
 **Used as:** the LEFT door leaf, covering the left half of the screen, sliding left to open. (We flip it for the right.)
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. A single complete carved temple door leaf that FILLS the entire tall narrow frame edge to edge: a frontal dwarpal guardian warrior under a scalloped arch, holding an upright steel khanda sword and a round lion-bossed shield, lotus and oil-lamp motifs, a vertical row of antique-gold dome studs running down ONE long edge (the hinge side), the opposite long edge a plain straight border (the meeting seam). The door leaf occupies the whole frame with no empty margin. Plain solid white background only outside the door silhouette, no scenery, no shadow. Tall portrait 1:2.
@@ -56,14 +56,14 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 ```
 
 ### `public/art/door/04-foreground-toran.png` · 1600×520 · transparent (white bg)
-**Used as:** a garland strung across the very top of the screen — the closest layer, drifts most on scroll.
+**Used as:** a garland strung across the very top of the screen, the closest layer, drifts most on scroll.
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227. Aged cotton texture. A wide hanging festival toran spanning the full width of the frame: a swag of marigold flowers, mango leaves and tiny brass bells, with one ornate hanging brass oil-lamp dropping down at each end. Sits along the top, hanging downward, filling the wide short frame. Plain solid white background only, no shadow. Wide banner 3:1.
 ```
 
 ---
 
-# THE HINGUL LEGEND — horizontal scroll cloth (5 panels, each 2400×900, opaque)
+# THE HINGUL LEGEND: horizontal scroll cloth (5 panels, each 2400×900, opaque)
 **Used as:** one continuous Mata-ni-Pachedi cloth that scrolls sideways. Keep the maroon ground and the top/bottom border height identical across all five so they butt together seamlessly; left/right edges bleed.
 
 ### `public/art/legend/a-tapasya.png` · 2400×900 · opaque
@@ -93,7 +93,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 
 ---
 
-# PARSHURAM CLIMAX — the sword at the feet (1600×2000, opaque)
+# PARSHURAM CLIMAX: the sword at the feet (1600×2000, opaque)
 **Used as:** the full-bleed hero image of the climax section.
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110 outlines, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. The scene fills the whole frame. Hinglaj Mata as serene-but-supreme Nani Maa: calm glowing face with a prominent third eye, gold crown, four arms holding a trishula, a straight khadga sword, a lotus, and one open palm in abhaya-varada mudra, seated supreme on her lion with a gold halo and an akhand flame at her right, oxblood-maroon sari with green-and-gold choli (NOT the naked Tantric form). She sits centre and elevated between two carved temple pillars. Lower LEFT: Parshuram, the matted-haired axe-warrior, kneeling with bowed head, laying his sword down at her feet, his parashu axe beside him. Lower RIGHT: two surrendered Kshatriya warriors kneeling with folded hands in anjali, weapons set down. Scattered flower offerings on the floor between them. Dense block-print border on all four sides. The famous sword-at-the-feet scene. Portrait 4:5.
@@ -121,9 +121,9 @@ Plain aged hand-spun cotton cloth in deep oxblood maroon #3E0A1A with faint unev
 ---
 
 # ════════════════════════ DESKTOP DOOR SET (Option B) ════════════════════════
-The current tall `01-backdrop` + `02-leaf` become the **mobile** set. These two wider assets are the **desktop** set — composed for a landscape screen so the guardian fills a half-screen without cropping. I swap them by breakpoint once you save them.
+The current tall `01-backdrop` + `02-leaf` become the **mobile** set. These two wider assets are the **desktop** set, composed for a landscape screen so the guardian fills a half-screen without cropping. I swap them by breakpoint once you save them.
 
-### `public/art/door/desktop-leaf.png` · 1000×1200 · transparent (white bg) — ONE leaf, mirrored in code
+### `public/art/door/desktop-leaf.png` · 1000×1200 · transparent (white bg): ONE leaf, mirrored in code
 **Used as:** the desktop LEFT door leaf (covers half a landscape screen ≈ near-square); mirrored for the right.
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. A single complete carved temple door leaf that FILLS the whole near-square frame edge to edge: a large frontal dwarpal guardian warrior — fully visible from crown to feet — under a scalloped arch, holding an upright steel khanda sword and a round lion-bossed shield, lotus and oil-lamp motifs, a vertical row of antique-gold dome studs down ONE long edge (the hinge), the opposite edge a plain straight border (the meeting seam). Composition sized so the WHOLE guardian fits comfortably in a wide-ish panel, no cropping. Plain solid white background only outside the door silhouette, no shadow. Aspect 5:6 (slightly tall).
@@ -156,14 +156,14 @@ Same rules: white bg for transparent assets (remove with a subject-based tool), 
 ---
 
 ### `public/art/brand/logo.png` · 512×512 · transparent (white bg)
-**Used as:** site logo + favicon — must read at tiny sizes, so keep it bold and simple.
+**Used as:** site logo + favicon, must read at tiny sizes, so keep it bold and simple.
 ```
 Mata-ni-Pachedi style emblem, hand-drawn kalam black linework, flat, no realism, no gradients. Palette only: kalam-black #1A1110 and antique gold #C9A227. A single bold emblem: a trishula (trident) rising out of an akhand flame, two small khanda swords crossed at the base, enclosed in a thin circular gold ring. Symmetrical, simple, legible at very small sizes, centred and filling the frame. Plain solid white background only.
 ```
 
 ---
 
-## Gallery seed plates — standalone Devi forms (each 1024×1280, opaque)
+## Gallery seed plates: standalone Devi forms (each 1024×1280, opaque)
 **Used as:** the curated gallery grid. Each is a self-contained pachedi cloth: a single goddess, frontal and hieratic, gold halo, four-sided block-print border, deep maroon ground.
 
 ### `public/art/gallery/01-hinglaj.png` · 1024×1280 · opaque
@@ -201,13 +201,13 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 ## Section backdrops (wide, opaque)
 
 ### `public/art/scene/hingol-river.png` · 2400×1000 · opaque
-**Used as:** a wide section background — the landscape of the shrine.
+**Used as:** a wide section background, the landscape of the shrine.
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. A wide landscape filling the frame: the Hingol river winding through stylised Makran hills and mud-volcano cones, a small cave shrine set in a cliff, palm trees, birds, a thin block-print border top and bottom. Flat, decorative, calm. Wide landscape 12:5.
 ```
 
 ### `public/art/scene/cave-shrine.png` · 2400×1000 · opaque
-**Used as:** a wide section background — the inner sanctum.
+**Used as:** a wide section background, the inner sanctum.
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. A wide interior filling the frame: the cave sanctum, the sindoor-smeared sacred stone glowing in a central rock niche with a flame above, hanging oil lamps on chains, a heraldic lion on each side, rows of small lamps along the base, a thin block-print border top and bottom. Wide landscape 12:5.
 ```

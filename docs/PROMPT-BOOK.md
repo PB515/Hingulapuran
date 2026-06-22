@@ -1,9 +1,9 @@
-# Hingulapuran — the art prompt book (bulk ship list)
+# Hingulapuran: the art prompt book (bulk ship list)
 
 Every remaining image the site needs, with its **exact filename and folder**, ready to generate in bulk and drop in. Two kinds of art:
 
-- **Part A — flagship reel layers** (the 2.5D scroll reels). 3 layers per scene. Full layered prompts live in `SCENE-PROMPTS.md`; the manifest here is the file checklist.
-- **Part B — chapter hero panels.** One opaque full-frame painting per chapter, all 87 + the invocation. Full prompts inline below.
+- **Part A, flagship reel layers** (the 2.5D scroll reels). 3 layers per scene. Full layered prompts live in `SCENE-PROMPTS.md`; the manifest here is the file checklist.
+- **Part B, chapter hero panels.** One opaque full-frame painting per chapter, all 87 + the invocation. Full prompts inline below.
 
 When art lands, I wire it in: hero panels go onto the chapter reader pages and the chapter-index cards; reel layers build the cinematic sections.
 
@@ -28,7 +28,7 @@ no photorealism, no 3d render, no soft pastel, no cute, no chibi, no disney, no 
 ```
 
 **After generating** (in `C:\Users\PC 1\Desktop\hingulapuran`):
-- Chapter hero panels are **opaque** — no cut-out needed. Just convert: `node scripts/to-webp.mjs`.
+- Chapter hero panels are **opaque**: no cut-out needed. Just convert: `node scripts/to-webp.mjs`.
 - Reel `subject`/`near` layers must be drawn on **plain solid white** → `node scripts/cutout.mjs` (keys the white out) → `node scripts/to-webp.mjs`. `far` layers are opaque (convert only).
 
 **The tally**
@@ -38,36 +38,36 @@ no photorealism, no 3d render, no soft pastel, no cute, no chibi, no disney, no 
 | A · Parashurama reel (8 scenes × 3) | 24 | 48 |
 | B · Chapter hero panels (ch00–ch87) | 88 | 176 |
 | **Total remaining** | **127** | **254** |
-| *(Fall of Sati reel — already done)* | *13* | *26* |
+| *(Fall of Sati reel, already done)* | *13* | *26* |
 
 ---
 
-# PART A — the two flagship reels to finish
+# PART A: the two flagship reels to finish
 
 Full, copy-paste-ready layered prompts for each file below are in **`SCENE-PROMPTS.md`** (Chapter B and Chapter C). This is the file checklist so nothing is missed. Each scene = `s<n>-far` (opaque) + `s<n>-subject` (on white) + `s<n>-near` (on white).
 
-### Chapter B — The Coming of Hingul → `public/art/stories/hingul/{desktop,mobile}/`
-- `s1-far` `s1-subject` `s1-near` — The thousand-year penance on Meru
-- `s2-far` `s2-subject` `s2-near` — Conquest of the heavens
-- `s3-far` `s3-subject` `s3-near` — The vow of the Devi
-- `s4-far` `s4-subject` `s4-near` — The unprecedented light
-- `s5-far` `s5-subject` `s5-near` — The vardan (Hingula Peeth)
+### Chapter B: The Coming of Hingul → `public/art/stories/hingul/{desktop,mobile}/`
+- `s1-far` `s1-subject` `s1-near`, The thousand-year penance on Meru
+- `s2-far` `s2-subject` `s2-near`, Conquest of the heavens
+- `s3-far` `s3-subject` `s3-near`, The vow of the Devi
+- `s4-far` `s4-subject` `s4-near`, The unprecedented light
+- `s5-far` `s5-subject` `s5-near`, The vardan (Hingula Peeth)
 
-### Chapter C — Parashurama & the Brahmakshatriya → `public/art/stories/parshuram/{desktop,mobile}/`
-- `s1-far` `s1-subject` `s1-near` — King Sahastrarjun enthroned
-- `s2-far` `s2-subject` `s2-near` — The theft of Kamadhenu
-- `s3-far` `s3-subject` `s3-near` — Parashurama slays Sahastrarjun
-- `s4-far` `s4-subject` `s4-near` — Jamadagni slain → the vow
-- `s5-far` `s5-subject` `s5-near` — The cleansing of the earth
-- `s6-far` `s6-subject` `s6-near` — Refuge at Mount Hingula
-- `s7-far` `s7-subject` `s7-near` — The twelve-year penance
-- `s8-far` `s8-subject` `s8-near` — Hingula manifests (the Brahmakshatriya)
+### Chapter C: Parashurama & the Brahmakshatriya → `public/art/stories/parshuram/{desktop,mobile}/`
+- `s1-far` `s1-subject` `s1-near`, King Sahastrarjun enthroned
+- `s2-far` `s2-subject` `s2-near`, The theft of Kamadhenu
+- `s3-far` `s3-subject` `s3-near`, Parashurama slays Sahastrarjun
+- `s4-far` `s4-subject` `s4-near`, Jamadagni slain → the vow
+- `s5-far` `s5-subject` `s5-near`, The cleansing of the earth
+- `s6-far` `s6-subject` `s6-near`, Refuge at Mount Hingula
+- `s7-far` `s7-subject` `s7-near`, The twelve-year penance
+- `s8-far` `s8-subject` `s8-near`, Hingula manifests (the Brahmakshatriya)
 
 > Chapter A (Fall of Sati) is already arted and live. After B and C art lands, both home sections upgrade from their stand-ins to the full 2.5D reels.
 
 ---
 
-# PART B — chapter hero panels (ch00–ch87)
+# PART B: chapter hero panels (ch00–ch87)
 
 One opaque full-frame painting per chapter, for the chapter's reader page and its index card. **Each block below is a complete prompt: copy the whole block, paste, generate.** Save the 16:9 to `public/art/chapters/desktop/` and the 9:16 to `mobile/`, same filename.
 
@@ -234,7 +234,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail; hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients; strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110 outlines, warm cream #E7D7B8, antique gold #C9A227, cold steel-grey #6E757C; aged hand-spun cotton texture; fierce, primal, devotional, never sweet, never modern; sacred history (itihaas) rendered as reverent cloth, dense floral block-print border on all four sides, fills the entire frame, no white margin. SCENE: The just solar-dynasty king Dhruvasandhi enthroned in his peaceful realm, his two queens — the wise Manorama and the lovely Lilavati — seated at his sides, opening the Sudarshana account in a court of order and contentment. Generate at wide landscape 16:9 and save to desktop/, then regenerate the same composition at portrait 9:16 and save to mobile/.
 ```
 
-### `public/art/chapters/desktop/ch32.png`  (+ `mobile/ch32.png`) · opaque · Dhruvasandhi Akhyana, cont. — the exile
+### `public/art/chapters/desktop/ch32.png`  (+ `mobile/ch32.png`) · opaque · Dhruvasandhi Akhyana, cont.: the exile
 ```
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail; hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients; strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110 outlines, warm cream #E7D7B8, antique gold #C9A227, cold steel-grey #6E757C; aged hand-spun cotton texture; fierce, primal, devotional, never sweet, never modern; sacred history (itihaas) rendered as reverent cloth, dense floral block-print border on all four sides, fills the entire frame, no white margin. SCENE: Queen Manorama fleeing through the forest at night clutching the infant prince Sudarshana, arriving at sage Bharadvaja's ashram where the sage receives them in shelter; the lamp of the hermitage glowing against the dark wilderness. Generate at wide landscape 16:9 and save to desktop/, then regenerate the same composition at portrait 9:16 and save to mobile/.
 ```
@@ -401,7 +401,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail; hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients; strict limited palette only: deep oxblood maroon #3E0A1A ground, kalam-black #1A1110 outlines, warm cream #E7D7B8, antique gold #C9A227, cold steel-grey #6E757C; aged hand-spun cotton texture; fierce, primal, devotional, never sweet, never modern; sacred history (itihaas) rendered as reverent cloth, dense floral block-print border on all four sides, fills the entire frame, no white margin. SCENE: The bridge-vision of Hingulambika rising self-arisen from a red lotus, red-eyed and luminous, over an earth restored to peace after the victory. Generate at wide landscape 16:9 and save to desktop/, then regenerate the same composition at portrait 9:16 and save to mobile/.
 ```
 
-## The Hinglaj core — Dwitiya Pravah (ch 65–87)
+## The Hinglaj core: Dwitiya Pravah (ch 65–87)
 
 ### `public/art/chapters/desktop/ch65.png`  (+ `mobile/ch65.png`) · opaque · The Origin of Hingula
 ```

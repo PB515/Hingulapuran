@@ -1,13 +1,13 @@
-# Hinglaj Puran — Chapter Index (Anukramaṇikā)
+# Hinglaj Puran: Chapter Index (Anukramaṇikā)
 
-> Public-facing English table of contents for the whole grantha — **87 adhyāy across 2 pravāh**.
+> Public-facing English table of contents for the whole grantha, **87 adhyāy across 2 pravāh**.
 > *Shri Hingulapuran*, stated as part of the **Skanda Purāṇa**; Gujarati translation by **Chhotalal Chandrashankar Shastri**, pub. Mumbai-Gujarati Printing Press, **Samvat 1966 / CE 1915**.
 > Faithful working titles (English); see HINGLAJ-PURAN.md for the per-chapter summaries + scene candidates. This is **itihaas (sacred history)**.
 
-## Prathama Pravāh — chapters 1–64
+## Prathama Pravāh: chapters 1–64
 *The Devi-upāsanā and the Devi Māhātmya (Goddess-worship rites → the slaying of Mahishāsura).*
 
-**— Maṅgalācharaṇa — The Invocation**
+**: Maṅgalācharaṇa, The Invocation**
 1. The Rite of Devi-Worship
 2. The Creation of the World from Mahālakṣmī
 3. The Various Forms of the Great Goddess
@@ -29,7 +29,7 @@
 19. Bhagavatī's Command to Brahmā & the Gods
 20. Brahmā & the Gods' Vision of Mahāmāyā
 21. A Hymn to Mahāmāyā (I)
-22. A Hymn to Mahāmāyā (II — in distress)
+22. A Hymn to Mahāmāyā (II, in distress)
 23. The Tasks Mahāmāyā Assigns the Gods
 24. The Nirguṇa Principle
 25. A Discourse on the Three Guṇas
@@ -39,17 +39,17 @@
 29. The Rite of the Devi-Yajna
 30. The Devi-Yajna Ordained by Bhagavān (the Cosmogony)
 31. The Dhruvasandhi Ākhyāna *(the Sudarshana saga begins)*
-32. — Sudarshana's Exile
-33. — Sudhajit's Pursuit
-34. — The Vishvāmitra–Nandinī Tale & the *klīṃ* Bīja
-35. — Shashikalā's Longing
-36. — Shashikalā's Resolve
-37. — The Svayaṃvara: Shashikalā Chooses Sudarshana
-38. — Sudhajit's Plea & the Kings' Outrage
-39. — The Wedding Arranged
-40. — The Battle & the Devi's Victory
-41. — Sudarshana Enthroned (the saga concludes)
-42. — Return to Ayodhyā & Reconciliation
+32., Sudarshana's Exile
+33., Sudhajit's Pursuit
+34., The Vishvāmitra–Nandinī Tale & the *klīṃ* Bīja
+35., Shashikalā's Longing
+36., Shashikalā's Resolve
+37., The Svayaṃvara: Shashikalā Chooses Sudarshana
+38., Sudhajit's Plea & the Kings' Outrage
+39., The Wedding Arranged
+40., The Battle & the Devi's Victory
+41., Sudarshana Enthroned (the saga concludes)
+42., Return to Ayodhyā & Reconciliation
 43. The Navrātri Vrat & Kalasha-Maṇḍapa Installation
 44. The Fruits of the Navrātri Vrat / Kumārī-pūjā
 45. The Various Avatāras of Durgā
@@ -73,7 +73,7 @@
 63. The Devi's Victory-Stuti & the Sāvitrī-vrat Rite
 64. The State of the Earth after Mahisha's Slaying *(→ bridges to the Hingula account)*
 
-## Dvitīya Pravāh — chapters 65–87
+## Dvitīya Pravāh: chapters 65–87
 *The Hingula account: the goddess's origin, the tīrthas, the Parashurāma campaign, and the community origins.*
 
 65. The Origin of Hingulā
@@ -101,4 +101,4 @@
 87. The Contents of the Hingulapurāṇa *(the grand summary)*
 
 ---
-*Names marked (?) and several in ch 80–86 are read-by-eye from the scan and await pandit/native review — see SCAN-QUALITY-NOTES.md.*
+*Names marked (?) and several in ch 80–86 are read-by-eye from the scan and await pandit/native review, see SCAN-QUALITY-NOTES.md.*

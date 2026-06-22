@@ -1,8 +1,8 @@
-# Hingul story — layered scroll art (v3, copy-paste prompts)
+# Hingul story: layered scroll art (v3, copy-paste prompts)
 
 The Hingul section rebuilt as a **pothi (scroll) that unrolls sideways**: two rotating scroll-rods left and right, a tiling border top and bottom, and **7 scenes** that pan past. Each scene = **two layers** that parallax for a 2.5D / 3D feel: a **background** (opaque, no border) and a **figure** layer (on white, cut out, drifts above the bg). The arc is the faithful grantha account (ch 65–66).
 
-Each image below is **one complete prompt in a code block** (full style baked in — copy the block, paste, generate). Above each: its exact **save filename**, **size**, **background**, and **"Used as."**
+Each image below is **one complete prompt in a code block** (full style baked in, copy the block, paste, generate). Above each: its exact **save filename**, **size**, **background**, and **"Used as."**
 
 **Rules:**
 - **Fill the frame.** Backgrounds fill the whole 16:9 frame, no decorative border (the frame is overlaid in code). Figures are drawn large on white and we scale/position/parallax them in code.
@@ -55,7 +55,7 @@ Sacred Mata-ni-Pachedi temple-cloth style, hand-drawn kalam reed-pen black linew
 # THE 7 SCENES (Hingul, grantha ch 65–66)
 Each scene: a **bg** (opaque, fills the frame, no border) and a **fig** (the figures large on white, cut out).
 
-## Scene 1 — हिंगुल और सिंदुर · Hingul & Sindur conquer the gods
+## Scene 1: हिंगुल और सिंदुर · Hingul & Sindur conquer the gods
 
 ### `public/art/stories/hingul/scroll/s1-bg.png` · 1920×1080 · opaque
 **Used as:** scene 1 background (the heavens falling).
@@ -69,7 +69,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. FIGURES ONLY, large and centred, filling most of the frame: two powerful horned rakshasa brothers, Hingul and Sindur, armed and triumphant mid-stride, a few small devtas recoiling and fleeing at their feet. Frontal-dynamic, fierce, dignified. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
 
-## Scene 2 — गणपति का वध · Parvati's son slays Sindur
+## Scene 2: गणपति का वध · Parvati's son slays Sindur
 
 ### `public/art/stories/hingul/scroll/s2-bg.png` · 1920×1080 · opaque
 **Used as:** scene 2 background (the battlefield).
@@ -83,7 +83,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. FIGURES ONLY, large and centred, filling most of the frame: the radiant boy Ganapati, brought forth from Parvati's own body, armed with many weapons, striking down the demon Sindurasura who falls before him. Frontal, righteous, dignified. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
 
-## Scene 3 — हिंगुल की तपस्या · Hingul's thousand-year penance on Meru
+## Scene 3: हिंगुल की तपस्या · Hingul's thousand-year penance on Meru
 
 ### `public/art/stories/hingul/scroll/s3-bg.png` · 1920×1080 · opaque
 **Used as:** scene 3 background (Mount Meru).
@@ -97,7 +97,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. FIGURE ONLY, large and centred, filling most of the frame height: the mighty demon Hingul in fierce penance, standing rigid on a single toe, both arms raised to the heavens, eyes shut, thin kalam heat-lines radiating from his body, matted hair and beads. Frontal, imposing, dignified. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
 
-## Scene 4 — ब्रह्मा का वरदान · Brahma grants the boon
+## Scene 4: ब्रह्मा का वरदान · Brahma grants the boon
 
 ### `public/art/stories/hingul/scroll/s4-bg.png` · 1920×1080 · opaque
 **Used as:** scene 4 background (the gold mandala at Meru's summit).
@@ -111,7 +111,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. FIGURES ONLY, large and centred, filling most of the frame: four-faced Brahma seated on his lotus, one hand raised granting a boon and sprinkling water from his kamandalu; the demon Hingul kneeling with bowed head and folded hands before him. Frontal, hieratic, dignified. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
 
-## Scene 5 — स्वर्ग पर विजय · Hingul seizes Swarga
+## Scene 5: स्वर्ग पर विजय · Hingul seizes Swarga
 
 ### `public/art/stories/hingul/scroll/s5-bg.png` · 1920×1080 · opaque
 **Used as:** scene 5 background (the taken heavens).
@@ -125,7 +125,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. FIGURES ONLY, large and centred, filling most of the frame: the empowered demon Hingul enthroned in triumph over Swarga, multi-armed and wielding steel weapons, a few gods fleeing small at the edges. Frontal, fierce, dignified. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
 
-## Scene 6 — मोहिनी रूप · the Goddess's enchanting form lures him
+## Scene 6: मोहिनी रूप · the Goddess's enchanting form lures him
 
 ### `public/art/stories/hingul/scroll/s6-bg.png` · 1920×1080 · opaque
 **Used as:** scene 6 background (the Sindhu shore).
@@ -139,7 +139,7 @@ Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature 
 Sacred Mata-ni-Pachedi temple-cloth painting fused with Rajput-Marwar miniature detail. Hand-drawn kalam reed-pen black linework, flat frontal hieratic, no realism, no 3D, no shadows, no gradients. Strict limited palette only: deep oxblood maroon #3E0A1A, kalam-black #1A1110, warm cream #E7D7B8, antique gold #C9A227, steel-grey #6E757C. Aged cotton texture. FIGURES ONLY, large and centred, filling most of the frame: the supreme Goddess in an enchanting, radiant mohini form leading the way with grace, the lust-struck demon Hingul following close behind her toward the sea. Frontal, graceful yet charged, dignified. Isolated on a plain solid white background, no scenery, no shadow, for a clean cut-out.
 ```
 
-## Scene 7 — हिंगुला देवी · the dissolution, and her name
+## Scene 7: हिंगुला देवी · the dissolution, and her name
 
 ### `public/art/stories/hingul/scroll/s7-bg.png` · 1920×1080 · opaque
 **Used as:** scene 7 background (the cave shrine by the sea).

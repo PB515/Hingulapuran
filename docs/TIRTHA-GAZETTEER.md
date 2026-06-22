@@ -1,6 +1,6 @@
 # Tīrtha Gazetteer & Map Data
 
-> The sacred places of the grantha, structured to drive the **temple-map**. A mix of **real-world locations** (mappable) and **sacred geography** (within the Hingula tīrtha-complex or cosmic — not literally mappable). Coordinates are **approximate, from general knowledge — verify before publishing**. Chapter refs point to HINGLAJ-PURAN.md / DWITIYA-TRANSLATION.md. Names marked (?) await pandit review.
+> The sacred places of the grantha, structured to drive the **temple-map**. A mix of **real-world locations** (mappable) and **sacred geography** (within the Hingula tīrtha-complex or cosmic, not literally mappable). Coordinates are **approximate, from general knowledge, verify before publishing**. Chapter refs point to HINGLAJ-PURAN.md / DWITIYA-TRANSLATION.md. Names marked (?) await pandit review.
 
 ## Human-readable index
 
@@ -15,7 +15,7 @@
 | **Koṭitīrth** | tīrth | Hingula region | 72 | Consecrated after Bhīmāsura's slaying | ◐ sacred geo |
 | **Puṇyadā(?)-tīrth** | tīrth | north of Hingulā | 71 | Sin-destroying; a corrupt brahmin redeemed | ◐ sacred geo (name?) |
 | **Parāshara river** | river | Hingula region | 72 | Holy river of the Koṭitīrth | ◐ sacred geo |
-| **Hemagiri** | mountain | — | 46 | Where Mahishāsura performed his 10,000-yr tapas | ✗ mythic |
+| **Hemagiri** | mountain |, | 46 | Where Mahishāsura performed his 10,000-yr tapas | ✗ mythic |
 | **Meru / Sumeru** | mountain | cosmic axis | 65 | Hingul's tapas; the cosmic mountain | ✗ cosmic |
 | **Pushkar** | lake/tīrth | Ajmer, **Rajasthan** | 86 | Rāma sanctified the **Pushkarṇā** brahmins here | ✅ real |
 | **Kanauj** | city | Kannauj, **Uttar Pradesh** | 86 | **Jayasena's** seat; the Lohana origin | ✅ real |
@@ -26,11 +26,11 @@
 | **Siṃhala** | island | = Sri Lanka | 61 | Mandodarī's land *(ākhyāna)* | ✅ real |
 | **Naimishāraṇya** | forest | Sitapur, **UP** | 27 | Where Sūta narrates to the rishis | ✅ real |
 | **Badarikāshrama** | shrine | Badrinath, **Uttarakhand** | 73 | Vishnu assures the rishis | ✅ real |
-| Satyaloka · Vaikuṇṭha · Kailāsa · Swarga · Pātāla · Hāṭakeshwar | cosmic loci | — | throughout | Abodes of Brahmā / Vishnu / Shiva / gods / demons | ✗ cosmic |
+| Satyaloka · Vaikuṇṭha · Kailāsa · Swarga · Pātāla · Hāṭakeshwar | cosmic loci |, | throughout | Abodes of Brahmā / Vishnu / Shiva / gods / demons | ✗ cosmic |
 
-**The map story:** the real anchors (Hinglaj ↔ Pushkar ↔ Kanauj ↔ Mahishmati ↔ Kāshi ↔ Ayodhyā ↔ Naimishāraṇya ↔ Badrinath) trace the sacred history **across the subcontinent**, from Balochistan to the Gangetic plain — the "Hinglaj across the states" tie-in.
+**The map story:** the real anchors (Hinglaj ↔ Pushkar ↔ Kanauj ↔ Mahishmati ↔ Kāshi ↔ Ayodhyā ↔ Naimishāraṇya ↔ Badrinath) trace the sacred history **across the subcontinent**, from Balochistan to the Gangetic plain, the "Hinglaj across the states" tie-in.
 
-## Map data (JSON — `mappable` entries for the temple-map)
+## Map data (JSON: `mappable` entries for the temple-map)
 ```json
 [
   { "id": "hinglaj", "name": "Hinglaj (Hingulā Pīṭh)", "type": "shrine", "lat": 25.51, "lng": 65.52, "certainty": "high", "primary": true, "chapters": "64-87", "note": "The supreme shrine; Shakti Pīṭh in Hingol Nat'l Park, Balochistan." },
@@ -46,4 +46,4 @@
   { "id": "simhala", "name": "Siṃhala (Sri Lanka)", "type": "region", "lat": 7.87, "lng": 80.77, "certainty": "high", "chapters": "61", "note": "Mandodarī's land (ākhyāna)." }
 ]
 ```
-> **Sacred-geography places** (Rāmtīrth, Nāga-/Koṭi-/Puṇyadā-tīrth, Mandākinī, Parāshara, Hemagiri) are intentionally **omitted from coordinates** — they belong to the Hingula tīrtha-complex or to cosmic geography and should be shown as part of the Hingulā node / a stylised inset, not pinned to false coordinates. All coordinates above are approximate — **verify before publishing.**
+> **Sacred-geography places** (Rāmtīrth, Nāga-/Koṭi-/Puṇyadā-tīrth, Mandākinī, Parāshara, Hemagiri) are intentionally **omitted from coordinates**: they belong to the Hingula tīrtha-complex or to cosmic geography and should be shown as part of the Hingulā node / a stylised inset, not pinned to false coordinates. All coordinates above are approximate, **verify before publishing.**
