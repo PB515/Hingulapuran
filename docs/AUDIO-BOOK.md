@@ -60,6 +60,93 @@ Turn these on only if they feel right; overused, they fatigue.
 
 ---
 
+## Clip-by-clip briefs (for finding or recording each sound)
+A full description of every clip so it is easy to recognize the right one, whether you are searching a sound library, briefing a musician, or generating it. Each brief gives: where it plays and what is on screen, the feeling, the instrument and how it is played, the length and dynamics, and **search terms** to paste into a library.
+
+### `drone-bed.wav` — the sacred air
+- **Where:** plays under the whole site by default (hero, intro, anywhere without its own bed). The constant backdrop.
+- **Feeling:** timeless, still, devotional. The hush of an old temple before anything happens.
+- **Instrument & play:** a **tanpura** (or shruti box) droning on **Sa**, with the **Pa** present, the natural overtones shimmering. No melody, no rhythm. Just the breathing hum.
+- **Length & dynamics:** a **seamless loop**, 20 to 40 seconds, flat and even (no swells that would reveal the loop point). Very low in the mix.
+- **Find it / brief it:** `tanpura drone Sa Pa loop`, `shruti box drone`, `Indian classical tanpura tambura sustained`, `meditative tonic drone seamless`.
+
+### `bell-ghanta.wav` — the strike
+- **Where:** the door hero, the moment the temple doors part on scroll; again at shrine moments.
+- **Feeling:** arrival, awakening, a threshold crossed. The single biggest emotional hit on the site.
+- **Instrument & play:** one **brass temple bell (ghanta)** struck once, left to ring out its full natural shimmer and decay. Not a tiny hand-bell; a deep temple bell.
+- **Length & dynamics:** a **oneshot**, about 3 to 4 seconds, loud attack then a long fading tail.
+- **Find it / brief it:** `temple bell single strike decay`, `ghanta brass bell hit`, `Hindu temple bell toll`, `large bell resonant tail`.
+
+### `conch-shankh.wav` — the call
+- **Where:** the door hero opening, sounding with or just before the bell.
+- **Feeling:** an announcement, the sacred summoned. Ancient and a little raw.
+- **Instrument & play:** a **conch (shankh)** blown once, the breathy swell up and the fall away. A real player's imperfect, human tone is better than a clean synth.
+- **Length & dynamics:** a **oneshot**, about 2 to 3 seconds, swelling in then tapering.
+- **Find it / brief it:** `conch shell blow shankh`, `Hindu ritual conch single`, `shankha horn blast`, `temple conch call`.
+
+### `sarangi-lament.wav` — the grief of Sati
+- **Where:** the Fall of Sati reel (Sati enters the fire, Shiva's grief, the body parted, the 51 peethas scatter).
+- **Feeling:** the most heartbreaking moment of the site. Mourning, then a slow settling into the sacred.
+- **Instrument & play:** a slow **sarangi** (or **bansuri** flute) line, deeply vocal, with sliding meend between notes and gentle vibrato, over the low drone. A minor / komal mode (think Bhairavi or Todi colour). Sparse, breathing, never busy.
+- **Length & dynamics:** a **seamless loop**, 20 to 40 seconds, soft, with one gentle rise and fall that resolves calmly so the loop does not jar.
+- **Find it / brief it:** `sarangi slow sad raga`, `bansuri lament Bhairavi`, `Indian flute mournful meend`, `devotional sarangi melancholy loop`.
+
+### `pakhawaj-build.wav` — the rising power of Hingul
+- **Where:** the Hingul reel (the thousand-year penance, the conquest of the heavens), the horizontal scroll.
+- **Feeling:** tension gathering, force building, then a release. Austere power, not chaos.
+- **Instrument & play:** **pakhawaj** or **dhol** in a steady cycle that slowly intensifies (more strokes, more weight) and then opens out. Deep, woody, controlled. A drone may sit underneath.
+- **Length & dynamics:** a **seamless loop**, roughly 15 to 30 seconds, starting measured and growing, looping cleanly.
+- **Find it / brief it:** `pakhawaj building rhythm`, `dhol crescendo loop`, `Indian percussion tension rising`, `tabla pakhawaj driving cycle`.
+
+### `nagara-veer.wav` — the warrior drums
+- **Where:** the Parashurama reel (the campaign, the sword laid at her feet), the climax section.
+- **Feeling:** martial, disciplined, the goddess of war. Restraint, not a battle frenzy; it resolves to calm at the refuge.
+- **Instrument & play:** **nagara / nagada** kettle war-drums in a steady, heavy, ceremonial pattern. Spacious, dignified, with controlled accents. Not fast.
+- **Length & dynamics:** a **seamless loop**, 15 to 30 seconds, even and weighty.
+- **Find it / brief it:** `nagara war drums India`, `nagada kettledrum ceremonial`, `martial Indian drum steady`, `dhol nagara battle restrained`.
+
+### `drone-crystal.wav` — the crown chakra
+- **Where:** the Brahmarandhra orb (the 3D piece, where the crown of the head fell).
+- **Feeling:** high, pure, weightless. The opening at the top of the head; light, not earth.
+- **Instrument & play:** a **high, thin, crystalline drone** — bowed metal, glass harmonica, high sustained strings, or a singing bowl's upper ring. Shimmering, ethereal, almost no low end.
+- **Length & dynamics:** a **seamless loop**, 15 to 30 seconds, very soft and even.
+- **Find it / brief it:** `high crystalline drone ethereal`, `singing bowl high shimmer loop`, `glass harmonica sustained pad`, `celestial high drone meditation`.
+
+### `resolve-note.wav` — the peace at the end
+- **Where:** the guided map and shrine finale, and the closing scene band (the Hingol river).
+- **Feeling:** everything coming to rest. Release, stillness, the journey landing.
+- **Instrument & play:** a **single sustained note resolving home** (to Sa) — a soft swell on bansuri, bowed string, or a held vocal note over the drone. One long breath, no movement.
+- **Length & dynamics:** a **seamless loop**, 15 to 30 seconds, very gentle, no rhythm.
+- **Find it / brief it:** `sustained resolving drone calm`, `single long note peaceful raga`, `ambient Indian resolution pad`, `soft tonic resolve loop`.
+
+### `vocal-aakaar.wav` — the Devi's presence
+- **Where:** entering the shrine / closing scene. Used sparingly, a single touch.
+- **Feeling:** the goddess is near. Human, warm, sacred. A whisper of presence, not a song.
+- **Instrument & play:** a short **wordless female hum / aakaar** (open "aa"), a single held phrase, soft vibrato, no lyrics. One voice, intimate.
+- **Length & dynamics:** a **oneshot**, 3 to 6 seconds, soft, fading.
+- **Find it / brief it:** `female vocal aakaar hum`, `wordless Indian female voice sustained`, `devotional humming aalap short`, `soft female aah sacred`.
+
+### `mantra-hinglaj.wav` — the mantra (Tier 3, real voice only)
+- **Where:** the shrine finale, as an opt-in loop. The deepest devotional moment.
+- **Feeling:** prayer. Direct address to the Mother.
+- **Instrument & play:** the **Hinglaj mantra** softly sung or chanted by a real voice (a pandit or community singer): *Om Hingule Parama-Hingule Amrita-rupini, Tanu-shakti-manah Shive, Shri Hingulaya Namah.* Over the drone. **Do not synthesize this one.**
+- **Length & dynamics:** a **seamless loop** of one or a few repetitions, calm and even.
+- **Find it / brief it:** record it; if sourcing reference, `Hinglaj mata mantra chant`, `Devi mantra soft male/female chant loop`.
+
+### `recite/ch65.wav` … `ch87.wav` — chapter recitation (future)
+- **Where:** a "play recitation" control on each grantha chapter reader page.
+- **Feeling:** the living oral tradition. The text spoken aloud, the way it was meant to be carried.
+- **Instrument & play:** a **pandit reciting** the chapter, clear and unhurried, no music needed. One file per chapter, named by number.
+- **Length & dynamics:** natural reading length, **not a loop**.
+- **Find it / brief it:** record with the community. This is conservation of the sound of the grantha, the most on-mission audio of all.
+
+### `ghungroo-tick.wav` and `cloth-rustle.wav` — UI micros (optional)
+- **Where:** nav hover / taps (`ghungroo-tick`); grantha page turns (`cloth-rustle`). Off by default.
+- **Feeling:** barely there. A faint physical texture, like the building is real.
+- **Instrument & play:** one tiny **ghungroo** ankle-bell jingle; a short **cloth / page rustle**. Both very short and quiet.
+- **Length & dynamics:** **oneshots**, well under a second.
+- **Find it / brief it:** `ghungroo single jingle short`, `ankle bells tiny`, `fabric cloth rustle short`, `paper page turn soft`.
+
 ## Section → sound map (what's wired right now)
 | Section (home) | Bed | Cue on enter |
 |---|---|---|
