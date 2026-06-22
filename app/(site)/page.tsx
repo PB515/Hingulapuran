@@ -6,12 +6,16 @@ import { ParshuramClimax } from "@/components/ParshuramClimax";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
 import { ShaktipeethSaga } from "@/components/ShaktipeethSaga";
+import { SoundScape } from "@/components/sound/SoundScape";
 
 export default function Home() {
   return (
     <main>
-      {/* Flagship: the temple door opens on scroll to reveal the sanctum. */}
-      <DoorHero />
+      {/* Flagship: the temple door opens on scroll to reveal the sanctum.
+          Sound: the base drone, with a conch + bell as the doors part. */}
+      <SoundScape bed="bed-base" cue={["cue-conch", "cue-bell"]}>
+        <DoorHero />
+      </SoundScape>
 
       {/* Intro — after the door, the invitation. */}
       <section className="mx-auto max-w-3xl px-6 py-28 text-center md:py-36">
@@ -35,20 +39,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The fall of Sati — one pinned stage: 2.5D scene-reel flowing into the guided map. */}
-      <ShaktipeethSaga />
+      {/* The fall of Sati — pinned 2.5D reel into the guided map. Sound: mournful sarangi. */}
+      <SoundScape bed="bed-sati">
+        <ShaktipeethSaga />
+      </SoundScape>
 
-      {/* Flagship: the history of Hingul as a horizontal scroll-painting. */}
-      <LegendScroll />
+      {/* The history of Hingul as a horizontal scroll-painting. Sound: building pakhawaj. */}
+      <SoundScape bed="bed-hingul">
+        <LegendScroll />
+      </SoundScape>
 
-      {/* Brahmarandhra — where the crown of the head fell (the 3D orb). */}
-      <BrahmarandhraOrb />
+      {/* Brahmarandhra — where the crown of the head fell (the 3D orb). Sound: crystalline drone. */}
+      <SoundScape bed="bed-crystal">
+        <BrahmarandhraOrb />
+      </SoundScape>
 
-      {/* Climax: Parshuram lays his sword at her feet. */}
-      <ParshuramClimax />
+      {/* Climax: Parshuram lays his sword at her feet. Sound: restrained war-drums. */}
+      <SoundScape bed="bed-parshuram">
+        <ParshuramClimax />
+      </SoundScape>
 
-      {/* Scene band — the Hingol river / mool sthan */}
-      <SceneBand src="/art/scene/hingol-river.webp" line="हिंगोल नदी के तट पर" sub="The cave on the Hingol: the mool sthan" />
+      {/* Scene band — the Hingol river / mool sthan. Sound: a single resolving note + the Devi's hum. */}
+      <SoundScape bed="bed-finale" cue="cue-aakaar">
+        <SceneBand src="/art/scene/hingol-river.webp" line="हिंगोल नदी के तट पर" sub="The cave on the Hingol: the mool sthan" />
+      </SoundScape>
     </main>
   );
 }

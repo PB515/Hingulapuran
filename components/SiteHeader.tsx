@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SoundToggle } from "@/components/sound/SoundToggle";
 
 export const NAV = [
   { href: "/grantha", en: "Grantha" },
@@ -21,6 +22,7 @@ export function SiteHeader() {
         {NAV.map((n) => (
           <Link key={n.href} href={n.href} className="transition-colors hover:text-swarna">{n.en}</Link>
         ))}
+        <SoundToggle />
       </nav>
     </header>
   );
