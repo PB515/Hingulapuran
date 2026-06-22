@@ -41,7 +41,6 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
 
   const s = scenes[active] ?? scenes[0];
   const borderStyle = { backgroundImage: `url(${border})`, backgroundRepeat: "repeat-x", backgroundSize: "auto 100%" } as const;
-  const rodStyle = { width: "clamp(46px,7%,108px)", objectFit: "fill" as const };
   const seam = "linear-gradient(90deg, rgba(26,17,16,0), #C9A227 38%, #E7D7B8 50%, #C9A227 62%, rgba(26,17,16,0))";
 
   return (
@@ -54,16 +53,9 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
           </div>
         )}
 
-        {/* stage: rod | viewport | rod */}
-        <div className="relative flex w-full max-w-6xl items-stretch" style={{ height: "54vh" }}>
-          {rod ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={rod} alt="" aria-hidden style={rodStyle} className="z-20 h-full shrink-0" />
-          ) : (
-            <div className="z-20 w-5 shrink-0 bg-gradient-to-r from-kajal to-swarna/60" />
-          )}
-
-          <div className="relative flex-1 overflow-hidden bg-rakta">
+        {/* stage: the image viewport, with taller scroll-rods straddling each edge */}
+        <div className="relative w-full max-w-6xl" style={{ height: "54vh" }}>
+          <div className="absolute inset-0 overflow-hidden bg-rakta">
             <motion.div style={{ x: trackX }} className="absolute inset-0 flex">
               {scenes.map((sc, i) => (
                 <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
@@ -81,12 +73,15 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-7 -scale-y-100 md:h-9" style={borderStyle} />
           </div>
 
+          {/* scroll-rods: natural shape, taller than the image, straddling the edges (knobs above + below) */}
           {rod ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={rod} alt="" aria-hidden style={rodStyle} className="z-20 h-full shrink-0 -scale-x-100" />
-          ) : (
-            <div className="z-20 w-5 shrink-0 bg-gradient-to-l from-kajal to-swarna/60" />
-          )}
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={rod} alt="" aria-hidden style={{ height: "64vh" }} className="pointer-events-none absolute left-0 top-1/2 z-30 w-auto -translate-x-1/2 -translate-y-1/2" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={rod} alt="" aria-hidden style={{ height: "64vh" }} className="pointer-events-none absolute right-0 top-1/2 z-30 w-auto -translate-y-1/2 translate-x-1/2 -scale-x-100" />
+            </>
+          ) : null}
         </div>
 
         {/* caption below the scroll */}
