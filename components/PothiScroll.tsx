@@ -41,7 +41,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
 
   const s = scenes[active] ?? scenes[0];
   const borderStyle = { backgroundImage: `url(${border})`, backgroundRepeat: "repeat-x", backgroundSize: "auto 100%" } as const;
-  const rodStyle = { width: "clamp(26px,3.5%,58px)", objectFit: "fill" as const };
+  const rodStyle = { width: "clamp(46px,7%,108px)", objectFit: "fill" as const };
   const seam = "linear-gradient(90deg, rgba(26,17,16,0), #C9A227 38%, #E7D7B8 50%, #C9A227 62%, rgba(26,17,16,0))";
 
   return (
