@@ -7,7 +7,7 @@ export const satiScroll: ScrollVideoConfig = {
   poster: "/art/stories/shaktipeeth/sati-poster.webp",
   // taller section = slower scrub = more time to read each beat (reading time is
   // set by scroll length, not the video's seconds).
-  heightVh: 640,
+  heightVh: 820,
   beats: [
     {
       from: 0.0,
