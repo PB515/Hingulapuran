@@ -50,3 +50,7 @@ source/
 probe/
 # scene-art PNG originals — the site serves the .webp; PNGs stay local as source
 public/art/stories/**/*.png
+
+# heavy source PNGs for the scroll/cut art (webp is served)
+public/art/stories/hingul/scroll/*.png
+public/art/stories/parshuram/cut/*.png

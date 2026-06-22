@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { DoorHero } from "@/components/DoorHero";
-import { LegendScroll } from "@/components/LegendScroll";
+import { PothiScroll } from "@/components/PothiScroll";
+import { hingulScroll } from "@/lib/hingul-scroll";
 import { ParshuramClimax } from "@/components/ParshuramClimax";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
@@ -45,9 +46,9 @@ export default function Home() {
         <ScrollVideo {...satiScroll} />
       </SoundScape>
 
-      {/* The history of Hingul as a horizontal scroll-painting. Sound: building pakhawaj. */}
+      {/* The Hingul story as a pothi scroll that unrolls sideways. Sound: building pakhawaj. */}
       <SoundScape bed="bed-hingul">
-        <LegendScroll />
+        <PothiScroll {...hingulScroll} />
       </SoundScape>
 
       {/* Brahmarandhra — where the crown of the head fell (the 3D orb). Sound: crystalline drone. */}

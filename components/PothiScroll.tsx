@@ -13,6 +13,7 @@ export type PothiScene = { bg: string; fig: string; deva: string; en: string; bo
 export type PothiConfig = {
   scenes: PothiScene[];
   border?: string; // tiling border strip
+  rod?: string; // vertical scroll-rod image (left + mirrored right)
   heightVh?: number;
 };
 
@@ -23,22 +24,7 @@ function Img({ src, className }: { src: string; className: string }) {
   return <img src={src} alt="" aria-hidden loading="lazy" onError={() => setBad(true)} className={className} />;
 }
 
-function RodWheel({ rotate }: { rotate: ReturnType<typeof useTransform<number, number>> }) {
-  return (
-    <motion.div
-      style={{ rotate }}
-      className="h-8 w-8 rounded-full border border-swarna/50"
-      // a conic "wheel" so the rotation is visible
-    >
-      <div
-        className="h-full w-full rounded-full"
-        style={{ background: "conic-gradient(var(--swarna) 0 12%, var(--rakta) 0 25%, var(--swarna) 0 37%, var(--rakta) 0 50%, var(--swarna) 0 62%, var(--rakta) 0 75%, var(--swarna) 0 87%, var(--rakta) 0 100%)" }}
-      />
-    </motion.div>
-  );
-}
-
-export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", heightVh = 720 }: PothiConfig) {
+export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, heightVh = 720 }: PothiConfig) {
   const wrap = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const N = scenes.length;
@@ -46,7 +32,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
   const { scrollYProgress } = useScroll({ target: wrap, offset: ["start start", "end end"] });
   const bgX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100}%`]);
   const figX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100 + 6}%`]); // a touch faster = parallax
-  const spin = useTransform(scrollYProgress, [0, 1], [0, 900]);
+  const rodW = { width: "clamp(22px,3.6%,52px)", objectFit: "fill" as const };
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     setActive(Math.max(0, Math.min(N - 1, Math.round(p * (N - 1)))));
@@ -85,14 +71,19 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
             {/* pothi frame: borders + rods */}
             <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-6 md:h-7" style={borderStyle} />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-6 -scale-y-100 md:h-7" style={borderStyle} />
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-20 flex w-7 flex-col items-center justify-between bg-gradient-to-r from-kajal via-swarna/70 to-kajal py-2 md:w-9">
-              <RodWheel rotate={spin} />
-              <RodWheel rotate={spin} />
-            </div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-20 flex w-7 flex-col items-center justify-between bg-gradient-to-l from-kajal via-swarna/70 to-kajal py-2 md:w-9">
-              <RodWheel rotate={spin} />
-              <RodWheel rotate={spin} />
-            </div>
+            {rod ? (
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={rod} alt="" aria-hidden style={rodW} className="pointer-events-none absolute inset-y-0 left-0 z-20 h-full" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={rod} alt="" aria-hidden style={rodW} className="pointer-events-none absolute inset-y-0 right-0 z-20 h-full -scale-x-100" />
+              </>
+            ) : (
+              <>
+                <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-6 bg-gradient-to-r from-kajal via-swarna/70 to-kajal md:w-8" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-6 bg-gradient-to-l from-kajal via-swarna/70 to-kajal md:w-8" />
+              </>
+            )}
 
             {/* caption */}
             <div className="absolute inset-x-0 bottom-0 z-30 bg-gradient-to-t from-raat via-raat/80 to-transparent px-8 pb-10 pt-20 md:px-14">
