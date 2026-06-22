@@ -15,7 +15,7 @@ function Img({ src, className }: { src: string; className: string }) {
   const [bad, setBad] = useState(false);
   if (bad) return null;
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src} alt="" aria-hidden loading="lazy" onError={() => setBad(true)} className={className} />;
+  return <img src={src} alt="" aria-hidden loading="eager" onError={() => setBad(true)} className={className} />;
 }
 
 export function CutReel({ scenes, heightVh = 680, holdLast = 2.2 }: CutReelConfig) {

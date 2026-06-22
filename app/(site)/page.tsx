@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 import { DoorHero } from "@/components/DoorHero";
 import { PothiScroll } from "@/components/PothiScroll";
 import { hingulScroll } from "@/lib/hingul-scroll";
-import { ParshuramClimax } from "@/components/ParshuramClimax";
+import { CutReel } from "@/components/CutReel";
+import { parshuramCut } from "@/lib/parshuram-cut";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
 import { ScrollVideo } from "@/components/ScrollVideo";
@@ -56,9 +57,9 @@ export default function Home() {
         <BrahmarandhraOrb />
       </SoundScape>
 
-      {/* Climax: Parshuram lays his sword at her feet. Sound: restrained war-drums. */}
+      {/* Parashurama: vertical hard-cut reel building to the Brahmakshatriya. Sound: restrained war-drums. */}
       <SoundScape bed="bed-parshuram">
-        <ParshuramClimax />
+        <CutReel {...parshuramCut} />
       </SoundScape>
 
       {/* Scene band — the Hingol river / mool sthan. Sound: a single resolving note + the Devi's hum. */}
