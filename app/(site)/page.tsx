@@ -5,7 +5,8 @@ import { LegendScroll } from "@/components/LegendScroll";
 import { ParshuramClimax } from "@/components/ParshuramClimax";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
-import { ShaktipeethSaga } from "@/components/ShaktipeethSaga";
+import { ScrollVideo } from "@/components/ScrollVideo";
+import { satiScroll } from "@/lib/sati-scroll";
 import { SoundScape } from "@/components/sound/SoundScape";
 
 export default function Home() {
@@ -39,9 +40,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The fall of Sati — pinned 2.5D reel into the guided map. Sound: mournful sarangi. */}
+      {/* The fall of Sati — scroll-scrubbed cinematic video in the framed box. Sound: mournful sarangi. */}
       <SoundScape bed="bed-sati">
-        <ShaktipeethSaga />
+        <ScrollVideo {...satiScroll} />
       </SoundScape>
 
       {/* The history of Hingul as a horizontal scroll-painting. Sound: building pakhawaj. */}
