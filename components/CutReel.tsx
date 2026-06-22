@@ -54,15 +54,22 @@ export function CutReel({ scenes, heightVh = 680, holdLast = 2.2 }: CutReelConfi
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
         <div className="mx-auto w-full max-w-6xl">
           <div className={`relative aspect-video w-full overflow-hidden bg-rakta shadow-[0_40px_140px_rgba(0,0,0,.65)] ${radius}`}>
-            {/* scene image — hard cut */}
-            <AnimatePresence mode="wait">
-              <motion.div key={active} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.14 }} className="absolute inset-0">
+            {/* preloaded stack — every scene mounts (eager) so a cut never flashes a blank */}
+            {scenes.map((sc, i) => (
+              <motion.div
+                key={i}
+                initial={false}
+                animate={{ opacity: i === active ? 1 : 0 }}
+                transition={{ duration: 0.18 }}
+                style={{ zIndex: i === active ? 2 : 1 }}
+                className="absolute inset-0"
+              >
                 <div className="absolute inset-0 grid place-items-center bg-gradient-to-b from-rakta to-raat">
-                  <span className="font-[family-name:var(--font-display)] text-7xl text-swarna/15">{s.deva}</span>
+                  <span className="font-[family-name:var(--font-display)] text-7xl text-swarna/15">{sc.deva}</span>
                 </div>
-                <Img src={s.src} className="absolute inset-0 h-full w-full object-cover" />
+                <Img src={sc.src} className="absolute inset-0 h-full w-full object-cover" />
               </motion.div>
-            </AnimatePresence>
+            ))}
 
             {/* hairline frame + climax accent */}
             <div className={`pointer-events-none absolute inset-0 z-10 border border-swarna/25 ${radius}`} />
