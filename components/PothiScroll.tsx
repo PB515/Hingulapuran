@@ -45,7 +45,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-5 overflow-hidden px-4 md:px-8">
+      <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-16 overflow-hidden px-4 md:px-8">
         {(title || titleEn) && (
           <div className="text-center">
             {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}
@@ -54,7 +54,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         )}
 
         {/* stage: top border / 16:9 viewport (no crop) / bottom border; rods straddle the edges */}
-        <div className="relative w-full max-w-5xl">
+        <div className="relative w-full max-w-4xl">
           <div className="flex flex-col">
             <div className="h-7 md:h-9" style={borderStyle} />
             <div className="relative aspect-video w-full overflow-hidden bg-rakta">
@@ -78,9 +78,9 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
           {rod ? (
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={rod} alt="" aria-hidden style={{ height: "82vh" }} className="pointer-events-none absolute left-0 top-1/2 z-30 w-auto -translate-x-1/2 -translate-y-1/2" />
+              <img src={rod} alt="" aria-hidden style={{ height: "122%" }} className="pointer-events-none absolute left-0 top-1/2 z-30 w-auto -translate-x-1/2 -translate-y-1/2" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={rod} alt="" aria-hidden style={{ height: "82vh" }} className="pointer-events-none absolute right-0 top-1/2 z-30 w-auto -translate-y-1/2 translate-x-1/2 -scale-x-100" />
+              <img src={rod} alt="" aria-hidden style={{ height: "122%" }} className="pointer-events-none absolute right-0 top-1/2 z-30 w-auto -translate-y-1/2 translate-x-1/2 -scale-x-100" />
             </>
           ) : null}
         </div>
