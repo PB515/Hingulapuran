@@ -34,7 +34,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
   const N = scenes.length;
 
   const { scrollYProgress } = useScroll({ target: wrap, offset: ["start start", "end end"] });
-  const trackX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 2) * 50}%`]);
+  const trackX = useTransform(scrollYProgress, [0, 1], ["0%", `-${(N - 1) * 100}%`]);
   useMotionValueEvent(scrollYProgress, "change", (p) => {
     setActive(Math.max(0, Math.min(N - 1, Math.round(p * (N - 1)))));
   });
@@ -45,7 +45,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-12 overflow-hidden px-4 md:px-8">
+      <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-10 overflow-hidden px-4 md:px-8">
         {(title || titleEn) && (
           <div className="text-center">
             {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}
@@ -54,13 +54,13 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         )}
 
         {/* stage: top border / 16:9 viewport (no crop) / bottom border; rods straddle the edges */}
-        <div className="relative w-full max-w-6xl">
+        <div className="relative w-full max-w-5xl">
           <div className="flex flex-col">
             <div className="h-7 md:h-9" style={borderStyle} />
-            <div className="relative aspect-[8/3] w-full overflow-hidden bg-rakta">
+            <div className="relative aspect-[2/1] w-full overflow-hidden bg-rakta">
               <motion.div style={{ x: trackX }} className="absolute inset-0 flex">
                 {scenes.map((sc, i) => (
-                  <div key={i} className="relative h-full shrink-0 grow-0 basis-1/2">
+                  <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
                     <div className="absolute inset-0 grid place-items-center bg-gradient-to-b from-rakta to-raat">
                       <span className="font-[family-name:var(--font-display)] text-6xl text-swarna/15">{sc.deva}</span>
                     </div>
