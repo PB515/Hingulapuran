@@ -16,8 +16,28 @@ export default function GranthaIndex() {
         Most people have never heard of the <span className="text-swarna">Hinglaj Puran</span>. It is a hundred-year-old Gujarati book that tells the sacred history of the goddess <span className="text-swarna">Hinglaj Mata</span>, whose shrine stands in a cave on the Makran coast. It survives in very few copies. This is where you can read it, understand it, and help carry it forward.
       </p>
       <p className="mt-4 max-w-2xl font-[family-name:var(--font-body)] leading-relaxed text-muted">
-        <span className="text-patra">New here?</span> Start with <Link href="/grantha/what-is-hinglaj-puran" className="text-swarna underline-offset-2 hover:underline">What is the Hinglaj Puran?</Link>, then read <Link href="/grantha/narrative-timeline" className="text-swarna underline-offset-2 hover:underline">The Story, Start to End</Link>. Everything else below is here to look things up. <span className="text-loha">(These are careful working drafts, awaiting a pandit&apos;s review.)</span>
+        <span className="text-patra">New here?</span> Start with <Link href="/grantha/what-is-hinglaj-puran" className="text-swarna underline-offset-2 hover:underline">What is the Hinglaj Puran?</Link> Then choose how you want to read it. <span className="text-loha">(These are careful working drafts, awaiting a pandit&apos;s review.)</span>
       </p>
+
+      {/* The two doors: the fast visual Story, and the complete Granth. */}
+      <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <Link href="/grantha/story" className="group rounded-[var(--radius)] border border-swarna/30 bg-rakta/30 p-7 transition-colors hover:border-swarna/70">
+          <p className="font-[family-name:var(--font-display)] text-2xl text-patra">कथा</p>
+          <p className="mt-1 font-[family-name:var(--font-display-latin)] text-xl text-swarna">The Story</p>
+          <p className="mt-3 font-[family-name:var(--font-body)] leading-relaxed text-muted">
+            The whole sacred history, chapter by chapter, in a picture and a few lines each. The fast way in, for when you do not have time for the whole book.
+          </p>
+          <span className="mt-4 inline-block font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.2em] text-loha transition-colors group-hover:text-swarna">Read the story →</span>
+        </Link>
+        <Link href="/grantha/translation" className="group rounded-[var(--radius)] border border-swarna/30 bg-rakta/30 p-7 transition-colors hover:border-swarna/70">
+          <p className="font-[family-name:var(--font-display)] text-2xl text-patra">ग्रंथ</p>
+          <p className="mt-1 font-[family-name:var(--font-display-latin)] text-xl text-swarna">The Granth</p>
+          <p className="mt-3 font-[family-name:var(--font-body)] leading-relaxed text-muted">
+            The complete, faithful text, chapter by chapter, beside the original. English now, Gujarati and Hindi coming. For reading the book itself.
+          </p>
+          <span className="mt-4 inline-block font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.2em] text-loha transition-colors group-hover:text-swarna">Read the full text →</span>
+        </Link>
+      </div>
 
       {groups.map((g) => (
         <section key={g.category} className="mt-14">

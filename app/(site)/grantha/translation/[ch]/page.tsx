@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTranslationChapters, getTranslationChapter } from "@/lib/grantha";
+import { getTranslationChapters, getTranslationChapter, getChapterBody } from "@/lib/grantha";
+import { LangToggle } from "@/components/grantha/LangToggle";
 
 export async function generateStaticParams() {
   const chapters = await getTranslationChapters();
@@ -18,6 +19,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ ch: st
   const r = await getTranslationChapter(Number(ch));
   if (!r) notFound();
   const { chapter, prev, next } = r;
+  const [gu, hi] = await Promise.all([getChapterBody(chapter.num, "gu"), getChapterBody(chapter.num, "hi")]);
 
   return (
     <main className="px-6 pb-24 pt-32 md:px-10">
@@ -32,7 +34,9 @@ export default async function ChapterPage({ params }: { params: Promise<{ ch: st
         {chapter.deva && <p className="mt-3 font-[family-name:var(--font-display)] text-3xl text-swarna">{chapter.deva}</p>}
         <h1 className="mt-2 font-[family-name:var(--font-display-latin)] text-3xl leading-tight text-patra md:text-4xl">{chapter.title}</h1>
 
-        <div className="grantha-prose mt-8" dangerouslySetInnerHTML={{ __html: chapter.bodyHtml }} />
+        <div className="mt-8">
+          <LangToggle en={chapter.bodyHtml} gu={gu} hi={hi} />
+        </div>
 
         <nav className="mt-16 flex items-stretch justify-between gap-4 border-t border-border pt-6">
           {prev ? (

@@ -78,13 +78,12 @@ export function getGranthaDoc(slug: string): GranthaDoc | null {
   return GRANTHA.find((d) => d.slug === slug) ?? null;
 }
 export function granthaByCategory(): { category: string; cards: GranthaCard[] }[] {
+  // The two primary doors (Story / Granth) are rendered separately on the hub;
+  // these are the supporting + reference cards.
   return CATEGORIES.map((category) => {
     const cards: GranthaCard[] = GRANTHA.filter((d) => d.category === category).map((d) => ({
       href: `/grantha/${d.slug}`, title: d.title, deva: d.deva, blurb: d.blurb,
     }));
-    if (category === "Read the story") {
-      cards.push({ href: "/grantha/translation", title: TRANSLATION.title, blurb: TRANSLATION.blurb });
-    }
     return { category, cards };
   });
 }
@@ -140,8 +139,23 @@ function splitDeva(raw: string): { title: string; deva?: string } {
   return { title: raw.trim() };
 }
 
-export async function getTranslationChapters(): Promise<TransChapter[]> {
-  const md = fs.readFileSync(path.join(process.cwd(), "docs", "DWITIYA-TRANSLATION.md"), "utf8");
+export type Lang = "en" | "gu" | "hi";
+export const LANGS: { code: Lang; label: string }[] = [
+  { code: "en", label: "English" },
+  { code: "gu", label: "ગુજરાતી" },
+  { code: "hi", label: "हिन्दी" },
+];
+// en = the working English file; gu/hi load from -GU / -HI variants when they exist
+const LANG_FILE: Record<Lang, string> = {
+  en: "DWITIYA-TRANSLATION.md",
+  gu: "DWITIYA-TRANSLATION-GU.md",
+  hi: "DWITIYA-TRANSLATION-HI.md",
+};
+
+export async function getTranslationChapters(lang: Lang = "en"): Promise<TransChapter[]> {
+  const file = path.join(process.cwd(), "docs", LANG_FILE[lang]);
+  if (!fs.existsSync(file)) return []; // gu/hi not supplied yet
+  const md = fs.readFileSync(file, "utf8");
   const parts = md.split(/^##\s+Adhyāy\s+/m).slice(1); // drop the preamble before ch 65
   const chapters: TransChapter[] = [];
   for (const part of parts) {
@@ -162,8 +176,14 @@ export async function getTranslationChapters(): Promise<TransChapter[]> {
 }
 
 export async function getTranslationChapter(num: number): Promise<{ chapter: TransChapter; prev: TransChapter | null; next: TransChapter | null; total: number } | null> {
-  const all = await getTranslationChapters();
+  const all = await getTranslationChapters("en");
   const i = all.findIndex((c) => c.num === num);
   if (i === -1) return null;
   return { chapter: all[i], prev: all[i - 1] ?? null, next: all[i + 1] ?? null, total: all.length };
+}
+
+// the rendered body for one chapter in a given language, or null if not available
+export async function getChapterBody(num: number, lang: Lang): Promise<string | null> {
+  const all = await getTranslationChapters(lang);
+  return all.find((c) => c.num === num)?.bodyHtml ?? null;
 }
