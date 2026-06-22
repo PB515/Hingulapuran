@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "motion/react";
+import { AmbientMotifs } from "@/components/AmbientMotifs";
 
 /* A vertical hard-cut reel: the section is pinned, and as you scroll DOWN the
    full-frame scenes cut (not pan) from one to the next, building to a held
@@ -52,6 +53,7 @@ export function CutReel({ scenes, heightVh = 680, holdLast = 2.2 }: CutReelConfi
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
+        <AmbientMotifs />
         <div className="mx-auto w-full max-w-6xl">
           <div className={`relative aspect-video w-full overflow-hidden bg-rakta shadow-[0_40px_140px_rgba(0,0,0,.65)] ${radius}`}>
             {/* preloaded stack — every scene mounts (eager) so a cut never flashes a blank */}
