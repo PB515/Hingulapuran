@@ -47,7 +47,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
       <div
-        className="sticky top-0 flex h-screen flex-col items-center justify-center gap-10 overflow-hidden px-4 md:px-8"
+        className="sticky top-0 flex h-screen flex-col items-center justify-center gap-8 overflow-hidden px-4 pt-20 md:px-8"
         style={bg ? { backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
       >
         {(title || titleEn) && (
@@ -58,7 +58,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         )}
 
         {/* stage: top border / 16:9 viewport (no crop) / bottom border; rods straddle the edges */}
-        <div className="relative w-full max-w-5xl">
+        <div className="relative w-full max-w-4xl">
           <div className="flex flex-col">
             <div className="h-7 md:h-9" style={borderStyle} />
             <div className="relative aspect-[2/1] w-full overflow-hidden bg-rakta">
