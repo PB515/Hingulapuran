@@ -9,6 +9,7 @@ export const hingulScroll: PothiConfig = {
   titleEn: "The story of Hingul",
   border: "/art/stories/hingul/scroll/frame-border.webp",
   rod: "/art/stories/hingul/scroll/frame-rod.webp",
+  bg: "/art/motifs/cloth-texture.webp",
   scenes: [
     {
       img: "/art/stories/hingul/scroll/s1.webp",

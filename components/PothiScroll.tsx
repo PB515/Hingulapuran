@@ -16,6 +16,7 @@ export type PothiConfig = {
   scenes: PothiScene[];
   border?: string;
   rod?: string;
+  bg?: string; // static cloth ground behind the scroll
   title?: string;
   titleEn?: string;
   heightVh?: number;
@@ -28,7 +29,7 @@ function Img({ src, className }: { src: string; className: string }) {
   return <img src={src} alt="" aria-hidden loading="eager" onError={() => setBad(true)} className={className} />;
 }
 
-export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, title, titleEn, heightVh = 760 }: PothiConfig) {
+export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, bg, title, titleEn, heightVh = 760 }: PothiConfig) {
   const wrap = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const N = scenes.length;
@@ -45,7 +46,10 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
-      <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-10 overflow-hidden px-4 md:px-8">
+      <div
+        className="sticky top-0 flex h-screen flex-col items-center justify-center gap-10 overflow-hidden px-4 md:px-8"
+        style={bg ? { backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
+      >
         {(title || titleEn) && (
           <div className="text-center">
             {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}

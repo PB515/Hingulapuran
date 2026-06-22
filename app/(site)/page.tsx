@@ -7,6 +7,7 @@ import { CutReel } from "@/components/CutReel";
 import { parshuramCut } from "@/lib/parshuram-cut";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
+import { CommunityWall } from "@/components/CommunityWall";
 import { ScrollVideo } from "@/components/ScrollVideo";
 import { satiScroll } from "@/lib/sati-scroll";
 import { SoundScape } from "@/components/sound/SoundScape";
@@ -65,6 +66,11 @@ export default function Home() {
       {/* Scene band — the Hingol river / mool sthan. Sound: a single resolving note + the Devi's hum. */}
       <SoundScape bed="bed-finale" cue="cue-aakaar">
         <SceneBand src="/art/scene/hingol-river.webp" line="हिंगोल नदी के तट पर" sub="The cave on the Hingol: the mool sthan" />
+      </SoundScape>
+
+      {/* The living lineage — the communities who still call her kuldevi. */}
+      <SoundScape bed="bed-finale">
+        <CommunityWall />
       </SoundScape>
     </main>
   );
