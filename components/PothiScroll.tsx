@@ -56,7 +56,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         {/* stage: the image viewport, with taller scroll-rods straddling each edge */}
         <div className="relative w-full max-w-6xl" style={{ height: "54vh" }}>
           <div className="absolute inset-0 overflow-hidden bg-rakta">
-            <motion.div style={{ x: trackX }} className="absolute inset-0 flex">
+            <motion.div style={{ x: trackX }} className="absolute inset-x-0 top-7 bottom-7 flex md:top-9 md:bottom-9">
               {scenes.map((sc, i) => (
                 <div key={i} className="relative h-full shrink-0 grow-0 basis-full">
                   <div className="absolute inset-0 grid place-items-center bg-gradient-to-b from-rakta to-raat">
