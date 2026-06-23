@@ -4,7 +4,7 @@ export function SceneBand({ src, line, sub }: { src: string; line: string; sub?:
   return (
     <section className="relative flex min-h-[68vh] items-center justify-center overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={src} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-raat/60" aria-hidden />
       <div className="relative z-10 px-6 text-center">
         <p className="font-[family-name:var(--font-display)] text-4xl text-patra md:text-6xl" style={{ textShadow: "0 2px 20px rgba(18,16,31,.9)" }}>

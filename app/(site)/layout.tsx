@@ -10,9 +10,10 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   return (
     <SoundProvider>
       <RouteSound />
+      <a href="#main" className="skip-link">Skip to content</a>
       <div className="flex min-h-screen flex-col">
         <SiteHeader />
-        <div className="flex-1">{children}</div>
+        <div id="main" tabIndex={-1} className="flex-1">{children}</div>
         <SiteFooter />
       </div>
     </SoundProvider>

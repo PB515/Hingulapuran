@@ -1,0 +1,52 @@
+/* Accessibility & reading comfort (S6). Loaded after globals.css. */
+
+/* Respect reduced-motion globally: kill long animations/transitions. The pinned
+   scroll sections are JS-driven (not CSS animation), so scrubbing still works;
+   this only calms the decorative loops, reveals, and smooth-scroll. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus everywhere (gold ring). */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--swarna, #c9a227);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip-to-content link: off-screen until focused. */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -120%;
+  z-index: 200;
+  background: var(--swarna, #c9a227);
+  color: var(--kajal, #1a1110);
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  font: 600 0.78rem/1 system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Reader font-size control (translation chapters). The wrapper sets a scale; the
+   body text inherits it so A-/A+ actually moves the prose. */
+.grantha-prose {
+  font-size: calc(1.05rem * var(--reading-scale, 1));
+}
+.grantha-prose p,
+.grantha-prose li {
+  font-size: 1em;
+  line-height: 1.85;
+}

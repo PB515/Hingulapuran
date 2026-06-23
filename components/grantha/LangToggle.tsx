@@ -15,14 +15,25 @@ const TABS: { code: Lang; label: string }[] = [
 export function LangToggle({ en, gu, hi }: { en: string; gu: string | null; hi: string | null }) {
   const bodies: Record<Lang, string | null> = { en, gu, hi };
   const [lang, setLang] = useState<Lang>("en");
+  const [scale, setScale] = useState(1);
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem("hp-lang") as Lang | null;
       if (saved && bodies[saved]) setLang(saved);
+      const s = parseFloat(localStorage.getItem("hp-reading-scale") || "1");
+      if (s >= 0.8 && s <= 1.4) setScale(s);
     } catch {}
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const setSize = (s: number) => {
+    const v = Math.min(1.4, Math.max(0.8, Math.round(s * 100) / 100));
+    setScale(v);
+    try {
+      localStorage.setItem("hp-reading-scale", String(v));
+    } catch {}
+  };
 
   const pick = (l: Lang) => {
     setLang(l);
@@ -35,7 +46,8 @@ export function LangToggle({ en, gu, hi }: { en: string; gu: string | null; hi: 
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-2">
         {TABS.map((t) => {
           const available = !!bodies[t.code];
           const active = lang === t.code;
@@ -56,10 +68,17 @@ export function LangToggle({ en, gu, hi }: { en: string; gu: string | null; hi: 
             </button>
           );
         })}
+        </div>
+
+        <div className="flex items-center gap-1" role="group" aria-label="Reading size">
+          <button onClick={() => setSize(scale - 0.1)} aria-label="Smaller text" className="rounded-full border border-border px-3 py-1.5 font-[family-name:var(--font-display-latin)] text-xs text-loha transition-colors hover:border-swarna/50 hover:text-swarna">A−</button>
+          <button onClick={() => setSize(1)} aria-label="Reset text size" className="rounded-full border border-border px-3 py-1.5 font-[family-name:var(--font-display-latin)] text-sm text-loha transition-colors hover:border-swarna/50 hover:text-swarna">Aa</button>
+          <button onClick={() => setSize(scale + 0.1)} aria-label="Larger text" className="rounded-full border border-border px-3 py-1.5 font-[family-name:var(--font-display-latin)] text-base text-loha transition-colors hover:border-swarna/50 hover:text-swarna">A+</button>
+        </div>
       </div>
 
       {html ? (
-        <div className="grantha-prose mt-8" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="grantha-prose mt-8" style={{ ["--reading-scale"]: scale } as React.CSSProperties} dangerouslySetInnerHTML={{ __html: html }} />
       ) : (
         <p className="mt-8 rounded-[var(--radius)] border border-border bg-rakta/20 px-5 py-4 font-[family-name:var(--font-body)] text-sm text-muted">
           This chapter is not in {lang === "gu" ? "Gujarati" : "Hindi"} yet.{" "}

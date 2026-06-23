@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Rozha_One, Baloo_Bhai_2, Eczar, Mukta_Vaani, Noto_Serif_Gujarati } from "next/font/google";
 import "./globals.css";
+import "./a11y.css";
 import { site } from "@/lib/site";
 
 /* Devanagari hero display */

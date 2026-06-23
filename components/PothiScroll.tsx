@@ -27,7 +27,7 @@ function Img({ src, className }: { src: string; className: string }) {
   const [bad, setBad] = useState(false);
   if (!src || bad) return null;
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src} alt="" aria-hidden loading="eager" onError={() => setBad(true)} className={className} />;
+  return <img src={src} alt="" aria-hidden loading="eager" decoding="async" onError={() => setBad(true)} className={className} />;
 }
 
 export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", rod, bg, title, titleEn, heightVh = 760 }: PothiConfig) {
