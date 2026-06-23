@@ -77,7 +77,7 @@ export function ScrollVideo({ src, poster, beats, heightVh = 360 }: ScrollVideoC
 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-4 md:px-10">
         <AmbientMotifs offset={0} />
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[0.85fr_1.5fr]">
           {/* caption */}
@@ -90,7 +90,7 @@ export function ScrollVideo({ src, poster, beats, heightVh = 360 }: ScrollVideoC
                 exit={{ opacity: 0, y: -14 }}
                 transition={{ duration: 0.5 }}
               >
-                <h3 className="font-[family-name:var(--font-display)] text-4xl leading-tight text-patra md:text-5xl">{beat.deva}</h3>
+                <h3 className="font-[family-name:var(--font-display)] text-3xl leading-tight text-patra md:text-5xl">{beat.deva}</h3>
                 <p className="mt-3 font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.28em] text-swarna">{beat.en}</p>
                 <p className="mt-4 max-w-sm font-[family-name:var(--font-body)] leading-relaxed text-muted">{beat.body}</p>
               </motion.div>

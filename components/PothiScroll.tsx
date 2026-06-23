@@ -48,13 +48,13 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
       <div
-        className="sticky top-0 flex h-screen flex-col items-center justify-center gap-8 overflow-hidden px-4 pt-20 md:px-8"
+        className="sticky top-0 flex h-screen flex-col items-center justify-center gap-6 overflow-hidden px-4 pt-16 md:gap-8 md:px-8 md:pt-20"
         style={bg ? { backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
       >
         <AmbientMotifs offset={1} />
         {(title || titleEn) && (
           <div className="relative z-10 text-center">
-            {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}
+            {title && <h2 className="font-[family-name:var(--font-display)] text-3xl leading-none text-patra md:text-5xl">{title}</h2>}
             {titleEn && <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.32em] text-loha">{titleEn}</p>}
           </div>
         )}
@@ -92,10 +92,10 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         </div>
 
         {/* caption below the scroll */}
-        <div className="relative z-10 min-h-[96px] w-full max-w-3xl text-center">
+        <div className="relative z-10 min-h-[80px] w-full max-w-3xl text-center md:min-h-[96px]">
           <AnimatePresence mode="wait">
             <motion.div key={active} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.4 }}>
-              <h3 className="font-[family-name:var(--font-display)] text-2xl leading-tight text-patra md:text-3xl">{s.deva}</h3>
+              <h3 className="font-[family-name:var(--font-display)] text-xl leading-tight text-patra md:text-3xl">{s.deva}</h3>
               <p className="mt-1 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.25em] text-swarna">{s.en}</p>
               <p className="mx-auto mt-2 max-w-xl font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted md:text-base">{s.body}</p>
             </motion.div>

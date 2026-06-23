@@ -52,7 +52,7 @@ export function CutReel({ scenes, heightVh = 680, holdLast = 2.2 }: CutReelConfi
 
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden px-4 md:px-10">
         <AmbientMotifs offset={3} />
         <div className="relative z-10 mx-auto w-full max-w-6xl">
           <div className={`relative aspect-video w-full overflow-hidden bg-rakta shadow-[0_40px_140px_rgba(0,0,0,.65)] ${radius}`}>
@@ -91,10 +91,10 @@ export function CutReel({ scenes, heightVh = 680, holdLast = 2.2 }: CutReelConfi
             </div>
 
             {/* caption */}
-            <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-raat via-raat/80 to-transparent px-8 pb-9 pt-20 md:px-12">
+            <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-raat via-raat/80 to-transparent px-5 pb-6 pt-14 md:px-12 md:pb-9 md:pt-20">
               <AnimatePresence mode="wait">
                 <motion.div key={active} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
-                  <h3 className="font-[family-name:var(--font-display)] text-3xl leading-tight text-patra md:text-4xl">{s.deva}</h3>
+                  <h3 className="font-[family-name:var(--font-display)] text-2xl leading-tight text-patra md:text-4xl">{s.deva}</h3>
                   <p className="mt-2 font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.25em] text-swarna">{s.en}</p>
                   <p className="mt-2 max-w-lg font-[family-name:var(--font-body)] text-sm leading-relaxed text-muted md:text-base">{s.body}</p>
                 </motion.div>
