@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslationChapters, getTranslationChapter, getChapterBody } from "@/lib/grantha";
+import { getChapterScans } from "@/lib/grantha-scans";
 import { LangToggle } from "@/components/grantha/LangToggle";
+import { OriginalPages } from "@/components/grantha/OriginalPages";
 
 export async function generateStaticParams() {
   const chapters = await getTranslationChapters();
@@ -20,6 +22,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ ch: st
   if (!r) notFound();
   const { chapter, prev, next } = r;
   const [gu, hi] = await Promise.all([getChapterBody(chapter.num, "gu"), getChapterBody(chapter.num, "hi")]);
+  const scans = getChapterScans(chapter.num);
 
   return (
     <main className="px-6 pb-24 pt-32 md:px-10">
@@ -33,6 +36,10 @@ export default async function ChapterPage({ params }: { params: Promise<{ ch: st
         </p>
         {chapter.deva && <p className="mt-3 font-[family-name:var(--font-display)] text-3xl text-swarna">{chapter.deva}</p>}
         <h1 className="mt-2 font-[family-name:var(--font-display-latin)] text-3xl leading-tight text-patra md:text-4xl">{chapter.title}</h1>
+
+        <div className="mt-8">
+          <OriginalPages pages={scans} num={chapter.num} />
+        </div>
 
         <div className="mt-8">
           <LangToggle en={chapter.bodyHtml} gu={gu} hi={hi} />
