@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { NAV } from "./SiteHeader";
+import { NAV } from "@/lib/nav";
 
 export function SiteFooter() {
   return (

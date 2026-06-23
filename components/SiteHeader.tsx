@@ -3,15 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { SoundToggle } from "@/components/sound/SoundToggle";
-
-export const NAV = [
-  { href: "/grantha", en: "Grantha" },
-  { href: "/books", en: "Books" },
-  { href: "/blog", en: "Blog" },
-  { href: "/gallery", en: "Gallery" },
-  { href: "/temples", en: "Temples" },
-  { href: "/contact", en: "Contact" },
-];
+import { NAV } from "@/lib/nav";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
