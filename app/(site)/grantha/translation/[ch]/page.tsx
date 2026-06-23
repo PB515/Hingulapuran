@@ -37,6 +37,10 @@ export default async function ChapterPage({ params }: { params: Promise<{ ch: st
         {chapter.deva && <p className="mt-3 font-[family-name:var(--font-display)] text-3xl text-swarna">{chapter.deva}</p>}
         <h1 className="mt-2 font-[family-name:var(--font-display-latin)] text-3xl leading-tight text-patra md:text-4xl">{chapter.title}</h1>
 
+        <p className="mt-4 inline-block rounded-full border border-loha/40 px-3 py-1 font-[family-name:var(--font-display-latin)] text-[10px] uppercase tracking-[0.18em] text-loha">
+          Working draft · pending a pandit&apos;s review
+        </p>
+
         <div className="mt-8">
           <OriginalPages pages={scans} num={chapter.num} />
         </div>

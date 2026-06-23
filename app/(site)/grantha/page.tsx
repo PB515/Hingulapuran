@@ -39,6 +39,21 @@ export default function GranthaIndex() {
         </Link>
       </div>
 
+      {/* Visual ways into the grantha */}
+      <div className="mt-5 grid gap-4 sm:grid-cols-3">
+        {[
+          { href: "/grantha/arc", deva: "सप्तक", title: "The Sacred Arc", blurb: "The whole story in seven movements." },
+          { href: "/grantha/genealogy", deva: "वंशावली", title: "The Lineages", blurb: "The dynastic trees, drawn." },
+          { href: "/temples", deva: "नक्शा", title: "The Sacred Map", blurb: "The places of the grantha, mapped." },
+        ].map((c) => (
+          <Link key={c.href} href={c.href} className="group rounded-[var(--radius)] border border-border bg-rakta/20 p-5 transition-colors hover:border-swarna/50">
+            <p className="font-[family-name:var(--font-display)] text-lg text-patra">{c.deva}</p>
+            <p className="font-[family-name:var(--font-display-latin)] text-sm text-swarna">{c.title}</p>
+            <p className="mt-2 font-[family-name:var(--font-body)] text-xs leading-relaxed text-muted">{c.blurb}</p>
+          </Link>
+        ))}
+      </div>
+
       {groups.map((g) => (
         <section key={g.category} className="mt-14">
           <h2 className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.28em] text-swarna">{g.category}</h2>
