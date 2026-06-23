@@ -14,9 +14,31 @@ const mukta = Mukta_Vaani({ variable: "--font-mukta", weight: ["400", "600", "70
 /* Gujarati body/serif */
 const notoGuj = Noto_Serif_Gujarati({ variable: "--font-noto-guj", weight: ["400", "600"], subsets: ["gujarati"], display: "swap" });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://hingulapuran.vercel.app";
+
 export const metadata: Metadata = {
-  title: `${site.name} — હિંગુળાપુરાણ`,
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${site.name} — હિંગુળાપુરાણ`,
+    template: `%s · ${site.name}`,
+  },
   description: site.description,
+  applicationName: site.name,
+  keywords: ["Hinglaj Mata", "Hinglaj Puran", "Hingulapuran", "Hingula", "Shakti Peetha", "Brahmakshatriya", "kuldevi"],
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: `${site.name} — the Hinglaj Puran, conserved`,
+    description: site.description,
+    locale: "en_IN",
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — the Hinglaj Puran, conserved`,
+    description: site.description,
+  },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

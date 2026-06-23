@@ -39,11 +39,21 @@ export default function GranthaIndex() {
         </Link>
       </div>
 
+      {/* Search the whole grantha */}
+      <Link
+        href="/grantha/search"
+        className="mt-5 flex items-center justify-between rounded-[var(--radius)] border border-swarna/40 bg-rakta/20 px-5 py-4 transition-colors hover:border-swarna"
+      >
+        <span className="font-[family-name:var(--font-body)] text-muted">Search chapters, names, places and terms…</span>
+        <span className="font-[family-name:var(--font-display-latin)] text-[11px] uppercase tracking-[0.2em] text-swarna">खोज · Search →</span>
+      </Link>
+
       {/* Visual ways into the grantha */}
-      <div className="mt-5 grid gap-4 sm:grid-cols-3">
+      <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
           { href: "/grantha/arc", deva: "सप्तक", title: "The Sacred Arc", blurb: "The whole story in seven movements." },
           { href: "/grantha/genealogy", deva: "वंशावली", title: "The Lineages", blurb: "The dynastic trees, drawn." },
+          { href: "/grantha/glossary", deva: "शब्दकोश", title: "Glossary", blurb: "Every name and term, identified." },
           { href: "/temples", deva: "नक्शा", title: "The Sacred Map", blurb: "The places of the grantha, mapped." },
         ].map((c) => (
           <Link key={c.href} href={c.href} className="group rounded-[var(--radius)] border border-border bg-rakta/20 p-5 transition-colors hover:border-swarna/50">
