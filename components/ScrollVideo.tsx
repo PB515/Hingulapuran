@@ -78,7 +78,7 @@ export function ScrollVideo({ src, poster, beats, heightVh = 360 }: ScrollVideoC
   return (
     <section ref={wrap} style={{ height: `${heightVh}vh` }} className="relative">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden px-6 md:px-10">
-        <AmbientMotifs />
+        <AmbientMotifs offset={0} />
         <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[0.85fr_1.5fr]">
           {/* caption */}
           <div className="min-h-[22vh] md:min-h-0">

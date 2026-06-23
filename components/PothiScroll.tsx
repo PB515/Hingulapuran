@@ -51,7 +51,7 @@ export function PothiScroll({ scenes, border = "/art/motifs/border-strip.webp", 
         className="sticky top-0 flex h-screen flex-col items-center justify-center gap-8 overflow-hidden px-4 pt-20 md:px-8"
         style={bg ? { backgroundImage: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" } : undefined}
       >
-        <AmbientMotifs />
+        <AmbientMotifs offset={1} />
         {(title || titleEn) && (
           <div className="relative z-10 text-center">
             {title && <h2 className="font-[family-name:var(--font-display)] text-4xl leading-none text-patra md:text-5xl">{title}</h2>}

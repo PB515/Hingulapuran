@@ -37,7 +37,7 @@ export function BrahmarandhraOrb() {
       className="relative overflow-hidden bg-raat px-6 py-28 md:py-40"
       style={{ perspective: 1000 }}
     >
-      <AmbientMotifs />
+      <AmbientMotifs offset={2} />
       <div className="relative z-10 mx-auto max-w-6xl text-center">
         <p className="font-[family-name:var(--font-display-latin)] text-xs uppercase tracking-[0.35em] text-loha">Where the crown fell</p>
         <h2 className="mt-4 font-[family-name:var(--font-display)] text-5xl text-patra md:text-7xl">ब्रह्मरंध्र</h2>
