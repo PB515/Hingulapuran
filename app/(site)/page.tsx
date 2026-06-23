@@ -8,6 +8,8 @@ import { parshuramCut } from "@/lib/parshuram-cut";
 import { BrahmarandhraOrb } from "@/components/BrahmarandhraOrb";
 import { SceneBand } from "@/components/SceneBand";
 import { CommunityWall } from "@/components/CommunityWall";
+import { GranthaInvite } from "@/components/GranthaInvite";
+import { MantraClose } from "@/components/MantraClose";
 import { ScrollVideo } from "@/components/ScrollVideo";
 import { satiScroll } from "@/lib/sati-scroll";
 import { SoundScape } from "@/components/sound/SoundScape";
@@ -71,6 +73,16 @@ export default function Home() {
       {/* The living lineage — the communities who still call her kuldevi. */}
       <SoundScape bed="bed-finale">
         <CommunityWall />
+      </SoundScape>
+
+      {/* Read the grantha — the invitation into the archive (the north star). */}
+      <SoundScape bed="bed-finale">
+        <GranthaInvite />
+      </SoundScape>
+
+      {/* The seva — carry her awareness forward, then the footer's mantra. */}
+      <SoundScape bed="bed-finale" cue="cue-aakaar">
+        <MantraClose />
       </SoundScape>
     </main>
   );
