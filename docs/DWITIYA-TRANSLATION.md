@@ -4,7 +4,7 @@
 >
 > **Method & caveats:** translated by eye from the scanned 1915 Gujarati of `source/Hinglaj Puran.pdf` (no text layer). It is a faithful **working draft**, not a final scholarly text, `[bracketed]` words are illegible/implied passages reconstructed from context; proper names flagged elsewhere await pandit/native review (see SCAN-QUALITY-NOTES.md). This is **itihaas (sacred history)**.
 >
-> **Progress:** ☑ ch 65–67 · ☐ ch 68–87 (in batches).
+> **Progress:** ☑ ch 65–68 · ☐ ch 69–87 (in batches).
 
 ---
 
@@ -75,5 +75,22 @@ The demon gave up his life, and the Goddess was made [serene]. Brahmā, Vishnu a
 
 ---
 
-## Adhyāy 68: The Origin of the Hingulā & Mandākinī Tīrthas
+## Adhyāy 68: The Origin of the Hingulā and Mandākinī Tīrthas (હિંગુલા તથા મંદાકિની તીર્થોની ઉત્પત્તિ)
+*Printed pp. 215–217 (PDF 221–223)*
+
+*Sūta said:* The great-souled **Shrī Rāma**, with **Sītā** and **Lakṣmaṇa**, having gone there, [resolved] rightly upon the slaying of **Rāvaṇa**.
+
+**Nārada said:** "How did the holy **Hingulā** and **Mandākinī** come to be? O protector of those who take refuge, tell me." **Lord Vishnu said:** Brahmā, who dwells in Brahmaloka, held in his **kalasha** the sin-cleansing water, which destroys crores of sins, water holy to the rishis, the ancestors and the gods. Taking this water from his **kumbha** for bathing, Brahmā went to the **Rāma-kṣetra** named **Hingulā**. In the forest of that kṣetra a sage ever meditates, where the munis recite the Vedas and the gods who receive the yajna-share dwell, where the stainless divine Brahman [is sought], a place set apart as if from Brahmā himself; dwelling there, when the body falls a man abides in **Vaikuṇṭha**. There **Rāma, Sītā and Saumitri (Lakṣmaṇa)** dwelt. In that Rāma-kṣetra, Brahmā, with the gods and the sages led by Anaka, took to austerity and performed tapas there for a full year.
+
+At that time the fearsome demons **Madhu and Kaiṭabha**, grown vast, rose up to slay Brahmā. The whole earth with its mountains trembled as the demons drew near. In the tumult Brahmā's kumbha-water was poured out upon the earth and split into two parts. The water that went to the north became the river known as **Hindulā (Hingulā)**, and that which went to the south became the other. Thus arose those great rivers, destroyers of grievous sin. From the water of Brahmā's kamaṇḍal arose the rivers named **Girilā-kaṇṭha and Hindulā**. At their **confluence (saṅgam)** bathing yields great merit: even the sin of brahmahatyā is removed, and one is not reborn. At the confluence of these two rivers stands the **Rāmeshwar liṅga**, which Rāma installed; its mere darshan undoes all sin. Having fought five thousand years, Vishnu slew the demon-lord; then Brahmā returned with the rest, and the rishis went to their abodes. From the marrow (meda) of these demons the earth was drenched, and so the place came to be called [Mahiṣī]. Thus arose the Girilā tīrtha, which destroys sins of every kind and grants prosperity of every kind.
+
+On the bank of the **Hindulamatī** lies the **Nāga-tīrth**, where a person is freed of any disease; no other tīrtha equals the Nāga-tīrth, the remover of all sins, and all the rishis frequent it. At that time a sinful, leprous man, who had once been a king and was now ruined, tormented by his disease and wandering the earth, came near **Hindulā**. He came to a muni and took refuge with him. The man said: "Wretched, I have come to your refuge. Protect me; in your mercy free me from all sin; tell me a means by which my affliction may depart." **Sūta-Purāṇi said:** Moved with compassion, the rishi told the king a means of solace. **The rishi said:** "I know one means: on the bank of the **Hindulavatī** is the **Nāga-tīrth**; go and bathe there, and you will be freed of leprosy." **Sūta-Purāṇi said:** He went to the Nāga-tīrth on the bank of the **Giril** and bathed, and all his sins were destroyed; he was freed of every disease and took on a divine form. Having enjoyed many pleasures in the world, at the last he went to **Swarga**. Thus on the bank of the Hindulā-Giril is the Nāga-tīrth, the Giril that destroys the mass of sins, frequented by the gods and rishis, which men should ever resort to.
+
+*Thus ends the sixty-eighth chapter, "The Origin of the Hingulā and Mandākinī Tīrthas," of the Shrī Hingulapurāṇa within the Skanda Purāṇa.*
+
+> **Flags:** river names read tentatively, and used interchangeably on the worn page (Hindulā/Hingulā, **Girilā-kaṇṭha**, Mandākinī, Hindulamatī/Hindulavatī); the place-name from the demons' marrow [Mahiṣī] and the sheltering muni's name are uncertain. Verify on re-scan (Priority 2).
+
+---
+
+## Adhyāy 69: The Nature of Mokṣa
 ☐ *to translate next.*
