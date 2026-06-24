@@ -4,7 +4,7 @@
 >
 > **Method & caveats:** translated by eye from the scanned 1915 Gujarati of `source/Hinglaj Puran.pdf` (no text layer). It is a faithful **working draft**, not a final scholarly text, `[bracketed]` words are illegible/implied passages reconstructed from context; proper names flagged elsewhere await pandit/native review (see SCAN-QUALITY-NOTES.md). This is **itihaas (sacred history)**.
 >
-> **Progress:** ☑ ch 65–68 · ☐ ch 69–87 (in batches).
+> **Progress:** ☑ ch 65–69 · ☐ ch 70–87 (in batches).
 
 ---
 
@@ -92,5 +92,26 @@ On the bank of the **Hindulamatī** lies the **Nāga-tīrth**, where a person is
 
 ---
 
-## Adhyāy 69: The Nature of Mokṣa
+## Adhyāy 69: The Nature of Mokṣa (મોક્ષનું સ્વરૂપ)
+*Printed pp. 217–219 (PDF 223–225)*
+
+*Sūta said:* The great-souled Shrī Rāma, with Sītā and Lakṣmaṇa, having gone there, [resolved] rightly upon the slaying of Rāvaṇa.
+
+**Sūta-Purāṇi said:** Rāma, Lakṣmaṇa and Sītā came to this tīrtha, and from there resolved to slay **Rāvaṇa**. At the time when Rāma [worshipped] Hingulā and [sought] to destroy māyā, he asked his guru **Vasiṣṭha** about dharma. **Shrī Rāma said:** "O Guru, how can all people cross the ocean of saṃsāra? Tell me its means, O sage."
+
+**Vasiṣṭha said:** "First I will tell you the nature of **māyā**. Men first take the non-self, the body and the rest, to be the self (ātma-buddhi); when this false notion arises through māyā, it is called saṃsāra. Through māyā this form is first imagined, with its coverings. This whole world is pervaded by māyā as a subtle covering, and apart from that the world stands wrapped in name and form. The ignorant are deluded, yet all is pervaded by the **Paramātmā**. On examination, the forms that appear, the seen and the manifold, are all unreal, like a dream. This is the root of the tree of saṃsāra, the bondage of rebirth.
+
+The body is made of the gross elements and the five **tanmātras**; ahaṅkāra, buddhi, the senses and the mind, together with prakṛti, are all firmly bound up in it. The **jīva** is distinct from all of these; it is in truth the Paramātmā, ever called free. The jīva is realized through knowledge. Hear the means to that knowledge: control of mind, speech and body; the service of a true guru (**sadguru**); the abandoning of false refuges; truthfulness, the company of the good (satsaṅga), dispassion toward the objects of sense, freedom from egoism, the contemplation of birth, old age and death, devotion, equanimity in pain and pleasure, non-attachment, dwelling in a holy place, love of the Veda, bathing at the sacred fords, and the doing of all one's duties. One who does not do so remains in the state of ignorance.
+
+This **ātmā** is formless, eternal and pure; it is without form, one and without a second (advitīya). To know the ātmā is **vidyā**, and by this knowledge one is merged in the Paramātmā. Thus I have told you the nature of **mokṣa**, which is most hard to attain; though a man has eyes, without this knowledge he does not truly see. Devotion to the Lord, faith in Īśvara, and love for him: these are all means of devotion. As your worship deepens, the grace of Girilā, though rare, is won. Near the **Sahyādri** this tīrtha is rare; it was brought up from Pātāla and set upon the earth."
+
+Thus Vasiṣṭha resolved Rāma's doubt; the muni bowed, and Rāma went on to the river. So the Girilā, destroyer of sins, arose in the world from Brahmā, and at the confluence of these two rivers stands the most excellent **Hingul mountain**.
+
+*Thus ends the sixty-ninth chapter, "The Nature of Mokṣa," of the Shrī Hingulapurāṇa within the Skanda Purāṇa.*
+
+> **Flags:** the closing lines (Girilā's origin "from Brahmā" and the link back to the mountain) sit on a worn patch; some clauses reconstructed from context. Verify on re-scan.
+
+---
+
+## Adhyāy 70: A Description of Mount Hingulā
 ☐ *to translate next.*
